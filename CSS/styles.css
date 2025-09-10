@@ -1,0 +1,70 @@
+
+
+
+/*  */
+/*  */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #030607;
+}
+
+/*  */
+/*  */
+button, a {
+  all: unset;
+  cursor: pointer;
+}
+
+li { list-style: none; }
+
+
+body {height: 1000px;}
+
+
+/* REUSABLE CLASSES */
+.transition-300 {
+  transition: 300ms ease;
+}
+
+
+
+.animate-fade-up { animation: fade-up 1s ease forwards; }
+.animate-fade-left { animation: fade-left 1s ease forwards; }
+.animate-fade-right { animation: fade-right 1s ease forwards; }
+
+@keyframes fade-up {
+  0% {
+    transform: translateY(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-left {
+  0% {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 100%;
+  }
+}
