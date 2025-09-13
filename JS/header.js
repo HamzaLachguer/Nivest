@@ -242,7 +242,7 @@ function initSearch() {
   elements.openSearchContainer?.addEventListener('click', openSearch);
   elements.openSearchContainerMobile?.addEventListener('click', openSearch);
 
-  elements.searchContainer.addEventListener('click', (e) => {
+  elements.searchContainer?.addEventListener('click', (e) => {
     if (e.target.closest("#search-container")) return;
 
     closeSearch();

@@ -5,7 +5,7 @@
 
   <!-- PRIMARY META TAGS -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="NIVEST® is a Paris-based movement in form. We curate clean, essential design—homeware, apparel, and objects chosen for feel, function, and a timeless edge. No noise, just purpose.">
   <meta name="title" content="NIVEST® | Minimal, Durable, Unapologetically Refined Design">
   <meta name="author" content="NIVEST">
@@ -112,7 +112,7 @@
             <p class="text-dark-96 capitalize mb-2 font-medium lg:text-sm">welcome</p>
             <h3 class="uppercase text-2xl mb-5 font-semibold leading-none lg:text-[40px] lg:text-center lg:mb-10">Sign up for newsletter for 20% off on first order!</h3>
   
-            <form class="w-full flex flex-col gap-3" action="" method="post">
+            <form class="w-full flex flex-col gap-3" action="#" method="post">
               <input class="p-4 focus:outline-none border border-solid border-dark-7a w-full text-sm" type="email" name="" id="" placeholder="Your e-mail*" required>
               <input class="w-full p-4 bg-dark text-white text-sm leading-4 cursor-pointer transition-300 hover:bg-dark-96" type="submit" value="Submit">
             </form>
@@ -254,7 +254,7 @@
 
     <!-- Search products -->
     <!--  -->
-    <div id="search-product-container" class="absolute top-0 left-0 z- w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
+    <div id="search-product-container" class="absolute top-0 left-0 z-40 w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
       <div id="search-container" class="bg-white w-full h-full lg:w-[400px] animate-fade-left">
         <div class="px-5 flex items-center gap-5">
 
@@ -265,7 +265,7 @@
 
             <input id="search-input" class="py-4 pl-8 pr-4 w-full focus:outline-none font-medium border-b border-solid border-[#03060714]" type="text" placeholder="SEARCH" aria-label="search for product input">
 
-            <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true">
+            <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true" aria-label="clear search input">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
@@ -278,7 +278,7 @@
         <div class="p-5">
 
           <!-- Search suggestions -->
-          <div class="hidden flex-col gap-3 uppercase">
+          <div class="flex flex-col gap-3 uppercase">
             <p class="text-dark-96 font-medium">Popular search items</p>
             <div class="flex gap-2">
               <button class="bg-[#03060714] uppercase py-4 px-6">bags</button>
@@ -288,7 +288,7 @@
           </div>
 
           <!-- product list retuened -->
-          <ul id="results-list" class="flex flex-col gap-2 overflow-y-scroll">
+          <ul id="results-list" class="hidden flex-col gap-2 overflow-y-scroll">
             <li class="flex ">
               <div class="h-40 w-40 bg-[#03060714]  shrink-0 grid place-items-center">
                 <img 
