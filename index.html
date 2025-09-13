@@ -59,7 +59,7 @@
 
     <!-- Announcement BAR -->
     <!--  -->
-    <div class="grid place-items-center bg-blue h-7 font-medium lg:h-9">
+    <div class="w-full grid place-items-center bg-blue h-7 font-medium lg:h-9">
       <button id="show-promo-btn" aria-controls="offer-container" aria-expanded="false" class="text-white hover:text-white-99 transition-300 uppercase text-[10px] lg:hidden">Discounts for new customers until next week!</button>
 
       <div class="hidden items-center uppercase gap-2 text-white-99 text-xs lg:flex">Discounts for new customers until next week! <button  id="show-promo-btn-ls" aria-controls="offer-container" aria-expanded="false" class="text-white uppercase">Get now</button>
@@ -68,7 +68,7 @@
 
     <!-- Header BAR -->
     <!--  -->
-    <div class="grid grid-cols-3 px-5 lg:px-12 py-4 font-medium">
+    <div class="w-full grid grid-cols-3 px-5 lg:px-12 py-4 font-medium bg-white-99">
       <div class="flex">
         <button id="open-nav-menu" aria-controls="navigation-menu" class="uppercase">menu</button>
       </div>
@@ -432,7 +432,34 @@
     ** MAIN **
 
   -->
-  <main></main>
+  <main>
+
+
+    <!-- Hero section -->
+    <!--  -->
+    <section class="relative h-fit">
+
+      <div class="h-screen w-full overflow-hidden pt-7 lg:pt-9">
+        <video class="h-full w-full object-cover object-center" 
+        autoplay="" loop="" preload="metadata" 
+        src="https://framerusercontent.com/assets/LKmrk8QfPWM2sLmdFLljpV6dA3w.mp4" 
+        aria-label="Background video showing NIVEST products"></video>
+      </div>
+
+      <div class="absolute bottom-0 h-screen w-full bg-gradient-to-t from-dark-96 to-white mix-blend-multiply"></div>
+
+      <div class="w-fit absolute left-0 bottom-0 flex flex-col gap-4 p-5 lg:px-12">
+        <h1 class="text-[40px] md:text-5xl lg:text-[56px] leading-none font-semibold uppercase text-white">Performance <br>
+        in Every step</h1>
+        
+        <p class=" text-sm max-w-[470px] text-white-99">Form, function, and attitude on repeat.</p>
+        <button class="py-4 px-6 bg-white text-dark uppercase font-medium w-fit">shop all</button>
+      </div>
+    </section>
+
+
+
+  </main>
 
   <!-- 
     ** FOOTER **
@@ -443,7 +470,7 @@
 
 
 
-  <script src="./JS/header.js"></script>
+  <script type="module" src="./JS/script.js"></script>
 </body>
 
 

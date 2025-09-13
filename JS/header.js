@@ -83,7 +83,7 @@ function initHeaderVisibility() {
 }
 
 function showHeader() {
-  elements.header.classList.add("fixed", "top-0", "w-full", "animate-fade-down");
+  elements.header.classList.add("fixed", "top-0", "z-30", "w-full", "animate-fade-down");
   elements.header.classList.remove("animate-fade-up2");
 
   //
@@ -94,7 +94,7 @@ function hideHeader() {
   elements.header.classList.add("animate-fade-up2");
 
   setTimeout(() => {
-    elements.header.classList.remove("fixed", "top-0", "w-full", "animate-fade-down");
+    elements.header.classList.remove("fixed", "top-0", "z-30", "w-full", "animate-fade-down");
   }, 500)
 
   //
@@ -293,7 +293,7 @@ function initCartToggling() {
 
 
 
-function initHeader() {
+export function initHeader() {
   initPromoModal();
   initHeaderVisibility();
   initCountrySelector();
@@ -301,6 +301,6 @@ function initHeader() {
   initSearch();
   initCartToggling();
 }
-initHeader();
+
 
 
