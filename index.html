@@ -55,7 +55,264 @@
     ** HEADER **
     
   -->
+  <header class="" aria-hidden="false">
 
+    <!-- Announcement BAR -->
+    <!--  -->
+    <div class="grid place-items-center bg-blue h-7 font-medium lg:h-9">
+      <button id="show-promo-btn" aria-controls="offer-container" aria-expanded="false" class="text-white hover:text-white-99 transition-300 uppercase text-[10px] lg:hidden">Discounts for new customers until next week!</button>
+
+      <div class="hidden items-center uppercase gap-2 text-white-99 text-xs lg:flex">Discounts for new customers until next week! <button  id="show-promo-btn-ls" aria-controls="offer-container" aria-expanded="false" class="text-white uppercase">Get now</button>
+      </div>
+    </div>
+
+    <!-- Header BAR -->
+    <!--  -->
+    <div class="grid grid-cols-3 px-5 lg:px-12 py-4 font-medium">
+      <div class="flex">
+        <button id="open-nav-menu" aria-controls="navigation-menu" class="uppercase">menu</button>
+      </div>
+
+      <div class="grid place-items-center">
+        <a class="h-6" href="./index.html">
+          <svg fill="none" height="24" id="svg75441938_3388" viewBox="0 0 64 16"><path d="M0 15.766V.446h4.152l6.675 13.533-1.022.255V.447h3.13v15.319H8.782L2.107 2.234l1.022-.255v13.787H0Zm13.972 0V4.915h3.13v10.851h-3.13Zm-.104-12.298V.021h3.338v3.447h-3.338Z" fill="#030607"></path><path d="M21.06 15.766 16.866 4.915h3.36L23.5 15.043h-1.752l3.255-10.128h3.275l-4.193 10.851H21.06Zm11.856.213c-1.182 0-2.21-.234-3.087-.702a5.188 5.188 0 0 1-2.045-2c-.473-.851-.709-1.83-.709-2.937 0-1.12.236-2.099.71-2.936a5.079 5.079 0 0 1 2.023-1.978c.862-.483 1.864-.724 3.004-.724 1.099 0 2.052.227 2.858.681a4.775 4.775 0 0 1 1.878 1.894c.445.808.667 1.758.667 2.85 0 .228-.007.44-.02.639a6.184 6.184 0 0 1-.063.532h-9.221V9.19h6.697l-.543.383c0-.879-.208-1.524-.626-1.936C34.036 7.213 33.48 7 32.77 7c-.82 0-1.46.284-1.919.851-.445.567-.668 1.419-.668 2.553 0 1.107.223 1.93.668 2.468.46.54 1.14.809 2.045.809.5 0 .931-.085 1.293-.255a1.67 1.67 0 0 0 .814-.83h2.941c-.348 1.05-.946 1.88-1.794 2.49-.834.595-1.912.893-3.233.893Z" fill="#030607"></path><path d="M43.037 15.979c-1.558 0-2.796-.32-3.714-.958-.918-.638-1.418-1.518-1.502-2.638h2.796c.07.482.306.851.709 1.106.417.241.987.362 1.71.362.654 0 1.127-.092 1.42-.277a.938.938 0 0 0 .458-.83c0-.269-.09-.474-.27-.616-.168-.156-.48-.284-.94-.383l-1.71-.362c-1.266-.27-2.198-.674-2.796-1.213-.598-.553-.897-1.262-.897-2.127 0-1.05.396-1.866 1.19-2.447.792-.596 1.898-.894 3.316-.894 1.405 0 2.524.29 3.359.872.835.568 1.294 1.362 1.377 2.383h-2.796a1.092 1.092 0 0 0-.584-.83c-.333-.198-.806-.297-1.418-.297-.557 0-.974.085-1.252.255a.746.746 0 0 0-.397.681.72.72 0 0 0 .334.617c.223.142.591.27 1.106.383l1.92.404c1.07.227 1.877.653 2.42 1.277.556.61.834 1.333.834 2.17 0 1.064-.41 1.894-1.231 2.49-.807.58-1.954.872-3.442.872Z" fill="#030607"></path><path d="M53.008 16c-1.363 0-2.379-.333-3.046-1-.654-.68-.98-1.71-.98-3.085V2.489l3.129-1.191V12.02c0 .482.132.844.396 1.085.264.242.675.362 1.231.362.209 0 .403-.021.584-.064.18-.042.362-.092.542-.149v2.426c-.18.1-.438.177-.771.234a6.23 6.23 0 0 1-1.085.085Zm-6.009-8.66V4.915h7.865V7.34H47Z" fill="#030607"></path><path d="M59.306 9.574c-.65 0-1.26-.123-1.828-.37a4.828 4.828 0 0 1-1.502-1.021 4.935 4.935 0 0 1-1-1.532 4.782 4.782 0 0 1-.364-1.864A4.782 4.782 0 0 1 57.478.37 4.532 4.532 0 0 1 59.306 0c.65 0 1.26.123 1.828.37a4.58 4.58 0 0 1 1.49 1.034c.433.434.771.94 1.013 1.52.242.578.363 1.2.363 1.863a4.782 4.782 0 0 1-1.377 3.396 4.677 4.677 0 0 1-1.49 1.021 4.532 4.532 0 0 1-1.827.37Zm0-.83c.534 0 1.03-.101 1.49-.306a3.78 3.78 0 0 0 1.226-.855c.36-.366.639-.787.839-1.264.2-.476.3-.987.3-1.532 0-.544-.1-1.055-.3-1.532-.2-.476-.48-.898-.839-1.264a3.775 3.775 0 0 0-1.226-.855 3.622 3.622 0 0 0-1.49-.306c-.534 0-1.035.102-1.502.306a3.96 3.96 0 0 0-1.227.855c-.35.366-.626.788-.826 1.264-.2.477-.3.988-.3 1.532 0 .545.1 1.056.3 1.532.2.477.476.898.826 1.264a3.96 3.96 0 0 0 1.227.855c.467.205.968.307 1.502.307Zm-2.065-1.212v-5.49h2.478c.584 0 1.039.137 1.364.41.326.263.489.633.489 1.11 0 .74-.476 1.212-1.427 1.417v-.205c.425-.017.755.081.988.294.234.213.351.515.351.906v.907c0 .085.004.183.012.293.017.103.034.222.05.358h-1.163a1.662 1.662 0 0 1-.038-.255 5.328 5.328 0 0 1-.013-.396v-.587c0-.35-.075-.605-.225-.766-.142-.17-.371-.256-.688-.256H57.69V4.34h1.965c.242 0 .43-.055.564-.166.133-.119.2-.289.2-.51 0-.213-.067-.375-.2-.485-.125-.11-.313-.166-.563-.166h-1.265v4.519H57.24Z" fill="#030607"></path></svg>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end gap-5">
+        <div class="hidden items-center gap-5 lg:flex">
+          <button class="uppercase" 
+          id="show-country-selector"
+          aria-controls="country-selector-container" aria-expanded="false">lv | <span>eur</span></button>
+
+          <button id="open-search" class="uppercase">search</button>
+          <button class="uppercase">favorites</button>
+        </div>
+
+        <button class="uppercase flex items-center gap-1">cart <div class="h-[18px] w-[18px] grid place-items-center bg-green rounded-3xl">0</div></button>
+      </div>
+    </div>
+
+    <!-- Newsletter popup -->
+    <!--  -->
+    <div id="promo-container" aria-hidden="true" class="absolute w-full h-screen top-0 left-0 bg-dark-7a p-5 hidden place-items-center">
+
+      <div class="flex flex-col gap-5 items-end animate-fade-up">
+        <button class="h-7 w-7 rounded-3xl bg-white-14 outline-1 outline outline-white-99 grid place-items-center" id="hide-promo-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17 7L7 17M7 7L17 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div id="promo-modal-form" class="flex flex-col bg-white w-fit lg:flex-row lg:h-[460px] lg:gap-10 lg:pr-10">
+          <div class="h-56 w-full overflow-hidden lg:h-full lg:w-[500px] flex shrink-0">
+            <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/UCuaagB3OZy5NPwALnnwc9E2ay8.png" alt="**" loading="lazy">
+          </div>
+  
+          <div class="bg-white p-5 flex flex-col items-start lg:p-0  lg:items-center lg:max-w-[500px] lg:justify-center">
+            <p class="text-dark-96 capitalize mb-2 font-medium lg:text-sm">welcome</p>
+            <h3 class="uppercase text-2xl mb-5 font-semibold leading-none lg:text-[40px] lg:text-center lg:mb-10">Sign up for newsletter for 20% off on first order!</h3>
+  
+            <form class="w-full flex flex-col gap-3" action="" method="post">
+              <input class="p-4 focus:outline-none border border-solid border-dark-7a w-full text-sm" type="email" name="" id="" placeholder="Your e-mail*" required>
+              <input class="w-full p-4 bg-dark text-white text-sm leading-4 cursor-pointer transition-300 hover:bg-dark-96" type="submit" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Change country -->
+    <!--  -->
+    <div id="country-selector-container" class="fixed z-40 w-screen h-screen left-0 top-0 bg-dark-7a p-5 hidden place-items-center" aria-hidden="true">
+
+      <div class="flex flex-col items-end justify-center gap-4 animate-fade-up w-full md:w-[500px]">
+
+        <button id="hide-selector-btn" class="h-7 w-7 bg-white-14 outline outline-[.5px] outline-white-99 rounded-3xl grid place-items-center" aria-expanded="false" aria-controls="country-selector-container">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+
+        <div id="form-wrapper" class=" bg-white p-6 w-full ">
+          <div class="h-6 w-6 rounded-xl overflow-hidden">
+            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h512v512H0z%22%2F%3E%3Cpath%20fill%3D%22%23981e32%22%20d%3D%22M0%200h512v204.8H0zm0%20307.2h512V512H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" class="h-full w-full object-center object-cover">
+          </div>
+
+          <h2 class="text-[28px] my-5">You're in Latvia</h2>
+
+          <ul class="uppercase font-medium flex flex-col gap-2">
+            <li class="flex items-center gap-2 ">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Discount on orders over €200
+            </li>
+
+            <li class="flex items-center gap-2 ">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Taxes calculated at checkout
+            </li>
+
+            <li class="flex items-center gap-2 ">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              Receive order in 2-3 business weeks
+            </li>
+
+          </ul>
+
+          <select class="h-12 w-full border border-solid broder-white-14 px-5 focus:outline-none mt-5 uppercase font-medium" name="" id="">
+            <option value="0" class="capitalize">latvia (EUR)</option>
+          </select>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Navigation menu -->
+    <!--  -->
+    <div id="navigation-menu" class="bg-dark-7a absolute z-30 top-0 left-0 w-screen h-dvh hidden" aria-hidden="true">
+      <div id="nav-menu-container" class="p-5 pt-12 lg:pt-14 bg-white w-full h-full lg:w-[490px] animate-fade-right">
+        <button id="close-nav-menu" class="uppercase font-medium" aria-label="close nav menu" aria-expanded="true">close
+          menu</button>
+
+        <nav id="nav-menu" class="pt-10 h-full flex flex-col gap-6" aria-label="main navigation">
+          <div class=" flex flex-col gap-4">
+            <h4 class="uppercase text-dark-96 font-medium">products</h4>
+            <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+              <li>
+                <a href="">men</a>
+              </li>
+              <li>
+                <a href="">women</a>
+              </li>
+              <li>
+                <a href="">new</a>
+              </li>
+              <li>
+                <a href="">popular</a>
+              </li>
+              <li>
+                <a href="">all</a>
+              </li>
+              <li>
+                <a href="">salle</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class=" flex flex-col gap-4">
+            <h4 class="uppercase text-color-dark/99 font-medium ">our brand</h4>
+            <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+              <li>
+                <a href="" class="">about</a>
+              </li>
+              <li>
+                <a href="">values</a>
+              </li>
+              <li>
+                <a href="">locations</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class=" flex flex-col gap-4 lg:hidden">
+
+            <ul class="uppercase font-medium tracking-tight text-color-dark/99 flex flex-col gap-1">
+              <li>
+                <button id="open-search-mobile" aria-expanded="false" aria-controls="search-container" class="uppercase">search</button>
+              </li>
+              <li>
+                <a href="">favorites</a>
+              </li>
+              <li>
+                <button class="uppercase" id="show-country-selector-mobile" aria-expanded="false">lv | <span>eur</span></button>
+              </li>
+            </ul>
+          </div>
+
+          <div class=" flex flex-col gap-4">
+
+            <ul class="uppercase font-medium tracking-tight lg:text-sm text-color-dark/99 flex flex-col gap-1">
+              <li>
+                <a href="">faq's</a>
+              </li>
+              <li>
+                <a href="">contact</a>
+              </li>
+              <li>
+                <a href="">newsletter</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Search products -->
+    <!--  -->
+    <div id="search-product-container" class="absolute top-0 left-0 z- w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
+      <div id="search-container" class="bg-white w-full h-full lg:w-[400px] animate-fade-left">
+        <div class="px-5 flex items-center gap-5">
+
+          <div class="relative flex items-center w-full">
+            <svg class="absolute" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+
+            <input id="search-input" class="py-4 pl-8 pr-4 w-full focus:outline-none font-medium border-b border-solid border-[#03060714]" type="text" placeholder="SEARCH" aria-label="search for product input">
+
+            <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </button>
+          </div>
+
+          <button class="relative uppercase transition-300 hover:text-dark-7a font-medium after:content-[''] after:absolute after:h-[1px] after:w-full after:bg-dark after:bottom-0 after:left-0 after:transition-all after:ease-in-out after:duration-300 hover:after:w-0" id="close-search" aria-expanded="false" aria-controls="search-product-container">close</button>
+        </div>
+
+        <div class="p-5">
+
+          <!-- Search suggestions -->
+          <div class="hidden flex-col gap-3 uppercase">
+            <p class="text-dark-96 font-medium">Popular search items</p>
+            <div class="flex gap-2">
+              <button class="bg-[#03060714] uppercase py-4 px-6">bags</button>
+              <button class="bg-[#03060714] uppercase py-4 px-6">women</button>
+              <button class="bg-[#03060714] uppercase py-4 px-6">all</button>
+            </div>
+          </div>
+
+          <!-- product list retuened -->
+          <ul id="results-list" class="flex flex-col gap-2 overflow-y-scroll">
+            <li class="flex ">
+              <div class="h-40 w-40 bg-[#03060714]  shrink-0 grid place-items-center">
+                <img 
+                src="https://framerusercontent.com/images/imZekT6LTizswVRE6LtkgWbMOk.png" 
+                alt="product img" 
+                class="object-cover object-center h-1/2" 
+                loading="lazy">
+              </div>
+
+              <div class="flex justify-between items-start uppercase w-full p-5">
+                <div class="flex flex-col gap-0">
+                  <span class="font-semibold text-sm">yemas</span>
+                  <span class="text-dark-96 font-medium">Accessories</span>
+                </div>
+                <div class="font-semibold text-sm">€199</div>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
 
   <!-- 
     ** MAIN **
@@ -66,6 +323,12 @@
     ** FOOTER **
 
   -->
+
+
+
+
+
+  <script src="./JS/header.js"></script>
 </body>
 
 
