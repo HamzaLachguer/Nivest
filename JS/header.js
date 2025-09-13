@@ -14,7 +14,7 @@ function getElement(selector) {
 const elements = {
   header: getElement("header"),
 
-  /* ------------------- */
+  /* ----------------------- */
   showPromoBtn: getElement("#show-promo-btn"),
   showPromoBtnLs: getElement("#show-promo-btn-ls"),
   hidePromoBtn: getElement("#hide-promo-btn"),
@@ -37,6 +37,11 @@ const elements = {
   closeSearchContainer: getElement("#close-search"),
   searchContainer: getElement("#search-product-container"),
   emptySearch: getElement("#empty-search"),
+
+  /* ----------------------- */
+  openCartBtn: getElement("#open-cart-btn"),
+  cartContainer: getElement("#cart-container"),
+  closeCartBtn: getElement("#close-cart-btn"),
 }
 
 
@@ -252,12 +257,49 @@ function initSearch() {
 
 
 
+
+// Cart open - close
+//
+function openCart() {
+  updateClass(elements.cartContainer, "hidden", "flex");
+  document.body.classList.add("overflow-hidden");
+
+  //
+  updateAriaAttribute(elements.openCartBtn, "aria-expanded", "true");
+  updateAriaAttribute(elements.closeCartBtn, "aria-expanded", "true");
+  updateAriaAttribute(elements.cartContainer, "aria-hidden", "false");
+}
+
+function closeCart() {
+  updateClass(elements.cartContainer, "flex", "hidden");
+  document.body.classList.remove("overflow-hidden");
+
+  //
+  updateAriaAttribute(elements.openCartBtn, "aria-expanded", "false");
+  updateAriaAttribute(elements.closeCartBtn, "aria-expanded", "false");
+  updateAriaAttribute(elements.cartContainer, "aria-hidden", "true");
+}
+
+function initCartToggling() {
+  elements.openCartBtn.addEventListener('click', openCart);
+  elements.closeCartBtn.addEventListener('click', closeCart);
+
+  elements.cartContainer.addEventListener('click', (e) => {
+    if (e.target.closest("#js-cart")) return;
+
+    closeCart();
+  });
+}
+
+
+
 function initHeader() {
   initPromoModal();
   initHeaderVisibility();
   initCountrySelector();
   initNavigation();
   initSearch();
+  initCartToggling();
 }
 initHeader();
 

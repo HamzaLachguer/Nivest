@@ -33,13 +33,16 @@ body {height: 10000px;}
 .transition-300 {
   transition: 300ms ease;
 }
+.transition-150 {
+  transition: 150ms ease;
+}
 
 
 
 .animate-fade-up { animation: fade-up .5s ease forwards; }
 .animate-fade-down { animation: fade-down .5s ease forwards; }
 .animate-fade-up2 { animation: fade-up-2 .5s ease forwards; }
-.animate-fade-left { animation: fade-left .5s ease forwards; }
+.animate-fade-left { animation: fade-left 1s ease forwards; }
 .animate-fade-right { animation: fade-right .8s ease forwards; }
 
 @keyframes fade-up {
@@ -77,12 +80,10 @@ body {height: 10000px;}
 
 @keyframes fade-left {
   0% {
-    transform: translateX(60px);
-    opacity: 0;
+    transform: translateX(100px);
   }
   100% {
     transform: translateY(0px);
-    opacity: 100%;
   }
 }
 
