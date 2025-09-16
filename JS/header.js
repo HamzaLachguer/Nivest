@@ -171,7 +171,7 @@ function initCountrySelector() {
   elements.hideSelectorBtn.addEventListener('click', hideSelector);
 
   elements.countrySelectorContainer.addEventListener('click', (e) => {
-    if (e.target.closest("#promo-modal-form")) return;
+    if (e.target.closest("#country-form-wrapper")) return;
 
     hideSelector();
   })
