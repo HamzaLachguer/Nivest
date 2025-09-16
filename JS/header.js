@@ -83,18 +83,18 @@ function initHeaderVisibility() {
 }
 
 function showHeader() {
-  elements.header.classList.add("fixed", "top-0", "z-30", "w-full", "animate-fade-down");
-  elements.header.classList.remove("animate-fade-up2");
+  elements.header.classList.add("fixed", "animate-fade-down");
+  elements.header.classList.remove("absolute", "animate-fade-up2");
 
   //
   updateAriaAttribute(elements.header, "aria-hidden", "false")
 }
 
 function hideHeader() {
-  elements.header.classList.add("animate-fade-up2");
+  elements.header.classList.add("absolute", "animate-fade-up2");
 
   setTimeout(() => {
-    elements.header.classList.remove("fixed", "top-0", "z-30", "w-full", "animate-fade-down");
+    elements.header.classList.remove("fixed", "animate-fade-down");
   }, 500)
 
   //
