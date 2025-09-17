@@ -1,6 +1,6 @@
-[
+[ 
   {
-    "id": "nike-waffle-debut-001",
+    "id": "pdt-001",
     "imgs": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9b4586a5-62a6-4f9e-806b-3350ed82451a/NIKE+WAFFLE+DEBUT.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/068b1e97-2981-4254-bdf5-6cb759c6e319/NIKE+WAFFLE+DEBUT.png",
@@ -10,16 +10,15 @@
     "title": "Nike Waffle Debut",
     "price": 56.97,
     "desc": "Retro gets modernized in the Nike Waffle Debut. Remember that smooth suede and nylon trend? It's back, along with the modernized 'wedge' midsole that feels incredibly plush.",
-    "keywords": ["retro", "suede", "nylon", "wedge midsole", "plush", "casual", "lifestyle"],
+    "keywords": ["nike", "waffle"],
     "tag": "popular",
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 15
-  },
-  {
-    "id": "nike-winflo-11-002",
-    "imgs": [
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-002",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4e46751d-5e0f-4fc1-96c5-f373895536bb/NIKE+AIR+WINFLO+11.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/02c257ec-65ad-41b9-8665-00a6e073ee8f/NIKE+AIR+WINFLO+11.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/37d619b1-11be-42d3-a254-63c8f3f10546/NIKE+AIR+WINFLO+11.png",
@@ -27,144 +26,135 @@
     ],
     "title": "Nike Winflo 11",
     "price": 63.97,
-    "desc": "Responsive cushioning provides a balanced ride for everyday runs. Experience energy return with a combination of Cushlon 3.0 foam and a full-length Nike Air unit in the midsole.",
-    "keywords": ["running", "responsive", "cushioning", "Cushlon 3.0", "Air unit", "energy return", "daily trainer"],
-    "tag": "-39% off",
+    "description": "Responsive cushioning provides a balanced ride for everyday runs. Experience energy return with a combination of Cushlon 3.0 foam and a full-length Nike Air unit in the midsole.",
+    "keywords": ["nike", "winflo"],
+    "tag": 39,
     "category": "men",
-    "sizes": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12", "US 13"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 22
-  },
-  {
-    "id": "nike-pegasus-41-003",
-    "imgs": [
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-003",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/3cfa0374-d35c-4083-a466-35c5ce5e8eaa/AIR+ZOOM+PEGASUS+41.png",
-      "极速快3",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d53a8f06-85e1-4f2a-a79a-edd5887adc56/AIR+ZOOM+PEGASUS+极速快3.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f86c4ed9-afe1-40d7-9659-a00707798c83/AIR+极速快3+PEGASUS+41.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d53a8f06-85e1-4f2a-a79a-edd5887adc56/AIR+ZOOM+PEGASUS+41.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f86c4ed9-afe1-40d7-9659-a00707798c83/AIR+ZOOM+PEGASUS+41.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0d3f27c4-8055-4394-905b-b25f89bad5c1/AIR+ZOOM+PEGASUS+41.png"
     ],
     "title": "Nike Pegasus 41",
     "price": 145,
-    "desc": "Responsive cushioning in the Pegasus provides an energized ride for everyday road running. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole.",
-    "keywords": ["running", "Air Zoom", "ReactX", "energized", "road running", "lightweight", "responsive"],
+    "description": "Responsive cushioning in the Pegasus provides an energized ride for everyday road running. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole.",
+    "keywords": ["nike", "pegasus"],
     "tag": "new",
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12", "US 13"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 18
-  },
-  {
-    "id": "nike-cosmic-runner-004",
-    "imgs": [
-      "https://static.nike.com/a/images/t极速快3_PDP_1728_v1/f_auto,q_auto:eco/5a3b01f3-40b1-4eeb-bff1-b6d4a0d21dfc/NIKE+COSMIC+RUNNER+%28GS%29.png",
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-004",
+    "images": [
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/5a3b01f3-40b1-4eeb-bff1-b6d4a0d21dfc/NIKE+COSMIC+RUNNER+%28GS%29.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ac472191-caf5-4aa8-95cb-ebf089ee2a0b/NIKE+COSMIC+RUNNER+%28GS%29.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f98da7b3-a956-4e33-b280-fd479281de92/NIKE+COSMIC+RUNNER+%28GS%29.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0b99516a-0794-4187-97cb-2e极速快36527c76269/NIKE+COSMIC+RUNNER+%28GS%29.png"
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0b99516a-0794-4187-97cb-2e6527c76269/NIKE+COSMIC+RUNNER+%28GS%29.png"
     ],
     "title": "Nike Cosmic Runner",
     "price": 33.97,
-    "desc": "The world is your racetrack and slowing down isn't in your vocabulary. Loaded with stable cushioning and durability, the Nike Cosmic Runner helps support your every stride, so you can leave the competition in the dust.",
-    "keywords": ["stable", "durable", "cushioning", "racing", "support", "performance", "GS"],
-    "tag": "-38% off",
-    "category": "unisex",
-    "sizes": ["US 4", "US 5", "US 6", "US 7", "US 8"],
+    "description": "The world is your racetrack and slowing down isn't in your vocabulary. Loaded with stable cushioning and durability, the Nike Cosmic Runner helps support your every stride, so you can leave the competition in the dust.",
+    "keywords": ["nike", "cosmic"],
+    "tag": 38,
+    "category": "men",
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 12
-  },
-  {
-    "id": "nike-cortez-005",
-    "imgs": [
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-005",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6128aa0e-1ba8-4be6-b773-8d42a6a3295a/W+NIKE+CORTEZ.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/05c90f01-471c-452b-b412-88235e627853/W+NIKE+CORTEZ极速快3.png",
-      "https://static.nike.com/a极速快3/images/t_PDP_1728_v1/f_auto,q_auto:eco/db44366f-d75c-4c5a-afb5-2f9be50def27/W+NIKE+CORTEZ.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/05c90f01-471c-452b-b412-88235e627853/W+NIKE+CORTEZ.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/db44366f-d75c-4c5a-afb5-2f9be50def27/W+NIKE+CORTEZ.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/eda5850d-a50f-41b3-a18d-0346f1f14a97/W+NIKE+CORTEZ.png"
     ],
     "title": "Nike Cortez",
     "price": 100,
-    "desc": "You spoke. We listened. Based on your feedback, we've revamped the original Cortez while maintaining the retro appeal you know and love.",
-    "keywords": ["retro", "classic", "iconic", "lifestyle", "casual", "revamped", "heritage"],
+    "description": "You spoke. We listened. Based on your feedback, we've revamped the original Cortez while maintaining the retro appeal you know and love.",
+    "keywords": ["nike", "cortez"],
     "tag": "popular",
     "category": "women",
-    "sizes": ["US 5", "US 6", "US 7", "US 8", "US 9", "US 10"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 25
-  },
-  {
-    "id": "nike-pacific-006",
-    "imgs": [
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-006",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/eeacb75f-4f1f-4c1a-abef-b5025adc6f50/W+NIKE+PACIFIC.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ad6ae58a-0dfc-413d-8a1极速快3e-221c85d38a49/W+NIKE+PACIFIC.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ad6ae58a-0dfc-413d-8a1e-221c85d38a49/W+NIKE+PACIFIC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9e928238-94fa-47b4-9b17-d726054b7648/W+NIKE+PACIFIC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/49db6710-9914-4871-98b2-e03ab5982936/W+NIKE+PACIFIC.png"
     ],
     "title": "Nike Pacific",
-    "price": 75,
-    "desc": "The Nike Pacific takes inspiration from old-school styles to give you a new kind of low-profile look.",
-    "keywords": ["low-profile", "old-school", "vintage", "casual", "lifestyle", "minimalist", "style"],
+    "price": 75.25,
+    "description": "The Nike Pacific takes inspiration from old-school styles to give you a new kind of low-profile look.",
+    "keywords": ["nike", "pacific"],
     "tag": "new",
     "category": "women",
-    "sizes": ["US 6", "US 7", "US 8", "US 9", "US 10"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 16
-  },
-  {
-    "id": "nike-air-max-sc-007",
-    "imgs": [
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-007",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/423dada2-c79a-4b55-862c-1035928bba20/WMNS+NIKE+AIR+MAX+SC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/33b54a20-e01a-4d1d-83c2-2bd150bf6f82/WMNS+NIKE+AIR+MAX+SC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2dc9e4d2-9169-4b32-abb9-567245a3c85d/WMNS+NIKE+AIR+MAX+SC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9652bd56-50bf-41da-a1a0-06772bcdc36c/WMNS+NIKE+AIR+MAX+SC.png"
     ],
     "title": "Nike Air Max SC",
-    "极速快3price": 93.45,
-    "desc": "With easygoing lines and heritage track style, the Air极速快3 Max SC is the perfect finish to any outfit.",
-    "keywords": ["Air Max", "heritage", "track style", "casual", "comfort", "style", "versatile"],
-    "tag": "-20% off",
+    "price": 93.45,
+    "description": "With easygoing lines and heritage track style, the Air Max SC is the perfect finish to any outfit.",
+    "keywords": [],
+    "tag": 20,
     "category": "women",
-    "sizes": ["US 5", "US 6", "US 7", "US 8", "US 9", "US 10"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 14
-  },
-  {
-    "id": "nike-college-air-max-verse-008",
-    "imgs": [
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f极速快3_auto,q_auto:eco/6c1291d6-032b-4b2e-9335-02ce8e442103/AIR+MAX+VERSE+MICHIGAN+STATE.png",
+    "inventoryCount": 30
+  },   {
+    "id": "pdt-008",
+    "images": [
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/6c1291d6-032b-4b2e-9335-02ce8e442103/AIR+MAX+VERSE+MICHIGAN+STATE.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/8363db44-4ceb-4392-8f47-b7b28d5bb960/AIR+MAX+VERSE+MICHIGAN+STATE.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/981e290a-c249-4180-a282-ee9dfd99ab30/AIR+MAX+VERSE+MICHIGAN+STATE.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/25735281-b329-4e5b-a6c2-3f82c2bb5ba9/AIR+MAX+VERSE+MICHIGAN+STATE.png"
     ],
     "title": "Nike College Air Max Verse (Michigan State)",
     "price": 125,
-    "desc": "Max Air, max versatility. The Air Max Verse brings depth and texture to your look thanks to clean lines, mixed materials and rubberized details.",
-    "keywords": ["college", "Michigan State", "Air Max", "versatile", "mixed materials", "rubberized", "team spirit"],
+    "description": "Max Air, max versatility. The Air Max Verse brings depth and texture to your look thanks to clean lines, mixed materials and rubberized details.",
+    "keywords": [],
     "tag": "new",
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12", "US 13"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 20
-  },
-  {
-    "id": "nike-zoom-vomero-roam-009",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-009",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b3bddda6-c1f4-4a29-8d19-eae50f8e4747/NIKE+ZOOM+VOMERO+ROAM.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/658ece5a-48da-4cd2-8a57-0c0b422c160d/NIKE+ZOOM+VOMERO+ROAM.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v极速快31/f_auto,q_auto:eco/d3f39291-80b3-4f61-9d72-d990d1935e70/NIKE+ZOOM+VOMERO+ROAM.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q极速快3_auto:eco/f5835b4d-a183-4541-879c-极速快37d96361ff4b极速快36/NIKE+ZOOM+VOMERO+ROAM.png"
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d3f39291-80b3-4f61-9d72-d990d1935e70/NIKE+ZOOM+VOMERO+ROAM.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f5835b4d-a183-4541-879c-7d96361ff4b6/NIKE+ZOOM+VOMERO+ROAM.png"
     ],
     "title": "Nike Zoom Vomero Roam",
     "price": 150,
-    "desc": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles.",
-    "keywords": ["winter", "weatherproof", "durable", "mudguard", "city", "Zoom", "all-weather"],
+    "description": "Designed for city conditions, this winterized version of the Vomero is made for wet weather. Durable materials and a rubber mudguard work together to help safeguard your shoes from dirt and puddles.",
+    "keywords": ["nike", "zoom", "roam"],
     "tag": "new",
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 10
-  },
-  {
-    "id": "nike-zoom-vomero-5-010",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-0010",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/0e5256c9-7863-433f-b367-6eaca723a8b1/W+NIKE+ZOOM+VOMERO+5.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/cc0493a2-b8ba-4e2c-a9bf-80be236c7fc7/W+NIKE+ZOOM+VOMERO+5.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/593cca2b-31c4-41de-96d8-f34dcd47d01f/W+NIKE+ZOOM+VOMERO+5.png",
@@ -172,102 +162,97 @@
     ],
     "title": "Nike Zoom Vomero 5",
     "price": 140,
-    "desc": "Carve a new lane for yourself in the Vomero 5—your go-to for durability, depth and easy styling. The sleek design includes leather, textiles and plastic accents that nod to the Y2K aesthetic.",
-    "keywords": ["Y2K", "leather", "textile", "durable", "sleek", "stylish", "Zoom"],
+    "description": "Carve a new lane for yourself in the Vomero 5—your go-to for durability, depth and easy styling. The sleek design includes leather, textiles and plastic accents that nod to the Y2K aesthetic.",
+    "keywords": ["zoom", "nike", "vomero"],
     "tag": "new",
     "category": "women",
-    "sizes": ["US 5", "US 6", "US 7", "US 8", "US 9", "US 10"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 18
-  },
-  {
-    "id": "nike-air-max-uptempo-95-011",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-0011",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/nah7irsjisfbs3uy5fez/AIR+MAX+UPTEMPO+%2795.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/i61of6极速快3zbsqzxvus6unrv/AIR+MAX+UPTEMPO+%2795.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/i61of6zbsqzxvus6unrv/AIR+MAX+UPTEMPO+%2795.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/hrjjwlq5qg5nixtvzmgg/AIR+MAX+UPTEMPO+%2795.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/owsynpbybbbj2v0dr5rp/AIR+MAX+UPTEMPO+%2795.png"
     ],
     "title": "Nike Air Max Uptempo '95",
     "price": 200,
-    "desc": "The Nike Air Max Uptempo '95 leaves 1 court to hold court on another, stepping out with a retro basketball style that's upgraded for today with a clean look and hiking-boot-inspired details.",
-    "keywords": ["basketball", "retro", "Air Max", "hiking-inspired", "clean", "style", "versatile"],
+    "description": "The Nike Air Max Uptempo '95 leaves 1 court to hold court on another, stepping out with a retro basketball style that's upgraded for today with a clean look and hiking-boot-inspired details.",
+    "keywords": ["air", "max", "nike"],
     "tag": "new",
-    "category": "unisex",
-    "sizes": ["US 7", "US 8", "US 9", "US 10", "US 11", "US 12"],
+    "category": "men",
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 15
-  },
-  {
-    "id": "nike-vomero-18-012",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-0012",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9c310a64-1837-44a1-b111-132a7dfe1353/NIKE+VOMERO+18.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/2a9c0032-1e63-4f01-a0a6-912ec88da418/NIKE+VOMERO+18.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f90a961-165c-441e-b17c-e79bb8a52885/N极速快3IKE+VOMERO+18.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/1f90a961-165c-441e-b17c-e79bb8a52885/NIKE+VOMERO+18.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dabfb934-b0be-4457-93bc-73ed2d44ae3d/NIKE+VOMERO+18.png"
     ],
     "title": "Nike Vomero 18",
     "price": 300,
-    "desc": "Maximum cushioning in the Vomero provides a comfortable ride for everyday runs. Our softest, most cushioned ride has lightweight ZoomX foam stacked on top of responsive ReactX foam in the midsole.",
-    "keywords": ["maximum cushion", "ZoomX", "ReactX", "plush", "comfort", "daily running", "premium"],
+    "description": "Maximum cushioning in the Vomero provides a comfortable ride for everyday runs. Our softest, most cushioned ride has lightweight ZoomX foam stacked on top of responsive ReactX foam in the midsole.",
+    "keywords": ["nike", "zoom", "vomero"],
     "tag": "new",
-    "category": "unisex",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12", "US 13"],
+    "category": "men",
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 8
-  },
-  {
-    "id": "nike-zoom-gp-challenge-1-013",
-    "imgs": [
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f2997253-85极速快3d2-4971-8bd5-327e4454465f/M+ZOOM+GP+CHALLENGE+1+HC.png",
+    "inventoryCount": 14
+  },   {
+    "id": "pdt-0013",
+    "images": [
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f2997253-85d2-4971-8bd5-327e4454465f/M+ZOOM+GP+CHALLENGE+1+HC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d7c96e1b-667c-43c8-afdb-bf3d92af9551/M+ZOOM+GP+CHALLENGE+1+HC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/a444c4d5-0e36-40fd-8aa7-40e1c273fb7b/M+ZOOM+GP+CHALLENGE+1+HC.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/b317bfb1-f45f-4c8c-be5f-db550e171074/M+ZOOM+GP+CHALLENGE+1+HC.png"
     ],
     "title": "Nike Zoom GP Challenge 1",
     "price": 120,
-    "desc": "Made for the best and those who aspire to be, the GP Challenge 1 helps you serve and swing with confidence.",
-    "keywords": ["tennis", "performance", "Zoom", "court", "precision", "confidence", "sport"],
+    "description": "Made for the best and those who aspire to be, the GP Challenge 1 helps you serve and swing with confidence.",
+    "keywords": ["nike", "nike zoom gp challenge 1"],
     "tag": "popular",
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 20
-  },
-  {
-    "id": "nike-zegama-2-014",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-0014",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f7f1b77c-ce9b-454f-82aa-06ee24d806ad/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d8785abf-2e36-4a25-835a-af229f87a5ee/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4f7f极速快36a59-6212-4d80-b070-552528d98f38/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/4f7f6a59-6212-4d80-b070-552528d98f38/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/ab694250-744e-4153-9bcd-e3eec00aa152/NIKE+ZOOMX+ZEGAMA+TRAIL+2.png"
     ],
     "title": "Nike Zegama 2",
     "price": 140,
-    "desc": "Equipped with an ultra-responsive ZoomX foam midsole, the Zegama 2 is designed to conquer steep ridges, jagged rocks and races from trailhead to tip. Optimal cushioning complements a rugged outsole made for your trail running journey.",
-    "keywords": ["trail running", "ZoomX", "rugged", "grip", "technical", "off-road", "endurance"],
-    "tag": "-10% off",
+    "description": "Equipped with an ultra-responsive ZoomX foam midsole, the Zegama 2 is designed to conquer steep ridges, jagged rocks and races from trailhead to tip. Optimal cushioning complements a rugged outsole made for your trail running journey.",
+    "keywords": ["nike", "zegama", "run", "nike zegama"],
+    "tag": 10,
     "category": "men",
-    "sizes": ["US 8", "US 9", "US 10", "US 11", "US 12", "US 13"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 12
-  },
-  {
-    "id": "jordan-heir-series-015",
-    "imgs": [
+    "inventoryCount": 19
+  },   {
+    "id": "pdt-0015",
+    "images": [
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/419e92ee-fa59-4793-aacc-f404bd118524/WMNS+JORDAN+HEIR+SERIES.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/5fca3e4d-e806-4dc8-9545-4fff0be3ecd3/WMNS+JORDAN+HEIR+SERIES.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b极速快34-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/61c97dae-d9b7-45ea-a6c2-3fe572d92565/WMNS极速快3+JORDAN+HEIR+SERIES.png",
+      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/61c97dae-d9b7-45ea-a6c2-3fe572d92565/WMNS+JORDAN+HEIR+SERIES.png",
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8f14f9db-588c-4955-9535-344a5b17f968/WMNS+JORDAN+HEIR+SERIES.png"
     ],
     "title": "Jordan Heir Series 'Treat Yourself'",
-    "price": 120,
-    "desc": "You're not here to make friends—you're here to dominate the competition. But there's no reason you can't do it in style.",
-    "keywords": ["Jordan", "basketball", "style", "competition", "premium", "statement", "fashion"],
+    "price": "120",
+    "description": "You're not here to make friends—you're here to dominate the competition. But there's no reason you can't do it in style.",
+    "keywords": [],
     "tag": "popular",
     "category": "women",
-    "sizes": ["US 5", "US 6", "US 7", "US 8", "US 9", "US 10"],
+    "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 16
+    "inventoryCount": 19
   }
 ]

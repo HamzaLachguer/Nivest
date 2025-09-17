@@ -92,233 +92,233 @@
         <button id="open-cart-btn" aria-label="open cart button" aria-expanded="false" class="uppercase flex items-center gap-1">cart <div class="h-[18px] w-[18px] grid place-items-center bg-green rounded-3xl">0</div></button>
       </div>
     </div>
-
-    <!-- Newsletter popup -->
-    <!--  -->
-    <div id="promo-container" aria-hidden="true" class="absolute w-full h-screen top-0 left-0 bg-dark-7a p-5 hidden place-items-center">
-
-      <div class="flex flex-col gap-5 items-end animate-fade-up">
-        <button class="h-7 w-7 rounded-3xl bg-white-14 outline-1 outline outline-white-99 grid place-items-center" id="hide-promo-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17 7L7 17M7 7L17 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-        <div id="promo-modal-form" class="flex flex-col bg-white w-fit lg:flex-row lg:h-[460px] lg:gap-10 lg:pr-10">
-          <div class="h-56 w-full overflow-hidden lg:h-full lg:w-[500px] flex shrink-0">
-            <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/UCuaagB3OZy5NPwALnnwc9E2ay8.png" alt="**" loading="lazy">
-          </div>
-  
-          <div class="bg-white p-5 flex flex-col items-start lg:p-0  lg:items-center lg:max-w-[500px] lg:justify-center">
-            <p class="text-dark-96 capitalize mb-2 font-medium lg:text-sm">welcome</p>
-            <h3 class="uppercase text-2xl mb-5 font-semibold leading-none lg:text-[40px] lg:text-center lg:mb-10">Sign up for newsletter for 20% off on first order!</h3>
-  
-            <form class="w-full flex flex-col gap-3" action="#" method="post">
-              <input class="p-4 focus:outline-none border border-solid border-dark-7a w-full text-sm" type="email" name="" id="" placeholder="Your e-mail*" required>
-              <input class="w-full p-4 bg-dark text-white text-sm leading-4 cursor-pointer transition-300 hover:bg-dark-96" type="submit" value="Submit">
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Change country -->
-    <!--  -->
-    <div id="country-selector-container" class="fixed z-40 w-screen h-screen left-0 top-0 bg-dark-7a p-5 hidden place-items-center" aria-hidden="true">
-
-      <div class="flex flex-col items-end justify-center gap-4 animate-fade-up w-full md:w-[500px]">
-
-        <button id="hide-selector-btn" class="h-7 w-7 bg-white-14 outline outline-[.5px] outline-white-99 rounded-3xl grid place-items-center" aria-expanded="false" aria-controls="country-selector-container">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </button>
-
-        <div id="country-form-wrapper" class=" bg-white p-6 w-full ">
-          <div class="h-6 w-6 rounded-xl overflow-hidden">
-            <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h512v512H0z%22%2F%3E%3Cpath%20fill%3D%22%23981e32%22%20d%3D%22M0%200h512v204.8H0zm0%20307.2h512V512H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" class="h-full w-full object-center object-cover">
-          </div>
-
-          <h2 class="text-[28px] my-5">You're in Latvia</h2>
-
-          <ul class="uppercase font-medium flex flex-col gap-2">
-            <li class="flex items-center gap-2 ">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              Discount on orders over €200
-            </li>
-
-            <li class="flex items-center gap-2 ">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              Taxes calculated at checkout
-            </li>
-
-            <li class="flex items-center gap-2 ">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-              Receive order in 2-3 business weeks
-            </li>
-
-          </ul>
-
-          <select class="h-12 w-full border border-solid broder-white-14 px-5 focus:outline-none mt-5 uppercase font-medium" name="" id="">
-            <option value="0" class="capitalize">latvia (EUR)</option>
-          </select>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Navigation menu -->
-    <!--  -->
-    <div id="navigation-menu" class="bg-dark-7a absolute z-30 top-0 left-0 w-screen h-dvh hidden" aria-hidden="true">
-      <div id="nav-menu-container" class="p-5 pt-12 lg:pt-14 bg-white w-full h-full lg:w-[490px] animate-fade-right">
-        <button id="close-nav-menu" class="uppercase font-medium" aria-label="close nav menu" aria-expanded="true">close
-          menu</button>
-
-        <nav id="nav-menu" class="pt-10 h-full flex flex-col gap-6" aria-label="main navigation">
-          <div class=" flex flex-col gap-4">
-            <h4 class="uppercase text-dark-96 font-medium">products</h4>
-            <ul class="font-display text-2xl capitalize font-medium tracking-tight">
-              <li>
-                <a href="">men</a>
-              </li>
-              <li>
-                <a href="">women</a>
-              </li>
-              <li>
-                <a href="">new</a>
-              </li>
-              <li>
-                <a href="">popular</a>
-              </li>
-              <li>
-                <a href="">all</a>
-              </li>
-              <li>
-                <a href="">salle</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class=" flex flex-col gap-4">
-            <h4 class="uppercase text-dark-96 font-medium ">our brand</h4>
-            <ul class="font-display text-2xl capitalize font-medium tracking-tight">
-              <li>
-                <a href="" class="">about</a>
-              </li>
-              <li>
-                <a href="">values</a>
-              </li>
-              <li>
-                <a href="">locations</a>
-              </li>
-            </ul>
-          </div>
-
-          <div class=" flex flex-col gap-4 lg:hidden">
-
-            <ul class="uppercase font-medium tracking-tight text-dark-96 flex flex-col gap-1">
-              <li>
-                <button id="open-search-mobile" aria-expanded="false" aria-controls="search-container" class="uppercase">search</button>
-              </li>
-              <li>
-                <a href="">favorites</a>
-              </li>
-              <li>
-                <button class="uppercase" id="show-country-selector-mobile" aria-expanded="false">lv | <span>eur</span></button>
-              </li>
-            </ul>
-          </div>
-
-          <div class=" flex flex-col gap-4">
-
-            <ul class="uppercase font-medium tracking-tight lg:text-sm flex flex-col gap-1">
-              <li>
-                <a class="text-dark-96" href="">faq's</a>
-              </li>
-              <li>
-                <a class="text-dark-96" href="">contact</a>
-              </li>
-              <li>
-                <a class="text-dark-96" href="">newsletter</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <!-- Search products -->
-    <!--  -->
-    <div id="search-product-container" class="absolute top-0 left-0 z-40 w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
-      <div id="search-container" class="bg-white w-full h-full lg:w-[400px] animate-fade-left">
-        <div class="px-5 flex items-center gap-5">
-
-          <div class="relative flex items-center w-full">
-            <svg class="absolute" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-
-            <input id="search-input" class="py-4 pl-8 pr-4 w-full focus:outline-none font-medium border-b border-solid border-[#03060714]" type="text" placeholder="SEARCH" aria-label="search for product input">
-
-            <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true" aria-label="clear search input">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </button>
-          </div>
-
-          <button class="relative uppercase transition-300 hover:text-dark-7a font-medium after:content-[''] after:absolute after:h-[1px] after:w-full after:bg-dark after:bottom-0 after:left-0 after:transition-all after:ease-in-out after:duration-300 hover:after:w-0" id="close-search" aria-expanded="false" aria-controls="search-product-container">close</button>
-        </div>
-
-        <div class="p-5">
-
-          <!-- Search suggestions -->
-          <div class="flex flex-col gap-3 uppercase">
-            <p class="text-dark-96 font-medium">Popular search items</p>
-            <div class="flex gap-2">
-              <button class="bg-[#03060714] uppercase py-4 px-6">bags</button>
-              <button class="bg-[#03060714] uppercase py-4 px-6">women</button>
-              <button class="bg-[#03060714] uppercase py-4 px-6">all</button>
-            </div>
-          </div>
-
-          <!-- product list retuened -->
-          <ul id="results-list" class="hidden flex-col gap-2 overflow-y-scroll">
-            <li class="flex ">
-              <div class="h-40 w-40 bg-[#03060714]  shrink-0 grid place-items-center">
-                <img 
-                src="https://framerusercontent.com/images/imZekT6LTizswVRE6LtkgWbMOk.png" 
-                alt="product img" 
-                class="object-cover object-center h-1/2" 
-                loading="lazy">
-              </div>
-
-              <div class="flex justify-between items-start uppercase w-full p-5">
-                <div class="flex flex-col gap-0">
-                  <span class="font-semibold text-sm">yemas</span>
-                  <span class="text-dark-96 font-medium">Accessories</span>
-                </div>
-                <div class="font-semibold text-sm">€199</div>
-              </div>
-            </li>
-
-          </ul>
-        </div>
-      </div>
-    </div>
-
+    
   </header>
+
+  <!-- Newsletter popup -->
+  <!--  -->
+  <div id="promo-container" aria-hidden="true" class="fixed w-full h-screen top-0 left-0 bg-dark-7a p-5 hidden place-items-center">
+
+    <div class="flex flex-col gap-5 items-end animate-fade-up">
+      <button class="h-7 w-7 rounded-3xl bg-white-14 outline-1 outline outline-white-99 grid place-items-center" id="hide-promo-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="promo-modal-form" class="flex flex-col bg-white w-fit lg:flex-row lg:h-[460px] lg:gap-10 lg:pr-10">
+        <div class="h-56 w-full overflow-hidden lg:h-full lg:w-[500px] flex shrink-0">
+          <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/UCuaagB3OZy5NPwALnnwc9E2ay8.png" alt="**" loading="lazy">
+        </div>
+
+        <div class="bg-white p-5 flex flex-col items-start lg:p-0  lg:items-center lg:max-w-[500px] lg:justify-center">
+          <p class="text-dark-96 capitalize mb-2 font-medium lg:text-sm">welcome</p>
+          <h3 class="uppercase text-2xl mb-5 font-semibold leading-none lg:text-[40px] lg:text-center lg:mb-10">Sign up for newsletter for 20% off on first order!</h3>
+
+          <form class="w-full flex flex-col gap-3" action="#" method="post">
+            <input class="p-4 focus:outline-none border border-solid border-dark-7a w-full text-sm" type="email" name="" id="" placeholder="Your e-mail*" required>
+            <input class="w-full p-4 bg-dark text-white text-sm leading-4 cursor-pointer transition-300 hover:bg-dark-96" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change country -->
+  <!--  -->
+  <div id="country-selector-container" class="fixed z-40 w-screen h-screen left-0 top-0 bg-dark-7a p-5 hidden place-items-center" aria-hidden="true">
+
+    <div class="flex flex-col items-end justify-center gap-4 animate-fade-up w-full md:w-[500px]">
+
+      <button id="hide-selector-btn" class="h-7 w-7 bg-white-14 outline outline-[.5px] outline-white-99 rounded-3xl grid place-items-center" aria-expanded="false" aria-controls="country-selector-container">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+
+      <div id="country-form-wrapper" class=" bg-white p-6 w-full ">
+        <div class="h-6 w-6 rounded-xl overflow-hidden">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h512v512H0z%22%2F%3E%3Cpath%20fill%3D%22%23981e32%22%20d%3D%22M0%200h512v204.8H0zm0%20307.2h512V512H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" class="h-full w-full object-center object-cover">
+        </div>
+
+        <h2 class="text-[28px] my-5">You're in Latvia</h2>
+
+        <ul class="uppercase font-medium flex flex-col gap-2">
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Discount on orders over €200
+          </li>
+
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Taxes calculated at checkout
+          </li>
+
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Receive order in 2-3 business weeks
+          </li>
+
+        </ul>
+
+        <select class="h-12 w-full border border-solid broder-white-14 px-5 focus:outline-none mt-5 uppercase font-medium" name="" id="">
+          <option value="0" class="capitalize">latvia (EUR)</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation menu -->
+  <!--  -->
+  <div id="navigation-menu" class="bg-dark-7a fixed z-30 top-0 left-0 w-screen h-dvh hidden" aria-hidden="true">
+    <div id="nav-menu-container" class="p-5 pt-12 lg:pt-14 bg-white w-full h-full lg:w-[490px] animate-fade-right">
+      <button id="close-nav-menu" class="uppercase font-medium" aria-label="close nav menu" aria-expanded="true">close
+        menu</button>
+
+      <nav id="nav-menu" class="pt-10 h-full flex flex-col gap-6" aria-label="main navigation">
+        <div class=" flex flex-col gap-4">
+          <h4 class="uppercase text-dark-96 font-medium">products</h4>
+          <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+            <li>
+              <a href="">men</a>
+            </li>
+            <li>
+              <a href="">women</a>
+            </li>
+            <li>
+              <a href="">new</a>
+            </li>
+            <li>
+              <a href="">popular</a>
+            </li>
+            <li>
+              <a href="">all</a>
+            </li>
+            <li>
+              <a href="">salle</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4">
+          <h4 class="uppercase text-dark-96 font-medium ">our brand</h4>
+          <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+            <li>
+              <a href="" class="">about</a>
+            </li>
+            <li>
+              <a href="">values</a>
+            </li>
+            <li>
+              <a href="">locations</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4 lg:hidden">
+
+          <ul class="uppercase font-medium tracking-tight text-dark-96 flex flex-col gap-1">
+            <li>
+              <button id="open-search-mobile" aria-expanded="false" aria-controls="search-container" class="uppercase">search</button>
+            </li>
+            <li>
+              <a href="">favorites</a>
+            </li>
+            <li>
+              <button class="uppercase" id="show-country-selector-mobile" aria-expanded="false">lv | <span>eur</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4">
+
+          <ul class="uppercase font-medium tracking-tight lg:text-sm flex flex-col gap-1">
+            <li>
+              <a class="text-dark-96" href="">faq's</a>
+            </li>
+            <li>
+              <a class="text-dark-96" href="">contact</a>
+            </li>
+            <li>
+              <a class="text-dark-96" href="">newsletter</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Search products -->
+  <!--  -->
+  <div id="search-product-container" class="fixed top-0 left-0 z-40 w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
+    <div id="search-container" class="bg-white w-full h-full lg:w-[400px] animate-fade-left">
+      <div class="px-5 flex items-center gap-5">
+
+        <div class="relative flex items-center w-full">
+          <svg class="absolute" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+
+          <input id="search-input" class="py-4 pl-8 pr-4 w-full focus:outline-none font-medium border-b border-solid border-[#03060714]" type="text" placeholder="SEARCH" aria-label="search for product input">
+
+          <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true" aria-label="clear search input">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+
+        <button class="relative uppercase transition-300 hover:text-dark-7a font-medium after:content-[''] after:absolute after:h-[1px] after:w-full after:bg-dark after:bottom-0 after:left-0 after:transition-all after:ease-in-out after:duration-300 hover:after:w-0" id="close-search" aria-expanded="false" aria-controls="search-product-container">close</button>
+      </div>
+
+      <div class="p-5">
+
+        <!-- Search suggestions -->
+        <div class="flex flex-col gap-3 uppercase">
+          <p class="text-dark-96 font-medium">Popular search items</p>
+          <div class="flex gap-2">
+            <button class="bg-[#03060714] uppercase py-4 px-6">bags</button>
+            <button class="bg-[#03060714] uppercase py-4 px-6">women</button>
+            <button class="bg-[#03060714] uppercase py-4 px-6">all</button>
+          </div>
+        </div>
+
+        <!-- product list retuened -->
+        <ul id="results-list" class="hidden flex-col gap-2 overflow-y-scroll">
+          <li class="flex ">
+            <div class="h-40 w-40 bg-[#03060714]  shrink-0 grid place-items-center">
+              <img 
+              src="https://framerusercontent.com/images/imZekT6LTizswVRE6LtkgWbMOk.png" 
+              alt="product img" 
+              class="object-cover object-center h-1/2" 
+              loading="lazy">
+            </div>
+
+            <div class="flex justify-between items-start uppercase w-full p-5">
+              <div class="flex flex-col gap-0">
+                <span class="font-semibold text-sm">yemas</span>
+                <span class="text-dark-96 font-medium">Accessories</span>
+              </div>
+              <div class="font-semibold text-sm">€199</div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- 
     ** CART **
 
   -->
-  <div class="absolute top-0 left-0 z-50 w-full h-screen bg-dark-7a hidden justify-end" id="cart-container" aria-hidden="true">
+  <div class="fixed top-0 left-0 z-50 w-full h-screen bg-dark-7a hidden justify-end" id="cart-container" aria-hidden="true">
 
     <div id="js-cart" class="relative bg-white h-full w-full lg:w-[400px]  animate-fade-left">
 
@@ -565,11 +565,14 @@
 
             <div class="font-medium flex flex-col gap-1 text-sm">
               <h3>Nike Air Max Uptempo '95</h3>
-              <h3>$170</h3>
+              <h3 class="flex items-center gap-2">
+                <span class="text-red">$170</span>
+                <span class="text-dark-7a line-through">$447</span>
+              </h3>
             </div>
 
             <div class="p-3 flex items-center justify-between absolute top-0 left-0 w-full">
-              <span class="capitalize font-medium bg-blue px-2 py-1 text-white text-sm">new</span>
+              <span class="capitalize font-medium bg-red px-2 py-1 text-white text-sm">-38%</span>
               <button class="h-8 w-8 rounded-3xl bg-white grid place-items-center">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.15469 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -696,6 +699,64 @@
           <button class="bg-white-99 py- h-[1px] w-20 lg:w-40"></button>
         </div>
       </div>
+    </section>
+
+    <!-- Infinite scroll section -->
+    <!--  -->
+    <section class="overflow-hidden py-10">
+      <ul class="flex items-center gap-5">
+        <li class="flex items-center gap-4">
+          <div class="overflow-hidden h-12 w-[60px]">
+            <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/Un1nDdOiuQM2UcVDJO9DeOsAhw.png?scale-down-to=512" alt="instagram profile img" loading="lazy">
+          </div>
+
+          <p class="font-medium text-sm">Follow @nivest on Instagram</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- FAQ's section -->
+    <!--  -->
+    <section class="bg-[#f5f5f5] py-40 flex flex-col gap-12 px-5 lg:px-12">
+      <div class="flex flex-col gap-3 lg:flex-row justify-between">
+        <h2 class="uppercase font-semibold tracking-tight text-2xl lg:text-4xl">Know Before You Go</h2>
+        <button class="capitalize text-sm font-medium flex gap-1 items-center">
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4V5.4C4 8.76031 4 10.4405 4.65396 11.7239C5.2292 12.8529 6.14708 13.7708 7.27606 14.346C8.55953 15 10.2397 15 13.6 15H20M20 15L15 10M20 15L15 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </span>
+          <span>see FAQ's</span>
+        </button>
+      </div>
+
+      <ul class="flex flex-col gap-3">
+        <li class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
+          <button class="flex items-center justify-between w-full">
+            <span class="font-medium text-xs lg:text-sm">What’s your return policy?</span>
+            <span class="h-6 w-6 grid place-items-center">
+              <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+
+          <p class="text-dark-96 lg:text-sm font-medium pb-4">No stress. You’ve got 30 days to send them back — worn inside only, clean, and in original condition.</p>
+        </li>
+
+        <li class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
+          <button class="flex items-center justify-between w-full">
+            <span class="font-medium text-xs lg:text-sm">What’s your return policy?</span>
+            <span class="h-6 w-6 grid place-items-center">
+              <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+          </button>
+
+          <p class="text-dark-96 lg:text-sm font-medium h-0 overflow-hidden pb-0 transition-300">No stress. You’ve got 30 days to send them back — worn inside only, clean, and in original condition.</p>
+        </li>
+      </ul>
     </section>
 
   </main>
