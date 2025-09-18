@@ -1,7 +1,7 @@
 
 
 // get elements function
-function getElement(selector) {
+export function getElement(selector) {
   const element = document.querySelector(selector);
   if (!element) {
     console.warn(`Element not found: ${selector}`)
