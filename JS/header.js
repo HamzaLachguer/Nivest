@@ -46,7 +46,7 @@ const elements = {
 
 
 // Mnipulating classes
-function updateClass(element, remove, add) {
+export function updateClass(element, remove, add) {
   if (!element) return;
 
   element.classList.remove(remove);
@@ -54,7 +54,7 @@ function updateClass(element, remove, add) {
 }
 
 // Mnipulating aria-attributes
-function updateAriaAttribute(element, aria, value) {
+export function updateAriaAttribute(element, aria, value) {
   if (!element) return;
 
   element.setAttribute(aria, value);

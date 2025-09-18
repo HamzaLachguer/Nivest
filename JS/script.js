@@ -1,6 +1,6 @@
 // Impoting ...
 //
-import { initHeader, getElement } from "./header.js";
+import { initHeader, getElement, updateClass, updateAriaAttribute} from "./header.js";
 
 
 
@@ -9,10 +9,12 @@ import { initHeader, getElement } from "./header.js";
 const DOM_ELEMENTS = {
   popularProductGrid: getElement("#popular-product-grid"),
   newProductGrid: getElement("#new-product-grid"),
+
+  addToFavoritePoppup: getElement("#favorite-poppup")
 }
 
 let stats = {
-
+  favoritesList: new Set(),
 }
 
 
@@ -60,22 +62,18 @@ function renderProductCard(title, images, price, tag) {
 }
 
 function bgColor(tag) {
-  if (tag === "new") {
-    return "bg-blue";
-  } else if (tag === "popular") {
-    return "bg-dark";
-  } else "bg-red"
+  if (tag === "new") return "bg-blue";
+  if (tag === "popular") return "bg-dark";
+
+  return "bg-red";
 }
 
 function priceForm(price, tag) {
-  if (tag === "new" || tag === "popular") {
-    return `$${price}`
-  } else {
-    return `
-      <span class="text-red">$${price}</span>
-      <span class="text-dark-7a line-through">$${price}</span>
-    `
-  }
+  if (tag === "new" || tag === "popular") return `$${price}`;
+
+  return ` <span class="text-red">$${price}</span>
+          <span class="text-dark-7a line-through">$${price}</span>
+        `
 }
 
 
@@ -96,15 +94,40 @@ function renderProductGrid(grid, container, length) {
 
     productCard.addEventListener('click', (e) => {
       const productId = productCard.dataset.productId;
+      const addToFavoritesBtn = e.target.closest("#add-to-favorites");
 
-      if (e.target.closest("#add-to-favorites")) {
+      if (addToFavoritesBtn) {
+        // addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
+        showAddPoppup(productId, addToFavoritesBtn)
         console.log(`add ${productId} to favorite`)
       }
 
       else console.log(productId)
     })
-  }).join("");
+  });
 }
+
+// add to favorites popup
+//
+function showAddPoppup(productId, addToFavoritesBtn) {
+  addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
+
+  if (stats.favoritesList.has(productId)) {
+    stats.favoritesList.delete(productId);
+    return;
+  }
+
+  stats.favoritesList.add(productId);
+  updateClass(DOM_ELEMENTS.addToFavoritePoppup, "hidden", "flex");
+}
+
+function hideAddPoppup() {
+  updateClass(DOM_ELEMENTS.addToFavoritePoppup, "flex", "hidden")
+}
+
+DOM_ELEMENTS.addToFavoritePoppup.addEventListener('click', hideAddPoppup)
+
+
 
 async function generateProductGrid() {
   const grid = await loadData(URL);
