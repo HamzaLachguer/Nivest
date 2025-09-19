@@ -10,11 +10,18 @@ const DOM_ELEMENTS = {
   popularProductGrid: getElement("#popular-product-grid"),
   newProductGrid: getElement("#new-product-grid"),
 
-  addToFavoritePoppup: getElement("#favorite-poppup")
+  addToFavoritePoppup: getElement("#favorite-poppup"),
+
+  days: getElement("#days"),
+  hours: getElement("#hours"),
+  minutes: getElement("#minutes"),
+  seconds: getElement("#seconds"),
 }
 
 let stats = {
   favoritesList: new Set(),
+
+  targetDate: new Date("November 1 2025 00:00:00").getTime(),
 }
 
 
@@ -99,9 +106,8 @@ function renderProductGrid(grid, container, length) {
       if (addToFavoritesBtn) {
         // addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
         showAddPoppup(productId, addToFavoritesBtn)
-        console.log(`add ${productId} to favorite`)
       }
-
+      
       else console.log(productId)
     })
   });
@@ -111,13 +117,15 @@ function renderProductGrid(grid, container, length) {
 //
 function showAddPoppup(productId, addToFavoritesBtn) {
   addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
-
+  
   if (stats.favoritesList.has(productId)) {
     stats.favoritesList.delete(productId);
+    console.log(`${productId} removed from favorites`)
     return;
   }
-
+  
   stats.favoritesList.add(productId);
+  console.log(`add ${productId} to favorite`)
   updateClass(DOM_ELEMENTS.addToFavoritePoppup, "hidden", "flex");
 }
 
@@ -143,8 +151,30 @@ async function generateProductGrid() {
 generateProductGrid()
 
 
+// Counter
+function counter() {
+  const currentDate = new Date().getTime();
+  const interval = stats.targetDate - currentDate;
 
+  const days = Math.floor(interval / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(interval / (1000 * 60 * 60)) % 24;
+  const minutes = Math.floor(interval / (1000 * 60)) % 60;
+  const seconds = Math.floor(interval / 1000) % 60;
 
+  DOM_ELEMENTS.days.innerHTML = String(days).padStart(2, "0");
+  DOM_ELEMENTS.hours.innerHTML = String(hours).padStart(2, "0");
+  DOM_ELEMENTS.minutes.innerHTML = String(minutes).padStart(2, "0");
+  DOM_ELEMENTS.seconds.innerHTML = String(seconds).padStart(2, "0");
+
+  if (interval < 0) {
+    DOM_ELEMENTS.days.innerHTML = "00"
+    DOM_ELEMENTS.hours.innerHTML = "00"
+    DOM_ELEMENTS.minutes.innerHTML = "00"
+    DOM_ELEMENTS.seconds.innerHTML = "00"
+  }
+}
+
+setInterval(counter, 1000)
 
 
 
