@@ -12,6 +12,9 @@ const DOM_ELEMENTS = {
 
   addToFavoritePoppup: getElement("#favorite-poppup"),
 
+  copyPromoBtn: getElement("#copy-promo-code"),
+  promoCode: getElement("#promo-code").textContent,
+
   days: getElement("#days"),
   hours: getElement("#hours"),
   minutes: getElement("#minutes"),
@@ -151,7 +154,19 @@ async function generateProductGrid() {
 generateProductGrid()
 
 
+// copy promo code
+//
+DOM_ELEMENTS.copyPromoBtn.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(DOM_ELEMENTS.promoCode)
+  } catch (err) {
+    console.error("Failed to copy: ", err);
+  }
+})
+
+
 // Counter
+//
 function counter() {
   const currentDate = new Date().getTime();
   const interval = stats.targetDate - currentDate;
