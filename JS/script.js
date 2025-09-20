@@ -193,6 +193,7 @@ function counter() {
   DOM_ELEMENTS.seconds.innerHTML = String(seconds).padStart(2, "0");
 
   if (interval < 0) {
+    clearInterval(stats.interval)
     DOM_ELEMENTS.days.innerHTML = "00"
     DOM_ELEMENTS.hours.innerHTML = "00"
     DOM_ELEMENTS.minutes.innerHTML = "00"
@@ -200,7 +201,7 @@ function counter() {
   }
 }
 
-setInterval(counter, 1000);
+stats.interval = setInterval(counter, 1000);
 
 
 /* Testimenials */
@@ -359,6 +360,10 @@ const FAQList = [
   {
     question: "What if I ordered the wrong size?",
     answer: "Swap it fast, no questions. Use the return portal and grab the size that fits your stride."
+  },
+  {
+    question: "Are your shoes true to size?",
+    answer: "Yes — built to match standard fit. Wide feet? Size up half. Still unsure? Check our size guide."
   },
 ]
 
