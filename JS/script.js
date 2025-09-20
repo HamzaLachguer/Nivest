@@ -24,13 +24,16 @@ const DOM_ELEMENTS = {
   slideContent: getElement("#slide-content"),
 
   infinitScrollBar: getElement("#scroll-bar"),
-  scrollBarContent: getElement("#scroll-content")
+  scrollBarContent: getElement("#scroll-content"),
+
+  faqGrid: getElement("#faq-grid-container"),
 }
 
 let stats = {
   favoritesList: new Set(),
 
   targetDate: new Date("November 1 2025 00:00:00").getTime(),
+  interval: null,
 
   slideIndex: 0,
 }
@@ -197,7 +200,7 @@ function counter() {
   }
 }
 
-setInterval(counter, 1000)
+setInterval(counter, 1000);
 
 
 /* Testimenials */
@@ -252,7 +255,7 @@ updateSlider(stats.slideIndex)
 
 // generate togglers
 //
-testimenials.forEach((T, index) => {
+testimenials.forEach((_, index) => {
   const btn = document.createElement("button");
   btn.setAttribute("data-slide-index", index);
   btn.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
@@ -338,6 +341,59 @@ function renderInfiniteScroll() {
 renderInfiniteScroll()
 
 
+// FAQ's
+//
+const FAQList = [
+  {
+    question: "What’s your return policy?",
+    answer: "No stress. You’ve got 30 days to send them back — worn inside only, clean, and in original condition."
+  },
+  {
+    question: "How long does shipping take?",
+    answer: "Most orders ship in 1–2 days. Delivery hits your door within 3–7, depending on your zone."
+  },
+  {
+    question: "Do you ship internationally?",
+    answer: "Yes — global hustle, global reach. Shipping times vary based on location."
+  },
+  {
+    question: "What if I ordered the wrong size?",
+    answer: "Swap it fast, no questions. Use the return portal and grab the size that fits your stride."
+  },
+]
+
+function initFAQs() {
+  FAQList.forEach((Q, i) => {
+    const li = document.createElement("li");
+    li.className = "flex flex-col gap-3 border-b border-solid border-[#d7d7d7]";
+
+    li.innerHTML = `
+      <button class="flex items-center justify-between w-full">
+        <span class="font-medium text-xs lg:text-sm">${FAQList[i].question}</span>
+        <span id="drop-icon" class="h-6 w-6 grid place-items-center transition-300">
+          <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </button>
+
+      <p class="text-dark-96 lg:text-sm font-medium h-0 overflow-hidden pb-0 transition-300">${FAQList[i].answer}</p>
+    `;
+
+    DOM_ELEMENTS.faqGrid.appendChild(li);
+
+    li.addEventListener('click', () => {
+      li.querySelector("p").classList.toggle("h-0");
+      li.querySelector("p").classList.toggle("overflow-hidden");
+      li.querySelector("p").classList.toggle("pb-0");
+      li.querySelector("p").classList.toggle("pb-4");
+
+      li.querySelector("button #drop-icon").classList.toggle("rotate-180");
+    })
+  })
+}
+
+initFAQs()
 
 
 
