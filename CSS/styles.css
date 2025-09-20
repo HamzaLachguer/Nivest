@@ -37,6 +37,10 @@ li { list-style: none; }
   transition: 150ms ease;
 }
 
+.active-testimenial {
+  width: 80px;
+  background-color: white;
+}
 
 
 .animate-fade-up { animation: fade-up .5s ease forwards; }
