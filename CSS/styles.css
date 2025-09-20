@@ -49,6 +49,9 @@ li { list-style: none; }
 .animate-fade-left { animation: fade-left 1s ease forwards; }
 .animate-fade-right { animation: fade-right .8s ease forwards; }
 
+.animate-scroll {animation: scroll 25s linear infinite;}
+.animate-scroll:hover {animation-play-state: paused;}
+
 @keyframes fade-up {
   0% {
     transform: translateY(60px);
@@ -98,4 +101,9 @@ li { list-style: none; }
   100% {
     transform: translateY(0px);
   }
+}
+
+@keyframes scroll {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-50%);}
 }

@@ -22,6 +22,9 @@ const DOM_ELEMENTS = {
 
   slideTogglers: getElement("#slide-toggle"),
   slideContent: getElement("#slide-content"),
+
+  infinitScrollBar: getElement("#scroll-bar"),
+  scrollBarContent: getElement("#scroll-content")
 }
 
 let stats = {
@@ -248,31 +251,91 @@ function updateSlider(index) {
 updateSlider(stats.slideIndex)
 
 // generate togglers
+//
 testimenials.forEach((T, index) => {
   const btn = document.createElement("button");
   btn.setAttribute("data-slide-index", index);
-  btn.className = "bg-white-99 h-1 w-10 lg:w-40 transition-150";
+  btn.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
 
   if (index === stats.slideIndex) {
     btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
   }
   DOM_ELEMENTS.slideTogglers.append(btn);
-  btn.addEventListener('click', () => {
-    Array.from(DOM_ELEMENTS.slideTogglers.querySelectorAll("button")).forEach(b => {
-      b.className = "bg-white-99 h-1 w-10 lg:w-40 transition-150";
-    })
 
-    btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
+  btn.addEventListener('click', () => {
     const slideIndex = btn.dataset.slideIndex;
     stats.slideIndex = slideIndex;
-
+    
+    setActiveToggler(btn);
     updateSlider(stats.slideIndex);
   })
 })
 
+function setActiveToggler(btn) {
+  Array.from(DOM_ELEMENTS.slideTogglers.querySelectorAll("button"))
+    .forEach(b => {
+      b.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
+    })
+
+    btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
+}
+
+// Infinite scroll
+//
+const socialMediaPosts = [
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/Un1nDdOiuQM2UcVDJO9DeOsAhw.png",
+  },
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/NcSd7d619YqUizwo5PL6ocKBLbo.png",
+  },
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/ADK5HmWPOgvzSZh2XUc7GJwDQMY.png",
+  },
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/Un1nDdOiuQM2UcVDJO9DeOsAhw.png",
+  },
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/NcSd7d619YqUizwo5PL6ocKBLbo.png",
+  },
+  {
+    tag: "Follow @nivest on Instagram",
+    imgSrc: "https://framerusercontent.com/images/ADK5HmWPOgvzSZh2XUc7GJwDQMY.png",
+  },
+]
+
+function renderInfiniteScroll() {
+  const ul = document.createElement("ul");
+  ul.className = "flex w-fit gap-5 md:gap-10 whitespace-nowrap ";
 
 
+  socialMediaPosts.forEach(post => {
+    const li = document.createElement("li");
+    li.className = "flex items-center gap-4";
+    li.innerHTML = `
+      <div class="overflow-hidden h-12 md:h-16 w-[60px] md:w-20">
+        <img class="h-full w-full object-center object-cover" src=${post.imgSrc} alt="instagram profile img" loading="lazy">
+      </div>
 
+      <p class="font-medium text-sm">Follow @nivest on Instagram</p>
+    `;
+
+    ul.appendChild(li);
+  })
+
+  // Duplicate for infinite loop
+  const clone = ul.cloneNode(true);
+
+  DOM_ELEMENTS.scrollBarContent.append(ul, clone)
+}
+
+
+renderInfiniteScroll()
 
 
 

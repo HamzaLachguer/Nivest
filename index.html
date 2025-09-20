@@ -701,8 +701,9 @@
 
     <!-- Infinite scroll section -->
     <!--  -->
-    <section class="overflow-hidden py-10">
-      <ul class="flex items-center gap-5">
+    <section id="scroll-bar" class="relative overflow-hidden py-10 flex gap-5 md:gap-10 cursor-pointer">
+      <div id="scroll-content" class="animate-scroll [animation-play-state:running] hover:[animation-play-state:paused] flex gap-5 md:gap-10 "></div>
+      <!-- <ul id="" class="flex items-center gap-5 md:gap-10">
         <li class="flex items-center gap-4">
           <div class="overflow-hidden h-12 w-[60px]">
             <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/Un1nDdOiuQM2UcVDJO9DeOsAhw.png?scale-down-to=512" alt="instagram profile img" loading="lazy">
@@ -710,7 +711,10 @@
 
           <p class="font-medium text-sm">Follow @nivest on Instagram</p>
         </li>
-      </ul>
+        
+      </ul> -->
+
+      <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-white via-transparent to-white"></div>
     </section>
 
     <!-- FAQ's section -->
