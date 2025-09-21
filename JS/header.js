@@ -95,7 +95,7 @@ function hideHeader() {
 
   setTimeout(() => {
     elements.header.classList.remove("fixed", "animate-fade-down");
-  }, 500)
+  }, 1000)
 
   //
   updateAriaAttribute(elements.header, "aria-hidden", "true")

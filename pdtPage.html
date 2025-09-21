@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- PRIMARY META TAGS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NIVEST® is a Paris-based movement in form. We curate clean, essential design—homeware, apparel, and objects chosen for feel, function, and a timeless edge. No noise, just purpose.">
+  <meta name="title" content="NIVEST® | Minimal, Durable, Unapologetically Refined Design">
+  <meta name="author" content="NIVEST">
+  <meta name="keywords" content="NIVEST, minimalist design, essential design, Parisian design, durable homeware, timeless apparel, refined objects, clean aesthetic, functional design">
+
+  <!-- TITLE & FAV-ICON -->
+  <title>NIVEST® | Minimal, Durable, Unapologetically Refined Design</title>
+  <link rel="shortcut icon" href="https://framerusercontent.com/images/9EoQC1YkDbknD11NXx4Tq1P6VhM.png" type="image/x-icon">
+
+  <!-- TAILWIND CDN & CSS LINK-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        fontFamily: {
+          sans: ['Poppins', 'ui-sans-serif', 'system-ui']
+        },
+        extend: {
+          colors: {
+            blue: '#491eff',
+            green: '#d2ff1f',
+            red: '#f01919',
+            dark: '#030607',
+            'dark-96': '#03060796',
+            'dark-7a': '#0306077a',
+            white: '#ffffff',
+            'white-99': '#ffffff99',
+            'white-14': '#ffffff14',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="./CSS/styles.css">
+
+  <!-- GOOGLE FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="font-sans text-xs">
+  
+
+  <!-- 
+    ** HEADER **
+    
+  -->
+  <header class="absolute top-0 z-30 w-full animate-fade-down" aria-hidden="false">
+
+    <!-- Announcement BAR -->
+    <!--  -->
+    <div class="w-full grid place-items-center bg-blue h-7 font-medium lg:h-9">
+      <button id="show-promo-btn" aria-controls="offer-container" aria-expanded="false" class="text-white hover:text-white-99 transition-300 uppercase text-[10px] lg:hidden">Discounts for new customers until next week!</button>
+
+      <div class="hidden items-center uppercase gap-2 text-white-99 text-xs lg:flex">Discounts for new customers until next week! <button  id="show-promo-btn-ls" aria-controls="offer-container" aria-expanded="false" class="text-white uppercase">Get now</button>
+      </div>
+    </div>
+
+    <!-- Header BAR -->
+    <!--  -->
+    <div class="w-full grid grid-cols-3 px-5 lg:px-12 py-4 font-medium bg-white">
+      <div class="flex">
+        <button id="open-nav-menu" aria-controls="navigation-menu" class="uppercase">menu</button>
+      </div>
+
+      <div class="grid place-items-center">
+        <a class="h-6" href="./index.html">
+          <svg fill="none" height="24" id="svg75441938_3388" viewBox="0 0 64 16"><path d="M0 15.766V.446h4.152l6.675 13.533-1.022.255V.447h3.13v15.319H8.782L2.107 2.234l1.022-.255v13.787H0Zm13.972 0V4.915h3.13v10.851h-3.13Zm-.104-12.298V.021h3.338v3.447h-3.338Z" fill="#030607"></path><path d="M21.06 15.766 16.866 4.915h3.36L23.5 15.043h-1.752l3.255-10.128h3.275l-4.193 10.851H21.06Zm11.856.213c-1.182 0-2.21-.234-3.087-.702a5.188 5.188 0 0 1-2.045-2c-.473-.851-.709-1.83-.709-2.937 0-1.12.236-2.099.71-2.936a5.079 5.079 0 0 1 2.023-1.978c.862-.483 1.864-.724 3.004-.724 1.099 0 2.052.227 2.858.681a4.775 4.775 0 0 1 1.878 1.894c.445.808.667 1.758.667 2.85 0 .228-.007.44-.02.639a6.184 6.184 0 0 1-.063.532h-9.221V9.19h6.697l-.543.383c0-.879-.208-1.524-.626-1.936C34.036 7.213 33.48 7 32.77 7c-.82 0-1.46.284-1.919.851-.445.567-.668 1.419-.668 2.553 0 1.107.223 1.93.668 2.468.46.54 1.14.809 2.045.809.5 0 .931-.085 1.293-.255a1.67 1.67 0 0 0 .814-.83h2.941c-.348 1.05-.946 1.88-1.794 2.49-.834.595-1.912.893-3.233.893Z" fill="#030607"></path><path d="M43.037 15.979c-1.558 0-2.796-.32-3.714-.958-.918-.638-1.418-1.518-1.502-2.638h2.796c.07.482.306.851.709 1.106.417.241.987.362 1.71.362.654 0 1.127-.092 1.42-.277a.938.938 0 0 0 .458-.83c0-.269-.09-.474-.27-.616-.168-.156-.48-.284-.94-.383l-1.71-.362c-1.266-.27-2.198-.674-2.796-1.213-.598-.553-.897-1.262-.897-2.127 0-1.05.396-1.866 1.19-2.447.792-.596 1.898-.894 3.316-.894 1.405 0 2.524.29 3.359.872.835.568 1.294 1.362 1.377 2.383h-2.796a1.092 1.092 0 0 0-.584-.83c-.333-.198-.806-.297-1.418-.297-.557 0-.974.085-1.252.255a.746.746 0 0 0-.397.681.72.72 0 0 0 .334.617c.223.142.591.27 1.106.383l1.92.404c1.07.227 1.877.653 2.42 1.277.556.61.834 1.333.834 2.17 0 1.064-.41 1.894-1.231 2.49-.807.58-1.954.872-3.442.872Z" fill="#030607"></path><path d="M53.008 16c-1.363 0-2.379-.333-3.046-1-.654-.68-.98-1.71-.98-3.085V2.489l3.129-1.191V12.02c0 .482.132.844.396 1.085.264.242.675.362 1.231.362.209 0 .403-.021.584-.064.18-.042.362-.092.542-.149v2.426c-.18.1-.438.177-.771.234a6.23 6.23 0 0 1-1.085.085Zm-6.009-8.66V4.915h7.865V7.34H47Z" fill="#030607"></path><path d="M59.306 9.574c-.65 0-1.26-.123-1.828-.37a4.828 4.828 0 0 1-1.502-1.021 4.935 4.935 0 0 1-1-1.532 4.782 4.782 0 0 1-.364-1.864A4.782 4.782 0 0 1 57.478.37 4.532 4.532 0 0 1 59.306 0c.65 0 1.26.123 1.828.37a4.58 4.58 0 0 1 1.49 1.034c.433.434.771.94 1.013 1.52.242.578.363 1.2.363 1.863a4.782 4.782 0 0 1-1.377 3.396 4.677 4.677 0 0 1-1.49 1.021 4.532 4.532 0 0 1-1.827.37Zm0-.83c.534 0 1.03-.101 1.49-.306a3.78 3.78 0 0 0 1.226-.855c.36-.366.639-.787.839-1.264.2-.476.3-.987.3-1.532 0-.544-.1-1.055-.3-1.532-.2-.476-.48-.898-.839-1.264a3.775 3.775 0 0 0-1.226-.855 3.622 3.622 0 0 0-1.49-.306c-.534 0-1.035.102-1.502.306a3.96 3.96 0 0 0-1.227.855c-.35.366-.626.788-.826 1.264-.2.477-.3.988-.3 1.532 0 .545.1 1.056.3 1.532.2.477.476.898.826 1.264a3.96 3.96 0 0 0 1.227.855c.467.205.968.307 1.502.307Zm-2.065-1.212v-5.49h2.478c.584 0 1.039.137 1.364.41.326.263.489.633.489 1.11 0 .74-.476 1.212-1.427 1.417v-.205c.425-.017.755.081.988.294.234.213.351.515.351.906v.907c0 .085.004.183.012.293.017.103.034.222.05.358h-1.163a1.662 1.662 0 0 1-.038-.255 5.328 5.328 0 0 1-.013-.396v-.587c0-.35-.075-.605-.225-.766-.142-.17-.371-.256-.688-.256H57.69V4.34h1.965c.242 0 .43-.055.564-.166.133-.119.2-.289.2-.51 0-.213-.067-.375-.2-.485-.125-.11-.313-.166-.563-.166h-1.265v4.519H57.24Z" fill="#030607"></path></svg>
+        </a>
+      </div>
+
+      <div class="flex items-center justify-end gap-5">
+        <div class="hidden items-center gap-5 lg:flex">
+          <button class="uppercase" 
+          id="show-country-selector"
+          aria-controls="country-selector-container" aria-expanded="false">lv | <span>eur</span></button>
+
+          <button id="open-search" class="uppercase">search</button>
+          <button class="uppercase">favorites</button>
+        </div>
+
+        <button id="open-cart-btn" aria-label="open cart button" aria-expanded="false" class="uppercase flex items-center gap-1">cart <div class="h-[18px] w-[18px] grid place-items-center bg-green rounded-3xl">0</div></button>
+      </div>
+    </div>
+    
+  </header>
+
+  <!-- Newsletter popup -->
+  <!--  -->
+  <div id="promo-container" aria-hidden="true" class="fixed z-50 w-full h-screen top-0 left-0 bg-dark-7a p-5 hidden place-items-center">
+
+    <div class="flex flex-col gap-5 items-end animate-fade-up">
+      <button class="h-7 w-7 rounded-3xl bg-white-14 outline-1 outline outline-white-99 grid place-items-center" id="hide-promo-btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <div id="promo-modal-form" class="flex flex-col bg-white w-fit lg:flex-row lg:h-[460px] lg:gap-10 lg:pr-10">
+        <div class="h-56 w-full overflow-hidden lg:h-full lg:w-[500px] flex shrink-0">
+          <img class="h-full w-full object-center object-cover" src="https://framerusercontent.com/images/UCuaagB3OZy5NPwALnnwc9E2ay8.png" alt="**" loading="lazy">
+        </div>
+
+        <div class="bg-white p-5 flex flex-col items-start lg:p-0  lg:items-center lg:max-w-[500px] lg:justify-center">
+          <p class="text-dark-96 capitalize mb-2 font-medium lg:text-sm">welcome</p>
+          <h3 class="uppercase text-2xl mb-5 font-semibold leading-none lg:text-[40px] lg:text-center lg:mb-10">Sign up for newsletter for 20% off on first order!</h3>
+
+          <form class="w-full flex flex-col gap-3" action="#" method="post">
+            <input class="p-4 focus:outline-none border border-solid border-dark-7a w-full text-sm" type="email" name="" id="" placeholder="Your e-mail*" required>
+            <input class="w-full p-4 bg-dark text-white text-sm leading-4 cursor-pointer transition-300 hover:bg-dark-96" type="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Change country -->
+  <!--  -->
+  <div id="country-selector-container" class="fixed z-40 w-screen h-screen left-0 top-0 bg-dark-7a p-5 hidden place-items-center" aria-hidden="true">
+
+    <div class="flex flex-col items-end justify-center gap-4 animate-fade-up w-full md:w-[500px]">
+
+      <button id="hide-selector-btn" class="h-7 w-7 bg-white-14 outline outline-[.5px] outline-white-99 rounded-3xl grid place-items-center" aria-expanded="false" aria-controls="country-selector-container">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+
+      <div id="country-form-wrapper" class=" bg-white p-6 w-full ">
+        <div class="h-6 w-6 rounded-xl overflow-hidden">
+          <img src="data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221em%22%20height%3D%221em%22%20viewBox%3D%220%200%20512%20512%22%3E%3Cg%20fill-rule%3D%22evenodd%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M0%200h512v512H0z%22%2F%3E%3Cpath%20fill%3D%22%23981e32%22%20d%3D%22M0%200h512v204.8H0zm0%20307.2h512V512H0z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="" class="h-full w-full object-center object-cover">
+        </div>
+
+        <h2 class="text-[28px] my-5">You're in Latvia</h2>
+
+        <ul class="uppercase font-medium flex flex-col gap-2">
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Discount on orders over €200
+          </li>
+
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Taxes calculated at checkout
+          </li>
+
+          <li class="flex items-center gap-2 ">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12H20M20 12L14 6M20 12L14 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+            Receive order in 2-3 business weeks
+          </li>
+
+        </ul>
+
+        <select class="h-12 w-full border border-solid broder-white-14 px-5 focus:outline-none mt-5 uppercase font-medium" name="" id="">
+          <option value="0" class="capitalize">latvia (EUR)</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Navigation menu -->
+  <!--  -->
+  <div id="navigation-menu" class="bg-dark-7a fixed z-30 top-0 left-0 w-screen h-dvh hidden" aria-hidden="true">
+    <div id="nav-menu-container" class="p-5 pt-12 lg:pt-14 bg-white w-full h-full lg:w-[490px] animate-fade-right">
+      <button id="close-nav-menu" class="uppercase font-medium" aria-label="close nav menu" aria-expanded="true">close
+        menu</button>
+
+      <nav id="nav-menu" class="pt-10 h-full flex flex-col gap-6" aria-label="main navigation">
+        <div class=" flex flex-col gap-4">
+          <h4 class="uppercase text-dark-96 font-medium">products</h4>
+          <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+            <li>
+              <a href="">men</a>
+            </li>
+            <li>
+              <a href="">women</a>
+            </li>
+            <li>
+              <a href="">new</a>
+            </li>
+            <li>
+              <a href="">popular</a>
+            </li>
+            <li>
+              <a href="">all</a>
+            </li>
+            <li>
+              <a href="">salle</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4">
+          <h4 class="uppercase text-dark-96 font-medium ">our brand</h4>
+          <ul class="font-display text-2xl capitalize font-medium tracking-tight">
+            <li>
+              <a href="" class="">about</a>
+            </li>
+            <li>
+              <a href="">values</a>
+            </li>
+            <li>
+              <a href="">locations</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4 lg:hidden">
+
+          <ul class="uppercase font-medium tracking-tight text-dark-96 flex flex-col gap-1">
+            <li>
+              <button id="open-search-mobile" aria-expanded="false" aria-controls="search-container" class="uppercase">search</button>
+            </li>
+            <li>
+              <a href="">favorites</a>
+            </li>
+            <li>
+              <button class="uppercase" id="show-country-selector-mobile" aria-expanded="false">lv | <span>eur</span></button>
+            </li>
+          </ul>
+        </div>
+
+        <div class=" flex flex-col gap-4">
+
+          <ul class="uppercase font-medium tracking-tight lg:text-sm flex flex-col gap-1">
+            <li>
+              <a class="text-dark-96" href="">faq's</a>
+            </li>
+            <li>
+              <a class="text-dark-96" href="">contact</a>
+            </li>
+            <li>
+              <a class="text-dark-96" href="">newsletter</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Search products -->
+  <!--  -->
+  <div id="search-product-container" class="fixed top-0 left-0 z-40 w-full h-screen bg-dark-7a hidden justify-end" aria-hidden="true">
+    <div id="search-container" class="bg-white w-full h-full lg:w-[400px] animate-fade-left">
+      <div class="px-5 flex items-center gap-5">
+
+        <div class="relative flex items-center w-full">
+          <svg class="absolute" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 21L16.65 16.65M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+
+          <input id="search-input" class="py-4 pl-8 pr-4 w-full focus:outline-none font-medium border-b border-solid border-[#03060714]" type="text" placeholder="SEARCH" aria-label="search for product input">
+
+          <button id="empty-input-btn" class="absolute right-0 h-6 w-6 hidden place-items-center bg-[#03060714] rounded-2xl" aria-controls="search-input" aria-hidden="true" aria-label="clear search input">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 7L7 17M7 7L17 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+        </div>
+
+        <button class="relative uppercase transition-300 hover:text-dark-7a font-medium after:content-[''] after:absolute after:h-[1px] after:w-full after:bg-dark after:bottom-0 after:left-0 after:transition-all after:ease-in-out after:duration-300 hover:after:w-0" id="close-search" aria-expanded="false" aria-controls="search-product-container">close</button>
+      </div>
+
+      <div class="p-5">
+
+        <!-- Search suggestions -->
+        <div class="flex flex-col gap-3 uppercase">
+          <p class="text-dark-96 font-medium">Popular search items</p>
+          <div class="flex gap-2">
+            <button class="bg-[#03060714] uppercase py-4 px-6">bags</button>
+            <button class="bg-[#03060714] uppercase py-4 px-6">women</button>
+            <button class="bg-[#03060714] uppercase py-4 px-6">all</button>
+          </div>
+        </div>
+
+        <!-- product list retuened -->
+        <ul id="results-list" class="hidden flex-col gap-2 overflow-y-scroll">
+          <li class="flex ">
+            <div class="h-40 w-40 bg-[#03060714]  shrink-0 grid place-items-center">
+              <img 
+              src="https://framerusercontent.com/images/imZekT6LTizswVRE6LtkgWbMOk.png" 
+              alt="product img" 
+              class="object-cover object-center h-1/2" 
+              loading="lazy">
+            </div>
+
+            <div class="flex justify-between items-start uppercase w-full p-5">
+              <div class="flex flex-col gap-0">
+                <span class="font-semibold text-sm">yemas</span>
+                <span class="text-dark-96 font-medium">Accessories</span>
+              </div>
+              <div class="font-semibold text-sm">€199</div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    ** CART **
+
+  -->
+  <div class="fixed top-0 left-0 z-50 w-full h-screen bg-dark-7a hidden justify-end" id="cart-container" aria-hidden="true">
+
+    <div id="js-cart" class="relative bg-white h-full w-full lg:w-[400px]  animate-fade-left">
+
+      <!-- cart header -->
+      <div class="fixed top-0 w-full flex items-center justify-between px-5 py-4 border-b border-solid border-[#03060714]">
+        <h3 class="uppercase font-medium">Shopping Cart ( <span>0</span> )</h3>
+        <button id="close-cart-btn" aria-controls="cart-section" class="h-6 w-6 grid place-items-center" aria-expanded="false" aria-label="close cart button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+
+
+      <!-- cart body -->
+      <div class="mt-16 px-5 h-full pb-[290px] overflow-y-scroll">
+        <div class="uppercase font-semibold hidden">cart is empty</div>
+
+        <ul class="flex flex-col gap-5">
+
+          <li class="w-full flex gap-6">
+            <div class="h-[120px] w-[120px] overflow-hidden bg-[#03060714] flex-shrink-0">
+              <img class="" src="https://framerusercontent.com/images/lHdeV2pURwMNIXXxiD0iR5OKFg.png" alt="product image" loading="lazy">
+            </div>
+
+            <div class="flex flex-col justify-between w-full">
+              <div class="flex items-end justify-between w-full">
+                <div class="uppercase font-medium flex flex-col gap-1">
+                  <h4 class="font-semibold">Air Motion</h4>
+                  <h4 class="flex gap-2">size: <span class="text-dark-7a">5</span></h4>
+                </div>
+
+                <div class="font-semibold">€79.99</div>
+              </div>
+
+              <div class="flex justify-between items-center">
+                <div class="flex gap-0">
+                  <button id="increment-quantity-btn" aria-controls="product-quantity" aria-label="incement product quantity button" class="grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+
+                  <div id="product-quantity" class="font-semibold h-8 w-8 grid place-items-center">0</div>
+
+                  <button id="decrement-quantity-btn" aria-controls="product-quantity" aria-label="decrement product quantity button" class="grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <button id="remove-product" aria-label="remove product from cart" class="grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 3H15M3 6H21M19 6L18.2987 16.5193C18.1935 18.0975 18.1409 18.8867 17.8 19.485C17.4999 20.0118 17.0472 20.4353 16.5017 20.6997C15.882 21 15.0911 21 13.5093 21H10.4907C8.90891 21 8.11803 21 7.49834 20.6997C6.95276 20.4353 6.50009 20.0118 6.19998 19.485C5.85911 18.8867 5.8065 18.0975 5.70129 16.5193L5 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+      <!-- cart footer -->
+      <div class="absolute bottom-0 left-0 width-full bg-[#03060714] w-full p-5 flex flex-col gap-5">
+
+        <div class="flex flex-col gap-6">
+          <div class="uppercase flex justify-between items-center font-medium">
+            <span>subtotal</span>
+            <span id="sub-total">€299.00</span>
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <button class="uppercase font-medium bg-dark text-white p-4 text-center">Proceed to
+              Checkout</button>
+
+            <button id="clear-cart-btn" aria-controls="clear cart button" class="uppercase font-medium text-dark p-4 text-center">Clear
+              Cart</button>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+          <div>
+            <svg fill="none" height="24" id="svg686394755_1223" viewBox="0 0 38 24"><g clip-path="url(#svg686394755_1223_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#006FCF"></path><path d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02v.002Z" fill="#fff"></path><path d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z" fill="#006FCF"></path><path d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321v-.002Z" fill="#006FCF"></path><path d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z" fill="#fff"></path><path d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z" fill="#006FCF"></path><path d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.769Z" fill="#006FCF"></path></g><defs><clipPath id="svg686394755_1223_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg1588911522_3041" viewBox="0 0 38 24"><g clip-path="url(#svg1588911522_3041_a)"><path d="M34.387 0H3.228l-.324.006a4.64 4.64 0 0 0-.705.062 2.38 2.38 0 0 0-.67.22 2.25 2.25 0 0 0-.985.986 2.37 2.37 0 0 0-.22.67 4.66 4.66 0 0 0-.063.705c-.003.108-.004.216-.005.324v18.054c0 .108.002.216.005.324.006.235.02.472.062.705.04.233.114.459.22.67a2.24 2.24 0 0 0 .986.985c.215.11.434.18.67.222.233.041.47.055.705.061a19.433 19.433 0 0 0 .709.006h30.774l.385-.001c.107 0 .215-.002.324-.005a4.77 4.77 0 0 0 .705-.061c.233-.04.459-.115.67-.222.424-.216.769-.56.985-.985.11-.214.179-.434.22-.67.043-.233.056-.47.063-.705.003-.108.004-.216.005-.324V2.973c0-.108-.003-.216-.005-.324a4.658 4.658 0 0 0-.063-.705 2.357 2.357 0 0 0-.22-.67 2.251 2.251 0 0 0-.985-.985 2.382 2.382 0 0 0-.67-.221 4.698 4.698 0 0 0-.705-.062A16.167 16.167 0 0 0 34.772 0h-.385Z" fill="#000"></path><path d="M34.387.8h.379c.102.001.205.002.308.005.18.005.39.015.585.05.17.03.313.077.45.147.273.139.495.361.634.635.07.136.116.278.146.45.035.193.045.403.05.584a39.766 39.766 0 0 1 .006.686v17.286c0 .126 0 .252-.002.38 0 .102-.001.204-.004.306a4 4 0 0 1-.05.587 1.555 1.555 0 0 1-.146.447c-.14.274-.362.497-.636.636-.136.07-.278.116-.447.146-.2.035-.418.045-.582.05l-.313.004H3.232c-.102 0-.204-.002-.306-.004a4.078 4.078 0 0 1-.585-.05 1.572 1.572 0 0 1-.45-.147 1.438 1.438 0 0 1-.634-.635 1.57 1.57 0 0 1-.146-.45 3.91 3.91 0 0 1-.05-.584 14.956 14.956 0 0 1-.005-.306V2.978c0-.103.002-.205.005-.307.005-.18.014-.39.05-.586.026-.156.075-.308.146-.449a1.44 1.44 0 0 1 .635-.635c.142-.07.293-.12.449-.146.196-.035.406-.045.585-.05.103-.003.205-.004.307-.005h31.154Z" fill="#fff"></path><path d="M10.11 8.102c.318-.398.533-.932.476-1.477-.465.023-1.032.307-1.361.705-.295.34-.556.897-.489 1.419.523.045 1.045-.26 1.374-.647Zm.47.748c-.758-.045-1.403.431-1.765.431-.362 0-.917-.408-1.517-.397a2.237 2.237 0 0 0-1.901 1.155c-.815 1.405-.215 3.489.577 4.632.385.567.849 1.19 1.46 1.167.577-.023.804-.374 1.505-.374.702 0 .906.374 1.517.363.634-.012 1.03-.567 1.415-1.133.441-.645.622-1.268.633-1.302-.01-.011-1.222-.476-1.233-1.869-.011-1.166.95-1.721.996-1.755-.543-.804-1.392-.895-1.687-.917m7.562-1.579c1.649 0 2.797 1.137 2.797 2.791 0 1.66-1.172 2.802-2.838 2.802h-1.825v2.903h-1.319V7.272h3.185Zm-1.866 4.486h1.513c1.148 0 1.801-.617 1.801-1.69 0-1.07-.653-1.683-1.795-1.683h-1.52v3.373Zm4.99 2.25c0-1.09.83-1.714 2.36-1.808l1.643-.1v-.471c0-.689-.453-1.066-1.26-1.066-.665 0-1.148.342-1.248.866h-1.19c.036-1.101 1.072-1.902 2.473-1.902 1.508 0 2.49.79 2.49 2.014v4.227h-1.218v-1.019h-.03c-.347.665-1.112 1.083-1.942 1.083-1.225 0-2.078-.73-2.078-1.825Zm4.003-.548v-.477l-1.466.094c-.824.053-1.254.36-1.254.895 0 .518.448.854 1.148.854.895 0 1.572-.571 1.572-1.366Zm2.386 4.58v-1.018c.083.011.283.023.389.023.582 0 .912-.247 1.112-.883l.118-.377-2.231-6.181h1.377l1.555 5.015h.03l1.553-5.015h1.343l-2.314 6.493c-.53 1.49-1.136 1.978-2.42 1.978-.1 0-.424-.011-.512-.035Z" fill="#000"></path></g><defs><clipPath id="svg1588911522_3041_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg-1189860604_1912" viewBox="0 0 38 24"><g clip-path="url(#svg-1189860604_1912_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006Zm0-3.732v2.788h1.698a1.348 1.348 0 0 0 1.37-1.117 1.39 1.39 0 0 0-1.37-1.641l-1.698-.03Zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.93 2.17 2.17 0 0 1-1.496-.532 1.666 1.666 0 0 1-.613-1.324 1.607 1.607 0 0 1 .613-1.336 2.747 2.747 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.33v-.207a1.133 1.133 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.487 2.487 0 0 1 2.182-1.06ZM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.048 2.048 0 0 0-1.324-.374 1.717 1.717 0 0 0-1.03.294.883.883 0 0 0-.392.73Zm9.286-3.75-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097Z" fill="#5F6368"></path><path d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.095 2.095 0 0 1-.9 1.373v1.134h1.464a4.435 4.435 0 0 0 1.348-3.334Z" fill="#4285F4"></path><path d="M9.629 15.72a4.352 4.352 0 0 0 3.01-1.096l-1.466-1.14a2.753 2.753 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507Z" fill="#34A853"></path><path d="M7.079 12.05a2.709 2.709 0 0 1 0-1.736v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17Z" fill="#FBBC04"></path><path d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875Z" fill="#EA4335"></path></g><defs><clipPath id="svg-1189860604_1912_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg-356265071_646" viewBox="0 0 38 24"><g clip-path="url(#svg-356265071_646_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M15 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#EB001B"></path><path d="M23 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#00A2E5"></path><path d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7 0 2.3 1.2 4.5 3 5.7 1.8-1.2 3-3.3 3-5.7Z" fill="#7375CF"></path></g><defs><clipPath id="svg-356265071_646_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg-1275971728_646" viewBox="0 0 38 24"><g clip-path="url(#svg-1275971728_646_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M15 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#EB001B"></path><path d="M23 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#F79E1B"></path><path d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7 0 2.3 1.2 4.5 3 5.7 1.8-1.2 3-3.3 3-5.7Z" fill="#FF5F00"></path></g><defs><clipPath id="svg-1275971728_646_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg829500366_967" viewBox="0 0 38 24"><g clip-path="url(#svg829500366_967_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1Z" fill="#003087"></path><path d="m23.9 8.3-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8Z" fill="#3086C8"></path><path d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1Z" fill="#012169"></path></g><defs><clipPath id="svg829500366_967_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+          <div>
+            <svg fill="none" height="24" id="svg249320801_1370" viewBox="0 0 38 24"><g clip-path="url(#svg249320801_1370_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3Zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2Zm-13.4-.3.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1Zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2Z" fill="#142688"></path></g><defs><clipPath id="svg249320801_1370_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+    ** MAIN **
+
+  -->
+  <main>
+
+    <section class="mt- grid gap-10 grid-cols-1 lg:grid-cols-2 lg:pt-[120px] lg:px-12  pb-[60px]">
+      <div class="relative">
+
+        <!-- slider -->
+        <div class="overflow-hidden sticky top-14">
+
+          <ul class="flex shrink-0 gap-0 h-[500px] md:h-[600px]">
+            <li class="flex-none h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover object-center" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/343a21a0-d37d-474d-9768-cf10f6e86da8/NIKE+P-6000+SE.png" alt="" loading="lazy">
+            </li>
+            <li class="flex-none h-full w-full overflow-hidden">
+              <img class="h-full w-full object-cover object-center" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/343a21a0-d37d-474d-9768-cf10f6e86da8/NIKE+P-6000+SE.png" alt="" loading="lazy">
+            </li>
+          </ul>
+
+          <div class="absolute p-5 bottom-0 grid place-items-center w-full">
+            <div class="bg-white p-2 flex items-center gap-[6px] rounded-3xl">
+              <button class="h-1 md:h-2 w-5 md:w-7 rounded-lg bg-dark transition-300"></button>
+              <button class="h-1 md:h-2 w-1 md:w-2 rounded-lg bg-dark transition-300"></button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="relative px-5 flex flex-col gap-8 lg:px-0">
+        
+        <!-- Primary info -->
+        <div class="flex flex-col gap-2 lg:gap-3">
+          <h4 id="product-tag" class="bg-blue py-1 px-2 uppercase font-medium text-white w-fit tracking-tight mb-2">New</h4>
+
+          <h2 id="product-title" class="uppercase font-semibold text-2xl lg:text-4xl">Casual Walk</h2>
+
+          <p class="text-dark-7a mb-2 lg:text-sm">Vertical bounce meets horizontal flow. The hybrid you didn’t know you needed.</p>
+
+          <h2 id="product-title" class="uppercase font-medium text-2xl">$79.75</h2>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <!-- Select size -->
+          <div class="flex flex-col gap-4">
+            <h4 class="flex items-center gap-1 text-sm font-medium">
+              <span>Shoe size:</span>
+              <span class="text-[#7a7a7a]">7</span>
+            </h4>
+
+            <ul class="flex gap-2">
+              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium">7</li>
+              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium">8</li>
+            </ul>
+          </div>
+
+          <!-- Select color -->
+          <div class="flex flex-col gap-4">
+            <h4 class="flex items-center gap-1 text-sm font-medium">
+              <span>Color:</span>
+              <span class="text-[#7a7a7a] capitalize">white</span>
+            </h4>
+
+            <ul class="flex gap-2">
+              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium capitalize">white</li>
+              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium capitalize">black</li>
+            </ul>
+          </div>
+
+          <!-- CTA -->
+          <div class="w-full flex flex-col gap-2">
+            <button class="bg-dark w-full text-white grid place-items-center h-12 rounded-full text-xs font-medium">Add to Cart</button>
+            <button class="bg-white w-full text-dark grid place-items-center h-12 rounded-full text-xs font-medium border border-solid border-[#f0f0f0]">Purchase Now</button>
+          </div>
+
+          <!--  -->
+          <div class="border border-solid border-[#f0f0f0] flex flex-col">
+            <div class="p-4 border-b border-solid border-[#f0f0f0] flex flex-col gap-3">
+              <span class="h-5 w-5 lg:h-6 lg:w-6">
+                <svg fill="none" height="100%" width="100%" id="svg-405395133_622" viewBox="0 0 28 28"><path d="m27.789 11.68-4.981-5.803a1.75 1.75 0 0 0-1.342-.627H3.5A1.75 1.75 0 0 0 1.75 7v12.25A1.75 1.75 0 0 0 3.5 21h1.86a3.5 3.5 0 0 0 6.78 0h5.47a3.5 3.5 0 0 0 6.78 0h1.86A1.75 1.75 0 0 0 28 19.25v-7a.875.875 0 0 0-.211-.57Zm-2.568-.305H19.25V7h2.216l3.755 4.375Zm-13.846 0V7H17.5v4.375h-6.125ZM9.625 7v4.375H3.5V7h6.125ZM8.75 21.875a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5Zm12.25 0a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5Zm3.39-2.625a3.5 3.5 0 0 0-6.78 0h-5.47a3.5 3.5 0 0 0-6.78 0H3.5v-6.125h22.75v6.125h-1.86Z" fill="#030607"></path></svg>
+              </span>
+
+              <div class="flex flex-col gap-1 lg:text-sm">
+                <span class="font-medium">In general package will arrive in 2-4 weeks</span>
+                <span class="text-dark-7a">We use global DHL method</span>
+              </div>
+            </div>
+            
+            <div class="p-4 border-b border-solid border-[#f0f0f0] flex flex-col gap-3">
+              <span class="h-5 w-5 lg:h-6 lg:w-6">
+                <svg fill="none" height="100%" width="100%" id="svg749669239_576" viewBox="0 0 28 28"><path d="M24.465 7.235 14.84 1.969a1.737 1.737 0 0 0-1.68 0L3.535 7.237a1.75 1.75 0 0 0-.91 1.531V19.23a1.75 1.75 0 0 0 .91 1.531l9.625 5.269a1.737 1.737 0 0 0 1.68 0l9.625-5.269a1.75 1.75 0 0 0 .91-1.53V8.77a1.75 1.75 0 0 0-.91-1.535ZM14 3.5l8.787 4.812-3.256 1.783-8.788-4.812L14 3.5Zm0 9.625L5.213 8.312l3.708-2.03 8.787 4.813L14 13.125ZM4.375 9.844l8.75 4.788v9.383l-8.75-4.785V9.844Zm19.25 9.382-8.75 4.79v-9.38l3.5-1.915v3.904a.875.875 0 1 0 1.75 0v-4.862l3.5-1.92v9.382Z" fill="#030607"></path></svg>
+              </span>
+
+              <div class="flex flex-col gap-1 lg:text-sm">
+                <span class="font-medium">We deliver across the world for free</span>
+                <span class="text-dark-7a">Free deliveries and returns worldwide</span>
+              </div>
+            </div>
+
+            <div class="p-4 flex flex-col gap-3">
+              <span  class="h-5 w-5 lg:h-6 lg:w-6">
+                <svg fill="none" height="100%" width="100%" id="svg2099769333_356" viewBox="0 0 28 28"><path d="M25.375 12.25a7.008 7.008 0 0 1-7 7H5.612l3.757 3.756a.876.876 0 0 1-1.238 1.238l-5.25-5.25a.876.876 0 0 1 0-1.238l5.25-5.25a.876.876 0 0 1 1.238 1.238L5.612 17.5h12.763a5.25 5.25 0 1 0 0-10.5H8.75a.875.875 0 0 1 0-1.75h9.625a7.008 7.008 0 0 1 7 7Z" fill="#030607"></path></svg>
+              </span>
+
+              <div class="flex flex-col gap-1 lg:text-sm">
+                <span class="font-medium">Return us desired item within two weeks</span>
+                <span class="text-dark-7a">Guaranteed returns within first two weeks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- description -->
+          <div>
+            <div class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
+              <button class="flex items-center justify-between w-full">
+                <span class="font-medium text-xs lg:text-sm">Description</span>
+                <span class="h-6 w-6 grid place-items-center ">
+                  <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+
+              <p class="text-dark-96 lg:text-sm font-medium pb-4">Elevated heel and flexible base designed for fast, fluid motion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Might like -->
+    <section class="py-14 flex flex-col gap-20">
+      <div class="flex flex-col gap-3 lg:flex-row justify-between px-5 lg:px-9">
+        <h2 class="uppercase font-semibold tracking-tight text-2xl lg:text-4xl">You might also like</h2>
+        <button class="capitalize text-sm font-medium flex gap-1 items-center">
+          <span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4V5.4C4 8.76031 4 10.4405 4.65396 11.7239C5.2292 12.8529 6.14708 13.7708 7.27606 14.346C8.55953 15 10.2397 15 13.6 15H20M20 15L15 10M20 15L15 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span>shop new</span>
+        </button>
+      </div>
+
+      <ul id="new-product-grid" class="px-5 lg:px-9 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      </ul>
+    </section>
+  </main>
+
+  <!-- 
+    ** FOOTER **
+
+  -->
+  <footer class="bg-dark flex flex-col gap-20 pt-14 px-5 pb-10 lg:px-12">
+
+    <div class="grid gap-2 grid-cols-2 lg:grid-cols-4">
+
+      <div class="bg-white-14 py-5 px-4 flex flex-col gap-4 items-center">
+        <span class="fill-green">
+          <svg width="32" height="32" viewBox="0 0 256 256" id="svg-1421896596_960"><path d="M128 24a104 104 0 1 0 104 104A104.11 104.11 0 0 0 128 24Zm88 104a87.62 87.62 0 0 1-6.4 32.94l-44.7-27.49a15.92 15.92 0 0 0-6.24-2.23l-22.82-3.08a16.11 16.11 0 0 0-16 7.86h-8.72l-3.8-7.86a15.91 15.91 0 0 0-11-8.67l-8-1.73L96.14 104h16.71a16.06 16.06 0 0 0 7.73-2l12.25-6.76a16.62 16.62 0 0 0 3-2.14l26.91-24.34A15.93 15.93 0 0 0 166 49.1l-.36-.65A88.11 88.11 0 0 1 216 128Zm-72.69-86.66L152 56.9l-26.91 24.34L112.85 88H96.14a16 16 0 0 0-13.88 8l-8.73 15.23-10.15-27.04 10.94-25.87a87.87 87.87 0 0 1 69-17ZM40 128a87.53 87.53 0 0 1 8.54-37.8l11.34 30.27a16 16 0 0 0 11.62 10l21.43 4.61 3.81 7.92a16.09 16.09 0 0 0 14.4 9h1.48l-7.23 16.23a16 16 0 0 0 2.86 17.37l.14.14 19.61 20.2-1.94 10A88.11 88.11 0 0 1 40 128Zm102.58 86.78 1.13-5.81a16.09 16.09 0 0 0-4-13.9 1.85 1.85 0 0 1-.14-.14L120 174.74 133.7 144l22.82 3.08 45.72 28.12a88.18 88.18 0 0 1-59.66 39.58Z"></path></svg>
+        </span>
+        <span class="text-white text-sm lg:text-base text-center">FSC® certified packaging and paper only.</span>
+      </div>
+
+      <div class="bg-white-14 py-5 px-4 flex flex-col gap-4 items-center">
+        <span class="text-green">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.5 7.27783L12 12.0001M12 12.0001L3.49997 7.27783M12 12.0001L12 21.5001M21 16.0586V7.94153C21 7.59889 21 7.42757 20.9495 7.27477C20.9049 7.13959 20.8318 7.01551 20.7354 6.91082C20.6263 6.79248 20.4766 6.70928 20.177 6.54288L12.777 2.43177C12.4934 2.27421 12.3516 2.19543 12.2015 2.16454C12.0685 2.13721 11.9315 2.13721 11.7986 2.16454C11.6484 2.19543 11.5066 2.27421 11.223 2.43177L3.82297 6.54288C3.52345 6.70928 3.37369 6.79248 3.26463 6.91082C3.16816 7.01551 3.09515 7.13959 3.05048 7.27477C3 7.42757 3 7.59889 3 7.94153V16.0586C3 16.4013 3 16.5726 3.05048 16.7254C3.09515 16.8606 3.16816 16.9847 3.26463 17.0893C3.37369 17.2077 3.52345 17.2909 3.82297 17.4573L11.223 21.5684C11.5066 21.726 11.6484 21.8047 11.7986 21.8356C11.9315 21.863 12.0685 21.863 12.2015 21.8356C12.3516 21.8047 12.4934 21.726 12.777 21.5684L20.177 17.4573C20.4766 17.2909 20.6263 17.2077 20.7354 17.0893C20.8318 16.9847 20.9049 16.8606 20.9495 16.7254C21 16.5726 21 16.4013 21 16.0586Z" stroke="#d2ff1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M16.5 9.5L7.5 4.5" stroke="#d2ff1f" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="text-white text-sm lg:text-base text-center">Orders ship in 1–2 days with full tracking included.</span>
+      </div>
+
+      <div class="bg-white-14 py-5 px-4 flex flex-col gap-4 items-center">
+        <span class="fill-green">
+          <svg width="32" height="32" viewBox="0 0 256 256" id="svg928466614_533"><path d="M208 40H48a16 16 0 0 0-16 16v56c0 52.72 25.52 84.67 46.93 102.19 23.06 18.86 46 25.26 47 25.53a8 8 0 0 0 4.2 0c1-.27 23.91-6.67 47-25.53C198.48 196.67 224 164.72 224 112V56a16 16 0 0 0-16-16Zm0 72c0 37.07-13.66 67.16-40.6 89.42a129.3 129.3 0 0 1-39.4 22.2 128.25 128.25 0 0 1-38.92-21.81C61.82 179.51 48 149.3 48 112V56h160ZM82.34 141.66a8 8 0 0 1 11.32-11.32L112 148.69l50.34-50.35a8 8 0 0 1 11.32 11.32l-56 56a8 8 0 0 1-11.32 0Z"></path></svg>
+        </span>
+        <span class="text-white text-sm lg:text-base text-center">Long-wear materials that hold shape and age.</span>
+      </div>
+
+      <div class="bg-white-14 py-5 px-4 flex flex-col gap-4 items-center">
+        <span class="fill-green">
+          <svg width="32" height="32" viewBox="0 0 256 256" id="svg-1290818389_304"><path d="M232 144a64.07 64.07 0 0 1-64 64H80a8 8 0 0 1 0-16h88a48 48 0 0 0 0-96H51.31l34.35 34.34a8 8 0 0 1-11.32 11.32l-48-48a8 8 0 0 1 0-11.32l48-48a8 8 0 0 1 11.32 11.32L51.31 80H168a64.07 64.07 0 0 1 64 64Z"></path></svg>
+        </span>
+        <span class="text-white text-sm lg:text-base text-center">30-day return or exchange. No questions asked.</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-[120px]">
+      <div class="flex flex-col gap-4 lg:gap-6">
+        <h2 class="uppercase text-2xl font-semibold leading-none text-white lg:text-4xl">Join the Movement</h2>
+        <form class="flex gap-0 w-full"
+        action="#" method="post">
+          <input class="border-b border-solid border-white-99 text-white bg-transparent p-0 py-4 placeholder:text-white-99 font-normal text-sm w-full focus:outline-none"
+          type="email" name="email" id="#" placeholder="nivest@gmail.com">
+          <input class="text-white text-sm font-normal border-b border-solid border-white-99 cursor-pointer transition-300 hover:text-white-99"
+          type="submit" value="Submit">
+        </form>
+        <p class="text-sm text-white-99 lg:text-base">By submitting your email, you’ll be the first to know about upcoming updates for Nivest. You can unsubscribe at any time.</p>
+      </div>
+
+      <nav class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white-99 capitalize text-xs lg:text-sm">Shop</h4>
+          <ul class="flex flex-col gap-2 text-xs lg:text-sm">
+            <li class="text-white capitalize"><a href="">all</a></li>
+            <li class="text-white capitalize"><a href="">women</a></li>
+            <li class="text-white capitalize"><a href="">men</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white-99 capitalize text-xs lg:text-sm">Company</h4>
+          <ul class="flex flex-col gap-2 text-xs lg:text-sm">
+            <li class="text-white capitalize"><a href="">about</a></li>
+            <li class="text-white capitalize"><a href="">values</a></li>
+            <li class="text-white capitalize"><a href="">locations</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white-99 capitalize text-xs lg:text-sm">Others</h4>
+          <ul class="flex flex-col gap-2 text-xs lg:text-sm">
+            <li class="text-white capitalize"><a href="">FAQ's</a></li>
+            <li class="text-white capitalize"><a href="">Newsroom</a></li>
+            <li class="text-white capitalize"><a href="">contact</a></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <h4 class="text-white-99 capitalize text-xs lg:text-sm">Legal</h4>
+          <ul class="flex flex-col gap-2 text-xs lg:text-sm">
+            <li class="text-white capitalize"><a href="">Terms of Service</a></li>
+            <li class="text-white capitalize"><a href="">Privacy Policy</a></li>
+            <li class="text-white capitalize"><a href="">Return Policy</a></li>
+          </ul>
+        </div>
+
+      </nav>
+    </div>
+
+    <div class="flex flex-col gap-4 lg:flex-row-reverse justify-between">
+      <div class="flex items-center justify-start gap-2">
+        <div>
+          <svg fill="none" height="24" id="svg686394755_1223" viewBox="0 0 38 24"><g clip-path="url(#svg686394755_1223_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#006FCF"></path><path d="M22.012 19.936v-8.421L37 11.528v2.326l-1.732 1.852L37 17.573v2.375h-2.766l-1.47-1.622-1.46 1.628-9.292-.02v.002Z" fill="#fff"></path><path d="M23.013 19.012v-6.57h5.572v1.513h-3.768v1.028h3.678v1.488h-3.678v1.01h3.768v1.531h-5.572Z" fill="#006FCF"></path><path d="m28.557 19.012 3.083-3.289-3.083-3.282h2.386l1.884 2.083 1.89-2.082H37v.051l-3.017 3.23L37 18.92v.093h-2.307l-1.917-2.103-1.898 2.104h-2.321v-.002Z" fill="#006FCF"></path><path d="M22.71 4.04h3.614l1.269 2.881V4.04h4.46l.77 2.159.771-2.159H37v8.421H19l3.71-8.421Z" fill="#fff"></path><path d="m23.395 4.955-2.916 6.566h2l.55-1.315h2.98l.55 1.315h2.05l-2.904-6.566h-2.31Zm.25 3.777.875-2.09.873 2.09h-1.748Z" fill="#006FCF"></path><path d="M28.581 11.52V4.953l2.811.01L32.84 9l1.456-4.046H37v6.565l-1.74.016v-4.51l-1.644 4.494h-1.59L30.35 7.01v4.51h-1.769Z" fill="#006FCF"></path></g><defs><clipPath id="svg686394755_1223_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg1588911522_3041" viewBox="0 0 38 24"><g clip-path="url(#svg1588911522_3041_a)"><path d="M34.387 0H3.228l-.324.006a4.64 4.64 0 0 0-.705.062 2.38 2.38 0 0 0-.67.22 2.25 2.25 0 0 0-.985.986 2.37 2.37 0 0 0-.22.67 4.66 4.66 0 0 0-.063.705c-.003.108-.004.216-.005.324v18.054c0 .108.002.216.005.324.006.235.02.472.062.705.04.233.114.459.22.67a2.24 2.24 0 0 0 .986.985c.215.11.434.18.67.222.233.041.47.055.705.061a19.433 19.433 0 0 0 .709.006h30.774l.385-.001c.107 0 .215-.002.324-.005a4.77 4.77 0 0 0 .705-.061c.233-.04.459-.115.67-.222.424-.216.769-.56.985-.985.11-.214.179-.434.22-.67.043-.233.056-.47.063-.705.003-.108.004-.216.005-.324V2.973c0-.108-.003-.216-.005-.324a4.658 4.658 0 0 0-.063-.705 2.357 2.357 0 0 0-.22-.67 2.251 2.251 0 0 0-.985-.985 2.382 2.382 0 0 0-.67-.221 4.698 4.698 0 0 0-.705-.062A16.167 16.167 0 0 0 34.772 0h-.385Z" fill="#000"></path><path d="M34.387.8h.379c.102.001.205.002.308.005.18.005.39.015.585.05.17.03.313.077.45.147.273.139.495.361.634.635.07.136.116.278.146.45.035.193.045.403.05.584a39.766 39.766 0 0 1 .006.686v17.286c0 .126 0 .252-.002.38 0 .102-.001.204-.004.306a4 4 0 0 1-.05.587 1.555 1.555 0 0 1-.146.447c-.14.274-.362.497-.636.636-.136.07-.278.116-.447.146-.2.035-.418.045-.582.05l-.313.004H3.232c-.102 0-.204-.002-.306-.004a4.078 4.078 0 0 1-.585-.05 1.572 1.572 0 0 1-.45-.147 1.438 1.438 0 0 1-.634-.635 1.57 1.57 0 0 1-.146-.45 3.91 3.91 0 0 1-.05-.584 14.956 14.956 0 0 1-.005-.306V2.978c0-.103.002-.205.005-.307.005-.18.014-.39.05-.586.026-.156.075-.308.146-.449a1.44 1.44 0 0 1 .635-.635c.142-.07.293-.12.449-.146.196-.035.406-.045.585-.05.103-.003.205-.004.307-.005h31.154Z" fill="#fff"></path><path d="M10.11 8.102c.318-.398.533-.932.476-1.477-.465.023-1.032.307-1.361.705-.295.34-.556.897-.489 1.419.523.045 1.045-.26 1.374-.647Zm.47.748c-.758-.045-1.403.431-1.765.431-.362 0-.917-.408-1.517-.397a2.237 2.237 0 0 0-1.901 1.155c-.815 1.405-.215 3.489.577 4.632.385.567.849 1.19 1.46 1.167.577-.023.804-.374 1.505-.374.702 0 .906.374 1.517.363.634-.012 1.03-.567 1.415-1.133.441-.645.622-1.268.633-1.302-.01-.011-1.222-.476-1.233-1.869-.011-1.166.95-1.721.996-1.755-.543-.804-1.392-.895-1.687-.917m7.562-1.579c1.649 0 2.797 1.137 2.797 2.791 0 1.66-1.172 2.802-2.838 2.802h-1.825v2.903h-1.319V7.272h3.185Zm-1.866 4.486h1.513c1.148 0 1.801-.617 1.801-1.69 0-1.07-.653-1.683-1.795-1.683h-1.52v3.373Zm4.99 2.25c0-1.09.83-1.714 2.36-1.808l1.643-.1v-.471c0-.689-.453-1.066-1.26-1.066-.665 0-1.148.342-1.248.866h-1.19c.036-1.101 1.072-1.902 2.473-1.902 1.508 0 2.49.79 2.49 2.014v4.227h-1.218v-1.019h-.03c-.347.665-1.112 1.083-1.942 1.083-1.225 0-2.078-.73-2.078-1.825Zm4.003-.548v-.477l-1.466.094c-.824.053-1.254.36-1.254.895 0 .518.448.854 1.148.854.895 0 1.572-.571 1.572-1.366Zm2.386 4.58v-1.018c.083.011.283.023.389.023.582 0 .912-.247 1.112-.883l.118-.377-2.231-6.181h1.377l1.555 5.015h.03l1.553-5.015h1.343l-2.314 6.493c-.53 1.49-1.136 1.978-2.42 1.978-.1 0-.424-.011-.512-.035Z" fill="#000"></path></g><defs><clipPath id="svg1588911522_3041_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg-1189860604_1912" viewBox="0 0 38 24"><g clip-path="url(#svg-1189860604_1912_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M18.093 11.976v3.2h-1.018v-7.9h2.691a2.447 2.447 0 0 1 1.747.692 2.28 2.28 0 0 1 .11 3.224l-.11.116c-.47.447-1.098.69-1.747.674l-1.673-.006Zm0-3.732v2.788h1.698a1.348 1.348 0 0 0 1.37-1.117 1.39 1.39 0 0 0-1.37-1.641l-1.698-.03Zm6.484 1.348c.65-.03 1.286.188 1.778.613.445.43.682 1.03.65 1.649v3.334h-.969v-.766h-.049a1.93 1.93 0 0 1-1.673.93 2.17 2.17 0 0 1-1.496-.532 1.666 1.666 0 0 1-.613-1.324 1.607 1.607 0 0 1 .613-1.336 2.747 2.747 0 0 1 1.698-.515c.517-.02 1.03.093 1.49.33v-.207a1.133 1.133 0 0 0-.417-.901 1.416 1.416 0 0 0-.98-.368 1.545 1.545 0 0 0-1.319.717l-.895-.564a2.487 2.487 0 0 1 2.182-1.06ZM23.29 13.52a.79.79 0 0 0 .337.662c.223.176.5.269.785.263.429-.001.84-.17 1.146-.472.305-.286.478-.685.478-1.103a2.048 2.048 0 0 0-1.324-.374 1.717 1.717 0 0 0-1.03.294.883.883 0 0 0-.392.73Zm9.286-3.75-3.39 7.79h-1.048l1.281-2.728-2.224-5.062h1.103l1.612 3.885 1.569-3.885h1.097Z" fill="#5F6368"></path><path d="M13.986 11.284c0-.308-.024-.616-.073-.92h-4.29v1.747h2.451a2.095 2.095 0 0 1-.9 1.373v1.134h1.464a4.435 4.435 0 0 0 1.348-3.334Z" fill="#4285F4"></path><path d="M9.629 15.72a4.352 4.352 0 0 0 3.01-1.096l-1.466-1.14a2.753 2.753 0 0 1-4.094-1.44H5.577v1.17a4.53 4.53 0 0 0 4.052 2.507Z" fill="#34A853"></path><path d="M7.079 12.05a2.709 2.709 0 0 1 0-1.736v-1.17H5.577a4.505 4.505 0 0 0 0 4.075l1.502-1.17Z" fill="#FBBC04"></path><path d="M9.629 8.44a2.452 2.452 0 0 1 1.74.68l1.3-1.293a4.37 4.37 0 0 0-3.065-1.183 4.53 4.53 0 0 0-4.027 2.5l1.502 1.171a2.715 2.715 0 0 1 2.55-1.875Z" fill="#EA4335"></path></g><defs><clipPath id="svg-1189860604_1912_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg-356265071_646" viewBox="0 0 38 24"><g clip-path="url(#svg-356265071_646_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M15 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#EB001B"></path><path d="M23 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#00A2E5"></path><path d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7 0 2.3 1.2 4.5 3 5.7 1.8-1.2 3-3.3 3-5.7Z" fill="#7375CF"></path></g><defs><clipPath id="svg-356265071_646_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg-1275971728_646" viewBox="0 0 38 24"><g clip-path="url(#svg-1275971728_646_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M15 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#EB001B"></path><path d="M23 19a7 7 0 1 0 0-14 7 7 0 0 0 0 14Z" fill="#F79E1B"></path><path d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7 0 2.3 1.2 4.5 3 5.7 1.8-1.2 3-3.3 3-5.7Z" fill="#FF5F00"></path></g><defs><clipPath id="svg-1275971728_646_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg829500366_967" viewBox="0 0 38 24"><g clip-path="url(#svg829500366_967_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1Z" fill="#003087"></path><path d="m23.9 8.3-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8Z" fill="#3086C8"></path><path d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1Z" fill="#012169"></path></g><defs><clipPath id="svg829500366_967_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+        <div>
+          <svg fill="none" height="24" id="svg249320801_1370" viewBox="0 0 38 24"><g clip-path="url(#svg249320801_1370_a)"><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3Z" fill="#000"></path><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32Z" fill="#fff"></path><path d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3Zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2Zm-13.4-.3.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1Zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2Z" fill="#142688"></path></g><defs><clipPath id="svg249320801_1370_a"><path fill="#fff" d="M0 0h38v24H0z"></path></clipPath></defs></svg>
+        </div>
+      </div>
+      <p class="text-white-99 lg:text-base">© 2025 Nivest. All Rights Reserved</p>
+    </div>
+
+  </footer>
+  <div class="bg-green pt-20">
+    <svg fill="none" id="svg75441938_3388" viewBox="0 0 64 16"><path d="M0 15.766V.446h4.152l6.675 13.533-1.022.255V.447h3.13v15.319H8.782L2.107 2.234l1.022-.255v13.787H0Zm13.972 0V4.915h3.13v10.851h-3.13Zm-.104-12.298V.021h3.338v3.447h-3.338Z" fill="#030607"></path><path d="M21.06 15.766 16.866 4.915h3.36L23.5 15.043h-1.752l3.255-10.128h3.275l-4.193 10.851H21.06Zm11.856.213c-1.182 0-2.21-.234-3.087-.702a5.188 5.188 0 0 1-2.045-2c-.473-.851-.709-1.83-.709-2.937 0-1.12.236-2.099.71-2.936a5.079 5.079 0 0 1 2.023-1.978c.862-.483 1.864-.724 3.004-.724 1.099 0 2.052.227 2.858.681a4.775 4.775 0 0 1 1.878 1.894c.445.808.667 1.758.667 2.85 0 .228-.007.44-.02.639a6.184 6.184 0 0 1-.063.532h-9.221V9.19h6.697l-.543.383c0-.879-.208-1.524-.626-1.936C34.036 7.213 33.48 7 32.77 7c-.82 0-1.46.284-1.919.851-.445.567-.668 1.419-.668 2.553 0 1.107.223 1.93.668 2.468.46.54 1.14.809 2.045.809.5 0 .931-.085 1.293-.255a1.67 1.67 0 0 0 .814-.83h2.941c-.348 1.05-.946 1.88-1.794 2.49-.834.595-1.912.893-3.233.893Z" fill="#030607"></path><path d="M43.037 15.979c-1.558 0-2.796-.32-3.714-.958-.918-.638-1.418-1.518-1.502-2.638h2.796c.07.482.306.851.709 1.106.417.241.987.362 1.71.362.654 0 1.127-.092 1.42-.277a.938.938 0 0 0 .458-.83c0-.269-.09-.474-.27-.616-.168-.156-.48-.284-.94-.383l-1.71-.362c-1.266-.27-2.198-.674-2.796-1.213-.598-.553-.897-1.262-.897-2.127 0-1.05.396-1.866 1.19-2.447.792-.596 1.898-.894 3.316-.894 1.405 0 2.524.29 3.359.872.835.568 1.294 1.362 1.377 2.383h-2.796a1.092 1.092 0 0 0-.584-.83c-.333-.198-.806-.297-1.418-.297-.557 0-.974.085-1.252.255a.746.746 0 0 0-.397.681.72.72 0 0 0 .334.617c.223.142.591.27 1.106.383l1.92.404c1.07.227 1.877.653 2.42 1.277.556.61.834 1.333.834 2.17 0 1.064-.41 1.894-1.231 2.49-.807.58-1.954.872-3.442.872Z" fill="#030607"></path><path d="M53.008 16c-1.363 0-2.379-.333-3.046-1-.654-.68-.98-1.71-.98-3.085V2.489l3.129-1.191V12.02c0 .482.132.844.396 1.085.264.242.675.362 1.231.362.209 0 .403-.021.584-.064.18-.042.362-.092.542-.149v2.426c-.18.1-.438.177-.771.234a6.23 6.23 0 0 1-1.085.085Zm-6.009-8.66V4.915h7.865V7.34H47Z" fill="#030607"></path><path d="M59.306 9.574c-.65 0-1.26-.123-1.828-.37a4.828 4.828 0 0 1-1.502-1.021 4.935 4.935 0 0 1-1-1.532 4.782 4.782 0 0 1-.364-1.864A4.782 4.782 0 0 1 57.478.37 4.532 4.532 0 0 1 59.306 0c.65 0 1.26.123 1.828.37a4.58 4.58 0 0 1 1.49 1.034c.433.434.771.94 1.013 1.52.242.578.363 1.2.363 1.863a4.782 4.782 0 0 1-1.377 3.396 4.677 4.677 0 0 1-1.49 1.021 4.532 4.532 0 0 1-1.827.37Zm0-.83c.534 0 1.03-.101 1.49-.306a3.78 3.78 0 0 0 1.226-.855c.36-.366.639-.787.839-1.264.2-.476.3-.987.3-1.532 0-.544-.1-1.055-.3-1.532-.2-.476-.48-.898-.839-1.264a3.775 3.775 0 0 0-1.226-.855 3.622 3.622 0 0 0-1.49-.306c-.534 0-1.035.102-1.502.306a3.96 3.96 0 0 0-1.227.855c-.35.366-.626.788-.826 1.264-.2.477-.3.988-.3 1.532 0 .545.1 1.056.3 1.532.2.477.476.898.826 1.264a3.96 3.96 0 0 0 1.227.855c.467.205.968.307 1.502.307Zm-2.065-1.212v-5.49h2.478c.584 0 1.039.137 1.364.41.326.263.489.633.489 1.11 0 .74-.476 1.212-1.427 1.417v-.205c.425-.017.755.081.988.294.234.213.351.515.351.906v.907c0 .085.004.183.012.293.017.103.034.222.05.358h-1.163a1.662 1.662 0 0 1-.038-.255 5.328 5.328 0 0 1-.013-.396v-.587c0-.35-.075-.605-.225-.766-.142-.17-.371-.256-.688-.256H57.69V4.34h1.965c.242 0 .43-.055.564-.166.133-.119.2-.289.2-.51 0-.213-.067-.375-.2-.485-.125-.11-.313-.166-.563-.166h-1.265v4.519H57.24Z" fill="#030607"></path></svg>
+  </div>
+
+  <!-- Add to favorite -->
+  <!--  -->
+  <div id="favorite-poppup" class="fixed z-50 top-0 left-0 w-full h-full bg-[#ffffff00] hidden items-start justify-center">
+    <div class="p-5 w-[450px] flex flex-col gap-3 items-end animate-fade-up">
+      <button id="close-favorite-popup" class="h-7 w-7 rounded-full bg-white outline outline-1 outline-[#f5f5f5] grid place-items-center" aria-label="close add to favorite popop button" aria-expanded="false" aria-controls="favorite-poppup">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17 7L7 17M7 7L17 17" stroke="#030607" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <div class="bg-white p-4 flex items-center justify-between w-full shadow-md">
+        <div class="flex items-center gap-2">
+          <span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="red" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.15469 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+
+          <span class="font-medium text-sm">Added to the wishlist</span>
+        </div>
+        <a class="font-medium text-sm hover:text-dark-7a transition-300" href="#">Go to favorites</a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <script type="module" src="./JS/pdtPage.js"></script>
+</body>
+
+
+</html>
