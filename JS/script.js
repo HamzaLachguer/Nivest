@@ -1,11 +1,15 @@
-// Impoting ...
+/* ============================== */
+// Importing 
 //
-import { initHeader, getElement, updateClass, updateAriaAttribute} from "./header.js";
+/* ============================== */
+import {initHeader} from "./header.js";
+import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js'
 
 
-
-// Cach DOM elements & Declaring variables
+/* ============================== */
+// DOM elements caching
 //
+/* ============================== */
 const DOM_ELEMENTS = {
   popularProductGrid: getElement("#popular-product-grid"),
   newProductGrid: getElement("#new-product-grid"),
@@ -29,17 +33,40 @@ const DOM_ELEMENTS = {
   faqGrid: getElement("#faq-grid-container"),
 }
 
-let stats = {
-  favoritesList: new Set(),
+/* ============================== */
+// Constants & Configs
+//
+/* ============================== */
+const URL = './productsData.json';
 
+const TAG_COLORS = {
+  new: "bg-blue",
+  sale: "bg-red",
+  popular: "bg-dark"
+}
+
+/* ============================== */
+// State
+//
+/* ============================== */
+let savedFavorites = [];
+
+try {
+  const parsed = JSON.parse(localStorage.getItem("favorites"));
+  if (Array.isArray(parsed)) {
+    savedFavorites = parsed;
+  }
+} catch (e) {
+  console.warn("Invalid favorites in storage, resetting.");
+}
+
+let state = {
+  favoritesList: new Set(savedFavorites),
   targetDate: new Date("November 1 2025 00:00:00").getTime(),
   interval: null,
-
   slideIndex: 0,
 }
 
-
-const URL = "./productsData.json";
 
 // Fetch the product grid
 async function loadData(url) {
@@ -58,96 +85,129 @@ async function loadData(url) {
 
 
 
-// Return product card
-function renderProductCard(title, images, price, tag) {
-  
-  return `
+/* ============================== */
+// Rendering functions
+//
+/* ============================== */
+function getTagColor(tag) {
+  return TAG_COLORS[tag];
+}
+
+function formatPrice(price, tag) {
+  const plainTags = ["new", "popular"]
+  if (plainTags.includes(tag)) return `$${price}`;
+
+  return ` 
+    <span class="text-red">$${price}</span>
+    <span class="text-dark-7a line-through">$${price * (tag / 100)}</span>
+  `
+}
+
+function renderProductCard(product) {
+  const {id, title = "untitled", images = [], price = 0, tag = ""} = product;
+
+  const productCard = document.createElement("li");
+  productCard.className = "product-card relative flex flex-col gap-3 cursor-pointer";
+  productCard.setAttribute("data-product-id", id);
+
+  productCard.innerHTML =  `
     <div class="h-full w-full overflow-hidden">
       <img src=${images[0]} alt=" image" class="h-full w-ful object-cover object-center" loading="lazy">
     </div>
 
     <div class="font-medium flex flex-col gap-1 text-sm">
       <h3>${title}</h3>
-      <h3>${priceForm(price, tag)}</h3>
+      <h3>${formatPrice(price, tag)}</h3>
     </div>
 
     <div class="p-3 flex items-center justify-between absolute top-0 left-0 w-full">
-      <span class="capitalize font-medium ${bgColor(tag)} px-2 py-1 text-white text-sm">${tag}</span>
-      <button id="add-to-favorites" aria-label="add product to favorites" class="h-8 w-8 rounded-3xl bg-white grid place-items-center">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <span class="capitalize font-medium ${getTagColor(tag)} px-2 py-1 text-white text-sm">${tag}</span>
+      <button aria-label="add product to favorites" class="add-to-favorites h-8 w-8 rounded-3xl bg-white grid place-items-center">
+        <svg class="${state.favoritesList.has(id) ? "fill-red" : ""}" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9932 5.13581C9.9938 2.7984 6.65975 2.16964 4.15469 4.31001C1.64964 6.45038 1.29697 10.029 3.2642 12.5604C4.89982 14.6651 9.84977 19.1041 11.4721 20.5408C11.6536 20.7016 11.7444 20.7819 11.8502 20.8135C11.9426 20.8411 12.0437 20.8411 12.1361 20.8135C12.2419 20.7819 12.3327 20.7016 12.5142 20.5408C14.1365 19.1041 19.0865 14.6651 20.7221 12.5604C22.6893 10.029 22.3797 6.42787 19.8316 4.31001C17.2835 2.19216 13.9925 2.7984 11.9932 5.13581Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </button>
     </div>
-  `
-}
+  `;
 
-function bgColor(tag) {
-  if (tag === "new") return "bg-blue";
-  if (tag === "popular") return "bg-dark";
-
-  return "bg-red";
-}
-
-function priceForm(price, tag) {
-  if (tag === "new" || tag === "popular") return `$${price}`;
-
-  return ` <span class="text-red">$${price}</span>
-          <span class="text-dark-7a line-through">$${price}</span>
-        `
+  return productCard
 }
 
 
 
-// Render product grid
+
 function renderProductGrid(grid, container, length) {
   grid.map((product, index) => {
     if (!product) return;
-    const {id, title, images, price, tag} = product;
-
-    if (index > length) return;
-    const productCard = document.createElement("li");
-    productCard.className = "relative flex flex-col gap-3 cursor-pointer";
-    productCard.setAttribute("data-product-id", id);
-    productCard.innerHTML = renderProductCard(title, images, price, tag);
-
-    container.append(productCard);
-
-    productCard.addEventListener('click', (e) => {
-      const productId = productCard.dataset.productId;
-      const addToFavoritesBtn = e.target.closest("#add-to-favorites");
-
-      if (addToFavoritesBtn) {
-        // addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
-        showAddPoppup(productId, addToFavoritesBtn)
-      }
-      
-      else console.log(productId)
-    })
-  });
+    
+    if (length >= index)
+      container.appendChild(renderProductCard(product));
+  })
 }
 
-// add to favorites popup
+
+
+/* ============================== */
+// Favorites functionalitises
 //
-function showAddPoppup(productId, addToFavoritesBtn) {
-  addToFavoritesBtn.querySelector("svg").classList.toggle("fill-red");
-  
-  if (stats.favoritesList.has(productId)) {
-    stats.favoritesList.delete(productId);
-    console.log(`${productId} removed from favorites`)
-    return;
-  }
-  
-  stats.favoritesList.add(productId);
-  console.log(`add ${productId} to favorite`)
+/* ============================== */
+function saveFavorites() {
+  localStorage.setItem("favorites", JSON.stringify([...state.favoritesList]));
+}
+
+function addFavorite(pdtId, btn) {
+  state.favoritesList.add(pdtId);
+  saveFavorites();
+  btn.querySelector("svg").classList.add("fill-red");
+  showAddPoppup();
+}
+
+function removeFavorite(pdtId, btn) {
+  state.favoritesList.delete(pdtId);
+  saveFavorites();
+  btn.querySelector("svg").classList.remove("fill-red");
+}
+
+function showAddPoppup() {
   updateClass(DOM_ELEMENTS.addToFavoritePoppup, "hidden", "flex");
+
+  updateAriaAttribute(DOM_ELEMENTS.addToFavoritePoppup, "aria-hidden", "false")
 }
 
 function hideAddPoppup() {
-  updateClass(DOM_ELEMENTS.addToFavoritePoppup, "flex", "hidden")
+  updateClass(DOM_ELEMENTS.addToFavoritePoppup, "flex", "hidden");
+  updateAriaAttribute(DOM_ELEMENTS.addToFavoritePoppup, "aria-hidden", "true")
 }
 
-DOM_ELEMENTS.addToFavoritePoppup.addEventListener('click', hideAddPoppup)
+function toggleFavorites(pdtId, btn) {
+  if (state.favoritesList.has(pdtId)) { 
+    removeFavorite(pdtId, btn);
+  }
+
+  else addFavorite(pdtId, btn)
+}
+
+document.addEventListener('click', (e) => {
+  const productCard = e.target.closest(".product-card");
+  const favoriteBtn = e.target.closest(".add-to-favorites");
+  
+  if (!productCard) return;
+  if (!favoriteBtn) return;
+
+  if (productCard) {
+    const productId = productCard.dataset.productId;
+
+    if (favoriteBtn) {
+      toggleFavorites(productId, favoriteBtn);
+      //return;
+    } else {
+      console.log(productId)
+    }
+
+  }
+})
+
+DOM_ELEMENTS.addToFavoritePoppup.addEventListener('click', hideAddPoppup);
 
 
 
@@ -157,6 +217,7 @@ async function generateProductGrid() {
   // filter grid
   const popular = grid.filter(p => p.tag === "popular");
   const newArrivals = grid.filter(p => p.tag === "new");
+  //const sale = grid.filter(p => typeof p.tag == "number")
 
   renderProductGrid(popular, DOM_ELEMENTS.popularProductGrid, 3)
   renderProductGrid(newArrivals, DOM_ELEMENTS.newProductGrid, 3)
@@ -180,7 +241,7 @@ DOM_ELEMENTS.copyPromoBtn.addEventListener('click', async () => {
 //
 function counter() {
   const currentDate = new Date().getTime();
-  const interval = stats.targetDate - currentDate;
+  const interval = state.targetDate - currentDate;
 
   const days = Math.floor(interval / (1000 * 60 * 60 * 24));
   const hours = Math.floor(interval / (1000 * 60 * 60)) % 24;
@@ -193,7 +254,7 @@ function counter() {
   DOM_ELEMENTS.seconds.innerHTML = String(seconds).padStart(2, "0");
 
   if (interval < 0) {
-    clearInterval(stats.interval)
+    clearInterval(state.interval)
     DOM_ELEMENTS.days.innerHTML = "00"
     DOM_ELEMENTS.hours.innerHTML = "00"
     DOM_ELEMENTS.minutes.innerHTML = "00"
@@ -201,7 +262,7 @@ function counter() {
   }
 }
 
-stats.interval = setInterval(counter, 1000);
+state.interval = setInterval(counter, 1000);
 
 
 /* Testimenials */
@@ -252,7 +313,7 @@ function updateSlider(index) {
   `
 }
 
-updateSlider(stats.slideIndex)
+updateSlider(state.slideIndex)
 
 // generate togglers
 //
@@ -261,17 +322,17 @@ testimenials.forEach((_, index) => {
   btn.setAttribute("data-slide-index", index);
   btn.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
 
-  if (index === stats.slideIndex) {
+  if (index === state.slideIndex) {
     btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
   }
   DOM_ELEMENTS.slideTogglers.append(btn);
 
   btn.addEventListener('click', () => {
     const slideIndex = btn.dataset.slideIndex;
-    stats.slideIndex = slideIndex;
+    state.slideIndex = slideIndex;
     
     setActiveToggler(btn);
-    updateSlider(stats.slideIndex);
+    updateSlider(state.slideIndex);
   })
 })
 

@@ -2,7 +2,9 @@
 // Importing 
 //
 /* ============================== */
-import { initHeader, getElement, updateClass, updateAriaAttribute} from "./header.js";
+import { initHeader } from "./header.js";
+
+import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js'
 
 
 /* ============================== */
