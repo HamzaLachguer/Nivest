@@ -192,20 +192,23 @@ document.addEventListener('click', (e) => {
   const favoriteBtn = e.target.closest(".add-to-favorites");
   
   if (!productCard) return;
-  if (!favoriteBtn) return;
 
-  if (productCard) {
-    const productId = productCard.dataset.productId;
-    console.log(productId);
-
-    if (favoriteBtn) {
-      toggleFavorites(productId, favoriteBtn);
-      //return;
-    }
+  const productId = productCard.dataset.productId;
+  
+  if (favoriteBtn) {
+    toggleFavorites(productId, favoriteBtn);
+    return;
   }
+
+    // save product to locale storage in order to generate product page.
+    localStorage.setItem("product-id", JSON.stringify(productId));
+    window.location.href = "./pdtPage.html"
+    console.log("Product clicked " + productId);
 })
 
-DOM_ELEMENTS.addToFavoritePoppup.addEventListener('click', hideAddPoppup);
+function hideFavoritePoppup() {
+  DOM_ELEMENTS.addToFavoritePoppup.addEventListener('click', hideAddPoppup);
+}
 
 
 
@@ -221,7 +224,6 @@ async function generateProductGrid() {
   renderProductGrid(newArrivals, DOM_ELEMENTS.newProductGrid, 3)
 }
 
-generateProductGrid()
 
 
 
@@ -239,7 +241,6 @@ function initPromoCopy(btn) {
   })
 }
 
-initPromoCopy(DOM_ELEMENTS.copyPromoBtn);
 
 function counter() {
   const currentDate = new Date().getTime();
@@ -264,7 +265,7 @@ function counter() {
   }
 }
 
-state.interval = setInterval(counter, 1000);
+
 
 
 
@@ -318,7 +319,6 @@ function updateSlider(index) {
   `
 }
 
-updateSlider(state.slideIndex);
 
 function initTestimonials() {
   testimonials.forEach((_, index) => {
@@ -350,7 +350,7 @@ function setActiveToggler(btn) {
 
     btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
 }
-initTestimonials();
+
 
 /* ============================== */
 // Infinite scroll
@@ -409,7 +409,6 @@ function renderInfiniteScroll() {
 }
 
 
-renderInfiniteScroll();
 
 
 /* ============================== */
@@ -470,11 +469,20 @@ function initFAQs() {
   })
 }
 
-initFAQs();
 
 
 
-document.addEventListener('DOMContentLoaded', initHeader);
+document.addEventListener('DOMContentLoaded', () => {
+  initHeader();
+  generateProductGrid();
+  hideFavoritePoppup();
+  initFAQs();
+  renderInfiniteScroll();
+  initTestimonials();
+  updateSlider(state.slideIndex);
+  initPromoCopy(DOM_ELEMENTS.copyPromoBtn);
+  state.interval = setInterval(counter, 1000);
+});
 
 
 
