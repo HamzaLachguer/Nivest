@@ -156,16 +156,16 @@ function saveFavorites() {
 }
 
 function addFavorite(pdtId, btn) {
+  btn.querySelector("svg").classList.add("fill-red");
   state.favoritesList.add(pdtId);
   saveFavorites();
-  btn.querySelector("svg").classList.add("fill-red");
   showAddPoppup();
 }
 
 function removeFavorite(pdtId, btn) {
+  btn.querySelector("svg").classList.remove("fill-red");
   state.favoritesList.delete(pdtId);
   saveFavorites();
-  btn.querySelector("svg").classList.remove("fill-red");
 }
 
 function showAddPoppup() {
@@ -196,14 +196,12 @@ document.addEventListener('click', (e) => {
 
   if (productCard) {
     const productId = productCard.dataset.productId;
+    console.log(productId);
 
     if (favoriteBtn) {
       toggleFavorites(productId, favoriteBtn);
       //return;
-    } else {
-      console.log(productId)
     }
-
   }
 })
 
@@ -226,19 +224,23 @@ async function generateProductGrid() {
 generateProductGrid()
 
 
-// copy promo code
-//
-DOM_ELEMENTS.copyPromoBtn.addEventListener('click', async () => {
-  try {
-    await navigator.clipboard.writeText(DOM_ELEMENTS.promoCode)
-  } catch (err) {
-    console.error("Failed to copy: ", err);
-  }
-})
 
-
-// Counter
+/* ============================== */
+// Promo code
 //
+/* ============================== */
+function initPromoCopy(btn) {
+  btn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(DOM_ELEMENTS.promoCode)
+    } catch (err) {
+      console.error("Failed to copy: ", err);
+    }
+  })
+}
+
+initPromoCopy(DOM_ELEMENTS.copyPromoBtn);
+
 function counter() {
   const currentDate = new Date().getTime();
   const interval = state.targetDate - currentDate;
@@ -265,9 +267,12 @@ function counter() {
 state.interval = setInterval(counter, 1000);
 
 
-/* Testimenials */
+
+/* ============================== */
+// Testimonials
 //
-const testimenials = [
+/* ============================== */
+const testimonials = [
   {
     review: "These aren’t just sneakers. They’re motivation. I put them on and I move — simple as that. They feel built for momentum, not just comfort. Every step feels like purpose.",
     name: "Marcus Petrov",
@@ -288,8 +293,8 @@ const testimenials = [
 
 // update slider
 function updateSlider(index) {
-  const testimenial = testimenials[index];
-  const {review, name, country, imgSrc} = testimenial;
+  const testimonial = testimonials[index];
+  const {review, name, country, imgSrc} = testimonial;
 
   return DOM_ELEMENTS.slideContent.innerHTML = `
   <div class="flex flex-col gap-6 items-center">
@@ -313,28 +318,29 @@ function updateSlider(index) {
   `
 }
 
-updateSlider(state.slideIndex)
+updateSlider(state.slideIndex);
 
-// generate togglers
-//
-testimenials.forEach((_, index) => {
-  const btn = document.createElement("button");
-  btn.setAttribute("data-slide-index", index);
-  btn.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
+function initTestimonials() {
+  testimonials.forEach((_, index) => {
+    const btn = document.createElement("button");
+    btn.setAttribute("data-slide-index", index);
+    btn.className = "bg-white-99 h-1 w-10 lg:w-20 transition-150";
 
-  if (index === state.slideIndex) {
-    btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
-  }
-  DOM_ELEMENTS.slideTogglers.append(btn);
+    if (index === state.slideIndex) {
+      btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
+    }
+    DOM_ELEMENTS.slideTogglers.append(btn);
 
-  btn.addEventListener('click', () => {
-    const slideIndex = btn.dataset.slideIndex;
-    state.slideIndex = slideIndex;
-    
-    setActiveToggler(btn);
-    updateSlider(state.slideIndex);
+    btn.addEventListener('click', () => {
+      const slideIndex = btn.dataset.slideIndex;
+      state.slideIndex = slideIndex;
+      
+      setActiveToggler(btn);
+      updateSlider(state.slideIndex);
+    })
   })
-})
+}
+
 
 function setActiveToggler(btn) {
   Array.from(DOM_ELEMENTS.slideTogglers.querySelectorAll("button"))
@@ -344,9 +350,12 @@ function setActiveToggler(btn) {
 
     btn.className = "bg-white h-1 w-20 lg:w-40 transition-150";
 }
+initTestimonials();
 
+/* ============================== */
 // Infinite scroll
 //
+/* ============================== */
 const socialMediaPosts = [
   {
     tag: "Follow @nivest on Instagram",
@@ -400,11 +409,13 @@ function renderInfiniteScroll() {
 }
 
 
-renderInfiniteScroll()
+renderInfiniteScroll();
 
 
+/* ============================== */
 // FAQ's
 //
+/* ============================== */
 const FAQList = [
   {
     question: "What’s your return policy?",
@@ -429,7 +440,7 @@ const FAQList = [
 ]
 
 function initFAQs() {
-  FAQList.forEach((Q, i) => {
+  FAQList.forEach((_, i) => {
     const li = document.createElement("li");
     li.className = "flex flex-col gap-3 border-b border-solid border-[#d7d7d7]";
 
@@ -455,11 +466,11 @@ function initFAQs() {
       li.querySelector("p").classList.toggle("pb-4");
 
       li.querySelector("button #drop-icon").classList.toggle("rotate-180");
-    })
+    });
   })
 }
 
-initFAQs()
+initFAQs();
 
 
 
