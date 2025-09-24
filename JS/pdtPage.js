@@ -3,8 +3,8 @@
 //
 /* ============================== */
 import { initHeader } from "./header.js";
-
-import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js'
+import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js';
+import {cart} from './cart.js';
 
 
 /* ============================== */
@@ -20,10 +20,14 @@ const DOM_ELEMENTS = {
   pdtTitle: getElement("#product-title"),
   pdtDesc: getElement("#product-description"),
   pdtPrice: getElement("#product-price"),
-  pdtFullDesc: getElement("#description"),
-
+  
   sizeChart: getElement("#size-chart"),
   selectedSize: getElement("#selected-size"),
+  
+  addToCartBtn: getElement("#add-to-cart-btn"),
+  
+  toggleDescription: getElement("#toggle-description"),
+  pdtFullDesc: getElement("#description"),
 }
 
 
@@ -152,9 +156,9 @@ function initPdtInfo() {
   initTag(matchingProduct.tag);
   initPrice();
   initSizeChart();
+  initPdtDescription();
   DOM_ELEMENTS.pdtTitle.textContent = matchingProduct.title;
   DOM_ELEMENTS.pdtDesc.textContent = matchingProduct.description;
-  DOM_ELEMENTS.pdtFullDesc.textContent = matchingProduct.description;
 }
 
 function initTag(tag) {
@@ -197,6 +201,29 @@ function initSizeChart() {
   })
 }
 
+function initPdtDescription() {
+  DOM_ELEMENTS.pdtFullDesc.textContent = matchingProduct.description;
+
+  DOM_ELEMENTS.toggleDescription.addEventListener('click', () => {
+    DOM_ELEMENTS.toggleDescription.querySelector("#drop-icon")
+      .classList.toggle("rotate-180");
+
+    DOM_ELEMENTS.pdtFullDesc.classList.toggle("h-0");
+    DOM_ELEMENTS.pdtFullDesc.classList.toggle("pb-3");
+  })
+}
+
+
+
+/* ============================== */
+// Add to cart logic
+//
+/* ============================== */
+DOM_ELEMENTS.addToCartBtn.addEventListener('click', () => {
+  cart.push(productDetails);
+  localStorage.setItem("cartItemss", JSON.stringify(cart));
+  console.log(cart)
+})
 
 
 /* ============================== */

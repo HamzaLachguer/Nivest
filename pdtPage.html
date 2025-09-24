@@ -501,7 +501,7 @@
 
           <!-- CTA -->
           <div class="w-full flex flex-col gap-2">
-            <button class="bg-dark w-full text-white grid place-items-center h-12 rounded-full text-xs font-medium">Add to Cart</button>
+            <button id="add-to-cart-btn" class="bg-dark w-full text-white grid place-items-center h-12 rounded-full text-xs font-medium" aria-label="add product to cart">Add to Cart</button>
             <button class="bg-white w-full text-dark grid place-items-center h-12 rounded-full text-xs font-medium border border-solid border-[#f0f0f0]">Purchase Now</button>
           </div>
 
@@ -543,17 +543,18 @@
 
           <!-- description -->
           <div>
-            <div class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
-              <button class="flex items-center justify-between w-full">
+            <div id="" class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
+              <button id="toggle-description" class="flex items-center justify-between w-full">
                 <span class="font-medium text-xs lg:text-sm">Description</span>
-                <span class="h-6 w-6 grid place-items-center ">
+
+                <span id="drop-icon" class="h-6 w-6 grid place-items-center transition-300">
                   <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                 </span>
               </button>
 
-              <p id="description" class="text-dark-96 lg:text-sm font-medium pb-4">Elevated heel and flexible base designed for fast, fluid motion.</p>
+              <p id="description" class="text-dark-96 lg:text-sm font-medium pb-0 h-0 overflow-hidden transition-300">Elevated heel and flexible base designed for fast, fluid motion.</p>
             </div>
           </div>
         </div>
