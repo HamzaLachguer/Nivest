@@ -15,6 +15,15 @@ const DOM_ELEMENTS = {
   sliderContainer: getElement("#slider-container"),
   productImgs: getElement("#product-imgs"),
   sliderControls: getElement("#slider-controls"),
+
+  pdtTag: getElement("#product-tag"),
+  pdtTitle: getElement("#product-title"),
+  pdtDesc: getElement("#product-description"),
+  pdtPrice: getElement("#product-price"),
+  pdtFullDesc: getElement("#description"),
+
+  sizeChart: getElement("#size-chart"),
+  selectedSize: getElement("#selected-size"),
 }
 
 
@@ -22,6 +31,8 @@ const DOM_ELEMENTS = {
 // Constants & Configs
 //
 /* ============================== */
+const productId = localStorage.getItem("product-id");
+
 const state = {
   currentSlide: 0,
 }
@@ -34,30 +45,40 @@ const TAG_COLORS = {
   popular: "bg-dark"
 }
 
+let productDetails ={
+  id: productId,
+  quantity: 1,
+  size: 6,
+}
+
 
 /* ============================== */
 // Matching Product
 //
 /* ============================== */
-let matchingProduct = {
-    id: "pdt-001",
-    images: [
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/9b4586a5-62a6-4f9e-806b-3350ed82451a/NIKE+WAFFLE+DEBUT.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/068b1e97-2981-4254-bdf5-6cb759c6e319/NIKE+WAFFLE+DEBUT.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d1b07793-6d84-4ed3-a9ca-70f719da0552/NIKE+WAFFLE+DEBUT.png",
-      "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/c2681f83-1fef-4a9f-968b-0cb1b797008d/NIKE+WAFFLE+DEBUT.png"
-    ],
-    title: "Nike Waffle Debut",
-    price: 56.97,
-    desc: "Retro gets modernized in the Nike Waffle Debut. Remember that smooth suede and nylon trend? It's back, along with the modernized 'wedge' midsole that feels incredibly plush.",
-    keywords: ["nike", "waffle"],
-    tag: "popular",
-    category: "men",
-    sizes: ["6", "7", "8", "9", "10"],
-    inStock: true,
-    inventoryCount: 30
-  }
+async function loadData(url) {
+  const response = await fetch(url);
+  try {
+    if (!response.ok) {
+      console.warn("Could not fetch api");
+    }
 
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+async function findPdt() {
+  const data = await loadData(URL);
+
+  return data.find(p => p.id === productId);
+}
+
+let matchingProduct = await findPdt();
+
+console.log(matchingProduct)
 
   
 /* ============================== */
@@ -127,8 +148,56 @@ function slide(control) {
 // Product info
 //
 /* ============================== */
+function initPdtInfo() {
+  initTag(matchingProduct.tag);
+  initPrice();
+  initSizeChart();
+  DOM_ELEMENTS.pdtTitle.textContent = matchingProduct.title;
+  DOM_ELEMENTS.pdtDesc.textContent = matchingProduct.description;
+  DOM_ELEMENTS.pdtFullDesc.textContent = matchingProduct.description;
+}
 
+function initTag(tag) {
+  DOM_ELEMENTS.pdtTag.textContent = tag;
+  DOM_ELEMENTS.pdtTag.className = `${TAG_COLORS[tag]} py-1 px-2 uppercase font-medium text-white w-fit tracking-tight mb-2`;
+}
 
+function initPrice() {
+  if (matchingProduct.tag === "sale") {
+    DOM_ELEMENTS.pdtPrice.innerHtml = `
+      <span class="text-red">$${matchingProduct.pdtPrice}</span>
+      <span class="text-dark-7a line-through">$${matchingProduct.initPrice * (matchingProduct.discount / 100)}</span>
+    `;
+  }
+
+  DOM_ELEMENTS.pdtPrice.textContent = `$${matchingProduct.price}`
+}
+
+function initSizeChart() {
+  matchingProduct.sizes.forEach((s, index) => {
+    const li = document.createElement("li");
+
+    li.className = "cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium";
+    li.setAttribute("data-size", s)
+    li.textContent = s;
+
+    if (index == 0) {
+      li.className = "cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium";
+    }
+    DOM_ELEMENTS.sizeChart.appendChild(li);
+
+    li.addEventListener('click', () => {
+      DOM_ELEMENTS.sizeChart.querySelectorAll("li")
+        .forEach(el => el.className = "cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium")
+      
+        li.className = "cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium";
+        DOM_ELEMENTS.selectedSize.textContent = li.dataset.size;
+        productDetails.size = li.dataset.size;
+    })
+  })
+}
+
+initPdtInfo()
 
 
 /* ============================== */

@@ -73,7 +73,7 @@ async function loadData(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Could not fetch the api");
+      throw new Error("Could not fetch the API");
     }
 
     const data = await response.json();
@@ -201,7 +201,7 @@ document.addEventListener('click', (e) => {
   }
 
     // save product to locale storage in order to generate product page.
-    localStorage.setItem("product-id", JSON.stringify(productId));
+    localStorage.setItem("product-id", productId);
     window.location.href = "./pdtPage.html"
     console.log("Product clicked " + productId);
 })
