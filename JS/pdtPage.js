@@ -2,7 +2,7 @@
 // Importing 
 //
 /* ============================== */
-import { initHeader } from "./header.js";
+import { initHeader, cartQuantity, openCart } from "./header.js";
 import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js';
 import {cart} from './cart.js';
 
@@ -28,6 +28,8 @@ const DOM_ELEMENTS = {
   
   toggleDescription: getElement("#toggle-description"),
   pdtFullDesc: getElement("#description"),
+
+    cartLength: getElement("#cart-length"),
 }
 
 
@@ -196,7 +198,7 @@ function initSizeChart() {
       
         li.className = "cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium";
         DOM_ELEMENTS.selectedSize.textContent = li.dataset.size;
-        productDetails.size = li.dataset.size;
+        productDetails.size = +li.dataset.size;
     })
   })
 }
@@ -219,12 +221,28 @@ function initPdtDescription() {
 // Add to cart logic
 //
 /* ============================== */
-DOM_ELEMENTS.addToCartBtn.addEventListener('click', () => {
-  cart.push(productDetails);
-  localStorage.setItem("cartItemss", JSON.stringify(cart));
-  console.log(cart)
-})
+function cartMatchingPdt() {
+  return cart.find(p => p.id === productDetails.id && p.size === productDetails.size);
+}
 
+function addToCart() {
+  DOM_ELEMENTS.addToCartBtn.addEventListener('click', () => {
+  
+    const existingPdt = cartMatchingPdt();
+    if (existingPdt) {
+      existingPdt.quantity += 1;
+    } else {
+      cart.push({...productDetails});
+    }
+  
+    localStorage.setItem("cartItemsGrid", JSON.stringify(cart));
+    DOM_ELEMENTS.cartLength.textContent = cartQuantity();
+    openCart();
+    console.log(cart)
+  })
+}
+
+addToCart();
 
 /* ============================== */
 // Similar product

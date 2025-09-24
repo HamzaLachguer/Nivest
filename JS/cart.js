@@ -1,1 +1,1 @@
-export let cart = JSON.parse(localStorage.getItem("cartItemss")) || [];
+export let cart = JSON.parse(localStorage.getItem("cartItemsGrid")) || [];

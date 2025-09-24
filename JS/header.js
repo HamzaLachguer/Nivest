@@ -3,6 +3,7 @@
 // importing
 //
 import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js';
+import { cart } from './cart.js';
 
 
 
@@ -38,6 +39,8 @@ const elements = {
   openCartBtn: getElement("#open-cart-btn"),
   cartContainer: getElement("#cart-container"),
   closeCartBtn: getElement("#close-cart-btn"),
+
+  cartLength: getElement("#cart-length"),
 }
 
 
@@ -243,7 +246,7 @@ function initSearch() {
 
 // Cart open - close
 //
-function openCart() {
+export function openCart() {
   updateClass(elements.cartContainer, "hidden", "flex");
   document.body.classList.add("overflow-hidden");
 
@@ -275,6 +278,15 @@ function initCartToggling() {
 }
 
 
+/* ============================== */
+// Cart logic
+//
+/* ============================== */
+
+export function cartQuantity() {
+  return cart.reduce((a, b) => a + b.quantity, 0)
+}
+elements.cartLength.textContent = cartQuantity();
 
 export function initHeader() {
   initPromoModal();
