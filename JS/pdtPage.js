@@ -164,9 +164,9 @@ function initTag(tag) {
 
 function initPrice() {
   if (matchingProduct.tag === "sale") {
-    DOM_ELEMENTS.pdtPrice.innerHtml = `
-      <span class="text-red">$${matchingProduct.pdtPrice}</span>
-      <span class="text-dark-7a line-through">$${matchingProduct.initPrice * (matchingProduct.discount / 100)}</span>
+    return DOM_ELEMENTS.pdtPrice.innerHTML = `
+      <span class="text-red">$${matchingProduct.price - Math.floor(matchingProduct.price * (matchingProduct.discount / 100))}</span>
+      <span class="text-dark-7a line-through">$${matchingProduct.price}</span>
     `;
   }
 
@@ -197,7 +197,6 @@ function initSizeChart() {
   })
 }
 
-initPdtInfo()
 
 
 /* ============================== */
@@ -209,6 +208,8 @@ initPdtInfo()
 
 
 
+initPdtInfo();
+initHeader();
+
 document.addEventListener('DOMContentLoaded', () => {
-  initHeader();
 });
