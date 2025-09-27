@@ -3,7 +3,7 @@
 // importing
 //
 import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js';
-import { cart } from './cart.js';
+import { cart, cartQuantity } from './cart.js';
 
 
 
@@ -283,9 +283,7 @@ function initCartToggling() {
 //
 /* ============================== */
 
-export function cartQuantity() {
-  return cart.reduce((a, b) => a + b.quantity, 0)
-}
+
 elements.cartLength.textContent = cartQuantity();
 
 export function initHeader() {

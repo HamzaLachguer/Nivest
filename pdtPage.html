@@ -324,7 +324,7 @@
 
       <!-- cart header -->
       <div class="fixed top-0 w-full flex items-center justify-between px-5 py-4 border-b border-solid border-[#03060714]">
-        <h3 class="uppercase font-medium">Shopping Cart ( <span>0</span> )</h3>
+        <h3 class="uppercase font-medium">Shopping Cart ( <span id="cart-sum-items">0</span> )</h3>
         <button id="close-cart-btn" aria-controls="cart-section" class="h-6 w-6 grid place-items-center" aria-expanded="false" aria-label="close cart button">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -337,9 +337,9 @@
       <div class="mt-16 px-5 h-full pb-[290px] overflow-y-scroll">
         <div class="uppercase font-semibold hidden">cart is empty</div>
 
-        <ul class="flex flex-col gap-5">
+        <ul id="cart-items-list" class="flex flex-col gap-5">
 
-          <li class="w-full flex gap-6">
+          <!-- <li class="w-full flex gap-6">
             <div class="h-[120px] w-[120px] overflow-hidden bg-[#03060714] flex-shrink-0">
               <img class="" src="https://framerusercontent.com/images/lHdeV2pURwMNIXXxiD0iR5OKFg.png" alt="product image" loading="lazy">
             </div>
@@ -378,13 +378,13 @@
                 </button>
               </div>
             </div>
-          </li>
+          </li> -->
         </ul>
       </div>
 
 
       <!-- cart footer -->
-      <div class="absolute bottom-0 left-0 width-full bg-[#03060714] w-full p-5 flex flex-col gap-5">
+      <div class="absolute bottom-0 left-0 width-full bg-[#f1f1f1] w-full p-5 flex flex-col gap-5">
 
         <div class="flex flex-col gap-6">
           <div class="uppercase flex justify-between items-center font-medium">
