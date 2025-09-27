@@ -217,9 +217,8 @@ function addToCart() {
   
     localStorage.setItem("cartItemsGrid", JSON.stringify(cart));
 
-    DOM_ELEMENTS.cartLength.textContent = cartQuantity();
-    DOM_ELEMENTS.cartSumItems.textContent = cartQuantity();
-
+    // DOM_ELEMENTS.cartLength.textContent = cartQuantity();
+    // DOM_ELEMENTS.cartSumItems.textContent = cartQuantity();
     updateCart();
     openCart();
   })
@@ -239,6 +238,9 @@ async function updateCart() {
   localStorage.setItem("cartItemsGrid", JSON.stringify(cart))
   cartItems = await getCartItems();
   initCartRendering();
+
+  DOM_ELEMENTS.cartLength.textContent = cartQuantity();
+  DOM_ELEMENTS.cartSumItems.textContent = cartQuantity();
 }
 
 async function getCartItems() {
@@ -287,7 +289,7 @@ function renderCartItem(item) {
 
     <div class="flex justify-between items-center">
       <div class="flex gap-0">
-        <button aria-controls="product-quantity" aria-label="incement product quantity button" class="increment-quantity-btn grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
+        <button aria-controls="product-quantity" aria-label="decrement product quantity button" class="decrement-quantity-btn grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
@@ -295,7 +297,7 @@ function renderCartItem(item) {
 
         <div class="product-quantity font-semibold h-8 w-8 grid place-items-center">${quantity}</div>
 
-        <button aria-controls="product-quantity" aria-label="decrement product quantity button" class="decrement-quantity-btn grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
+        <button aria-controls="product-quantity" aria-label="increment product quantity button" class="increment-quantity-btn grid place-items-center h-8 w-8 hover:bg-[#03060714] transition-150">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 5V19M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
@@ -313,17 +315,34 @@ function renderCartItem(item) {
 
   li.addEventListener('click', async (e) => {
     const element = e.target;
+    if (!element) return;
+
     const itemId = li.dataset.itemId;
     const itemSize = item.size;
+    const itemQuantity = item.quantity;
     
     if (element.closest(".remove-product")) {
-      // updateCart();
       removeCartItem(itemId, itemSize);
       cartItems = await getCartItems();
       initCartRendering();
       console.log(itemSize)
     }
-    //console.log(element)
+
+    if (element.closest(".increment-quantity-btn")) {
+      const CartItem = cart.find(i => i.id === itemId && i.size === itemSize);
+      CartItem.quantity ++;
+      updateCart();
+    }
+
+    if (element.closest(".decrement-quantity-btn") && itemQuantity > 1) {
+      const CartItem = cart.find(i => i.id === itemId && i.size === itemSize);
+      CartItem.quantity --;
+      updateCart();
+    }
+
+
+    localStorage.setItem("product-id", itemId);
+    window.location.href = "./pdtPage.html";
   })
 
   DOM_ELEMENTS.cartItemsList.appendChild(li);
