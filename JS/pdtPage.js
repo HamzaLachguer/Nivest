@@ -325,24 +325,27 @@ function renderCartItem(item) {
       removeCartItem(itemId, itemSize);
       cartItems = await getCartItems();
       initCartRendering();
-      console.log(itemSize)
+      return;
     }
 
     if (element.closest(".increment-quantity-btn")) {
       const CartItem = cart.find(i => i.id === itemId && i.size === itemSize);
       CartItem.quantity ++;
       updateCart();
+      return;
     }
 
     if (element.closest(".decrement-quantity-btn") && itemQuantity > 1) {
       const CartItem = cart.find(i => i.id === itemId && i.size === itemSize);
       CartItem.quantity --;
       updateCart();
+      return;
     }
 
-
-    localStorage.setItem("product-id", itemId);
-    window.location.href = "./pdtPage.html";
+    else {
+      localStorage.setItem("product-id", itemId);
+      window.location.href = "./pdtPage.html";
+    }
   })
 
   DOM_ELEMENTS.cartItemsList.appendChild(li);
