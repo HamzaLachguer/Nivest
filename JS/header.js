@@ -2,8 +2,8 @@
 
 // importing
 //
-import {getElement, updateClass, updateAriaAttribute} from './helperFunc.js';
-import { cart, cartQuantity } from './cart.js';
+import {getElement, updateClass, updateAriaAttribute} from './modules/utils/dom.js';
+import { cart, cartQuantity } from './modules/cart/cart.js';
 
 
 

@@ -55,7 +55,7 @@
     ** HEADER **
     
   -->
-  <header class="absolute top-0 z-30 w-full animate-fade-down" aria-hidden="false">
+  <header class="absolute top-0 z-30 w-full animate-fade-down  bg-white" aria-hidden="false">
 
     <!-- Announcement BAR -->
     <!--  -->
@@ -68,7 +68,7 @@
 
     <!-- Header BAR -->
     <!--  -->
-    <div class="w-full grid grid-cols-3 px-5 lg:px-12 py-4 font-medium bg-white">
+    <div class="w-full grid grid-cols-3 px-5 lg:px-12 py-4 font-medium bg-whit">
       <div class="flex">
         <button id="open-nav-menu" aria-controls="navigation-menu" class="uppercase">menu</button>
       </div>
@@ -186,10 +186,10 @@
           <h4 class="uppercase text-dark-96 font-medium">products</h4>
           <ul class="font-display text-2xl capitalize font-medium tracking-tight">
             <li>
-              <a href="">men</a>
+              <a href="./men.html">men</a>
             </li>
             <li>
-              <a href="">women</a>
+              <a href="./women.html">women</a>
             </li>
             <li>
               <a href="">new</a>
@@ -198,7 +198,7 @@
               <a href="">popular</a>
             </li>
             <li>
-              <a href="">all</a>
+              <a href="./shop.html">all</a>
             </li>
             <li>
               <a href="">salle</a>
@@ -434,151 +434,11 @@
   -->
   <main>
 
-    <section class="mt- grid gap-10 grid-cols-1 lg:grid-cols-2 lg:pt-[120px] lg:px-12  pb-[60px]">
-      <div class="relative">
-
-        <!-- slider -->
-        <div id="slider-container" class="overflow-hidden sticky top-14">
-
-          <ul id="product-imgs" class="flex shrink-0 gap-0 h-[500px] md:h-[600px] transition-300">
-            <!-- <li class="flex-none h-full w-full overflow-hidden">
-              <img class="h-full w-full object-cover object-center" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/343a21a0-d37d-474d-9768-cf10f6e86da8/NIKE+P-6000+SE.png" alt="" loading="lazy">
-            </li>
-            <li class="flex-none h-full w-full overflow-hidden">
-              <img class="h-full w-full object-cover object-center" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/343a21a0-d37d-474d-9768-cf10f6e86da8/NIKE+P-6000+SE.png" alt="" loading="lazy">
-            </li> -->
-          </ul>
-
-          <div class="absolute p-5 bottom-0 grid place-items-center w-full">
-            <div id="slider-controls" class="bg-white p-2 flex items-center gap-[6px] rounded-3xl">
-              <!-- <button class="h-1 md:h-2 w-5 md:w-7 rounded-lg bg-dark transition-300"></button>
-              <button class="h-1 md:h-2 w-1 md:w-2 rounded-lg bg-dark transition-300"></button> -->
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="relative px-5 flex flex-col gap-8 lg:px-0">
-        
-        <!-- Primary info -->
-        <div class="flex flex-col gap-2 lg:gap-3">
-          <h4 id="product-tag" class="bg-blue py-1 px-2 uppercase font-medium text-white w-fit tracking-tight mb-2">New</h4>
-
-          <h2 id="product-title" class="uppercase font-semibold text-2xl lg:text-4xl">Casual Walk</h2>
-
-          <p id="product-description" class="text-dark-7a mb-2 lg:text-sm">Vertical bounce meets horizontal flow. The hybrid you didn’t know you needed.</p>
-
-          <h2 id="product-price" class="uppercase font-medium text-2xl">$79.75</h2>
-        </div>
-
-        <div class="flex flex-col gap-6">
-          <!-- Select size -->
-          <div class="flex flex-col gap-4">
-            <h4 class="flex items-center gap-1 text-sm font-medium">
-              <span>Shoe size:</span>
-              <span id="selected-size" class="text-[#7a7a7a]">6</span>
-            </h4>
-
-            <ul id="size-chart" class="flex gap-2">
-              <!-- <li class="cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium">7</li>
-              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium">8</li> -->
-            </ul>
-          </div>
-
-          <!-- Select color -->
-          <div class="flex flex-col gap-4">
-            <h4 class="flex items-center gap-1 text-sm font-medium">
-              <span>Color:</span>
-              <span class="text-[#7a7a7a] capitalize">white</span>
-            </h4>
-
-            <ul class="flex gap-2">
-              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-white border border-solid border-dark text-sm font-medium capitalize">white</li>
-              <li class="cursor-pointer py-2 px-4 grid place-items-center bg-[#f0f0f0]  text-sm font-medium capitalize">black</li>
-            </ul>
-          </div>
-
-          <!-- CTA -->
-          <div class="w-full flex flex-col gap-2">
-            <button id="add-to-cart-btn" class="bg-dark w-full text-white grid place-items-center h-12 rounded-full text-xs font-medium" aria-label="add product to cart">Add to Cart</button>
-            <button class="bg-white w-full text-dark grid place-items-center h-12 rounded-full text-xs font-medium border border-solid border-[#f0f0f0]">Purchase Now</button>
-          </div>
-
-          <!--  -->
-          <div class="border border-solid border-[#f0f0f0] flex flex-col">
-            <div class="p-4 border-b border-solid border-[#f0f0f0] flex flex-col gap-3">
-              <span class="h-5 w-5 lg:h-6 lg:w-6">
-                <svg fill="none" height="100%" width="100%" id="svg-405395133_622" viewBox="0 0 28 28"><path d="m27.789 11.68-4.981-5.803a1.75 1.75 0 0 0-1.342-.627H3.5A1.75 1.75 0 0 0 1.75 7v12.25A1.75 1.75 0 0 0 3.5 21h1.86a3.5 3.5 0 0 0 6.78 0h5.47a3.5 3.5 0 0 0 6.78 0h1.86A1.75 1.75 0 0 0 28 19.25v-7a.875.875 0 0 0-.211-.57Zm-2.568-.305H19.25V7h2.216l3.755 4.375Zm-13.846 0V7H17.5v4.375h-6.125ZM9.625 7v4.375H3.5V7h6.125ZM8.75 21.875a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5Zm12.25 0a1.75 1.75 0 1 1 0-3.5 1.75 1.75 0 0 1 0 3.5Zm3.39-2.625a3.5 3.5 0 0 0-6.78 0h-5.47a3.5 3.5 0 0 0-6.78 0H3.5v-6.125h22.75v6.125h-1.86Z" fill="#030607"></path></svg>
-              </span>
-
-              <div class="flex flex-col gap-1 lg:text-sm">
-                <span class="font-medium">In general package will arrive in 2-4 weeks</span>
-                <span class="text-dark-7a">We use global DHL method</span>
-              </div>
-            </div>
-            
-            <div class="p-4 border-b border-solid border-[#f0f0f0] flex flex-col gap-3">
-              <span class="h-5 w-5 lg:h-6 lg:w-6">
-                <svg fill="none" height="100%" width="100%" id="svg749669239_576" viewBox="0 0 28 28"><path d="M24.465 7.235 14.84 1.969a1.737 1.737 0 0 0-1.68 0L3.535 7.237a1.75 1.75 0 0 0-.91 1.531V19.23a1.75 1.75 0 0 0 .91 1.531l9.625 5.269a1.737 1.737 0 0 0 1.68 0l9.625-5.269a1.75 1.75 0 0 0 .91-1.53V8.77a1.75 1.75 0 0 0-.91-1.535ZM14 3.5l8.787 4.812-3.256 1.783-8.788-4.812L14 3.5Zm0 9.625L5.213 8.312l3.708-2.03 8.787 4.813L14 13.125ZM4.375 9.844l8.75 4.788v9.383l-8.75-4.785V9.844Zm19.25 9.382-8.75 4.79v-9.38l3.5-1.915v3.904a.875.875 0 1 0 1.75 0v-4.862l3.5-1.92v9.382Z" fill="#030607"></path></svg>
-              </span>
-
-              <div class="flex flex-col gap-1 lg:text-sm">
-                <span class="font-medium">We deliver across the world for free</span>
-                <span class="text-dark-7a">Free deliveries and returns worldwide</span>
-              </div>
-            </div>
-
-            <div class="p-4 flex flex-col gap-3">
-              <span  class="h-5 w-5 lg:h-6 lg:w-6">
-                <svg fill="none" height="100%" width="100%" id="svg2099769333_356" viewBox="0 0 28 28"><path d="M25.375 12.25a7.008 7.008 0 0 1-7 7H5.612l3.757 3.756a.876.876 0 0 1-1.238 1.238l-5.25-5.25a.876.876 0 0 1 0-1.238l5.25-5.25a.876.876 0 0 1 1.238 1.238L5.612 17.5h12.763a5.25 5.25 0 1 0 0-10.5H8.75a.875.875 0 0 1 0-1.75h9.625a7.008 7.008 0 0 1 7 7Z" fill="#030607"></path></svg>
-              </span>
-
-              <div class="flex flex-col gap-1 lg:text-sm">
-                <span class="font-medium">Return us desired item within two weeks</span>
-                <span class="text-dark-7a">Guaranteed returns within first two weeks</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- description -->
-          <div>
-            <div id="" class="flex flex-col gap-3 border-b border-solid border-[#d7d7d7]">
-              <button id="toggle-description" class="flex items-center justify-between w-full">
-                <span class="font-medium text-xs lg:text-sm">Description</span>
-
-                <span id="drop-icon" class="h-6 w-6 grid place-items-center transition-300">
-                  <svg width="20" height="" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </span>
-              </button>
-
-              <p id="description" class="text-dark-96 lg:text-sm font-medium pb-0 h-0 overflow-hidden transition-300">Elevated heel and flexible base designed for fast, fluid motion.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    
 
 
     <!-- Might like -->
-    <section class="py-14 flex flex-col gap-20">
-      <div class="flex flex-col gap-3 lg:flex-row justify-between px-5 lg:px-9">
-        <h2 class="uppercase font-semibold tracking-tight text-2xl lg:text-4xl">You might also like</h2>
-        <button class="capitalize text-sm font-medium flex gap-1 items-center">
-          <span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4V5.4C4 8.76031 4 10.4405 4.65396 11.7239C5.2292 12.8529 6.14708 13.7708 7.27606 14.346C8.55953 15 10.2397 15 13.6 15H20M20 15L15 10M20 15L15 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-          <span>shop new</span>
-        </button>
-      </div>
-
-      <ul id="new-product-grid" class="px-5 lg:px-9 grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-      </ul>
-    </section>
+    
   </main>
 
   <!-- 
@@ -737,7 +597,7 @@
 
 
   <!-- <script type="module" src="./JS/header.js"></script> -->
-  <script type="module" src="./JS/product-page.js"></script>
+  <script type="module" src="./JS/shop-page.js"></script>
 </body>
 
 
