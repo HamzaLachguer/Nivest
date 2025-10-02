@@ -8,7 +8,7 @@ import { URL, TAG_COLORS } from "./modules/utils/constants.js";
 import { findPdt } from "./modules/utils/helpers.js";
 import { initProductImgSlider, initProductInfo } from "./modules/product/product-info.js";
 import { getElement } from "./modules/utils/dom.js";
-import { addToCart, clearCart } from "./modules/cart/cart-manager.js"
+import { addToCart, clearCart } from "./modules/cart/cart-manager.js";
 import { initCart } from "./modules/cart/cart-rendering.js";
 
 
