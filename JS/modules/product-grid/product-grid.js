@@ -22,7 +22,7 @@ export async function generateProductGrid() {
 }
 
 
-function renderProductGrid(grid, selector, length) {
+export function renderProductGrid(grid, selector, length) {
   const container = document.querySelector(selector);
   grid.slice(0, length).forEach((product) => {
     container.appendChild(renderProductCard(product));

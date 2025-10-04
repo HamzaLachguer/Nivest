@@ -476,8 +476,8 @@
       
       <!-- filter by -->
       
-      <div class="grid lg:grid-flow-col-dense lg:grid-cols-4 lg:px-12">
-        <div class="lg:col-span-1 sticky top-28">
+      <div class="grid lg:grid-flow-col-dense lg:grid-cols-4 lg:px-12 gap-5">
+        <div class="lg:col-span-1">
           <div id="filter-header" class="px-5 lg:px-0 py-4 border-b border-[#e0e0e1] lg:border-none flex items-center justify-between cursor-pointer">
             <div class="flex items-center gap-2">
               <span>
@@ -490,12 +490,12 @@
             </div>
     
             <div class="grid place-items-center h-5 w-5 relative lg:hidden">
-              <div class="absolute h-[2px] w-4 bg-dark transition-300 rotate-90"></div>
+              <div id="rotate" class="absolute h-[2px] w-4 bg-dark transition-300 rotate-90"></div>
               <div class="absolute h-[2px] w-4 bg-dark"></div>
             </div>
           </div>
 
-          <div id="filter-options" aria-hidden="true" class="py- flex flex-col gap-5 transition-150 h-0 overflow-hidden py-0">
+          <div id="filter-options" aria-hidden="true" class="lg:sticky lg:top-10 flex flex-col gap-5 transition-150 h-0 overflow-hidden py-0 lg:py-5 lg:h-fit">
             <div class="px-5 lg:px-0 flex flex-col gap-3 border-b border-[#e0e0e1]">
               <h3 class="font-medium text-[15px]">Gender(<span>0</span>)</h3>
               <ul class="flex flex-col gap-2 pb-5">
@@ -571,7 +571,7 @@
         </div>
   
         <!-- product grid -->
-        <ul id="filter-product-grid" class="grid md:grid-cols-3 lg:grid-cols-4 gap-4 lg:col-span-3">
+        <ul id="filter-product-grid" class="px-5 lg:px-0 grid md:grid-cols-3 lg:grid-cols-3 gap-4 lg:col-span-3">
   
         </ul>
       </div>

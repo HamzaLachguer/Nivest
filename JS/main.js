@@ -10,9 +10,25 @@ import { counter } from "./modules/promo/counter.js";
 import { initFAQs } from "./modules/faq/faq.js";
 import { renderInfiniteScroll } from "./modules/scroll/infinite-scroll.js";
 import { initTestimonials, updateSlider } from "./modules/testimonials/testimonials.js";
-import { state } from "./modules/utils/constants.js";
+import { state, URL } from "./modules/utils/constants.js";
+import { getElement } from "./modules/utils/dom.js";
 
 import { saveToStorage } from "./modules/utils/storage.js";
+import { cart } from "./modules/cart/cart.js";
+import { initCart } from "./modules/cart/cart-rendering.js";
+import { clearCart } from "./modules/cart/cart-manager.js";
+
+
+
+
+const DOM_ELEMENTS = {
+  cartLength: getElement("#cart-length"),
+  cartSumItems: getElement("#cart-sum-items"),
+  cartItemsList: getElement("#cart-items-list"),
+  cartTOTAL: getElement("#sub-total"),
+  clearCartBtn: getElement("#clear-cart-btn"),
+}
+
 
 
 /* ============================== */
@@ -55,9 +71,9 @@ document.addEventListener('click', (e) => {
 
 
 
-initCart(DOM_ELEMENTS, URL);
+// initCart(DOM_ELEMENTS, URL);
 
-DOM_ELEMENTS.clearCartBtn.addEventListener('click', () => {
-  clearCart();
-  initCart(DOM_ELEMENTS, URL);
-});
+// DOM_ELEMENTS.clearCartBtn.addEventListener('click', () => {
+//   clearCart();
+//   initCart(DOM_ELEMENTS, URL);
+// });
