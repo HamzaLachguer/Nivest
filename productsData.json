@@ -15,7 +15,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["popular", "men", "$50 - $100"]
   },   {
     "id": "pdt-002",
     "images": [
@@ -33,7 +34,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["sale", "men", "$50 - $100"]
   },   {
     "id": "pdt-003",
     "images": [
@@ -50,7 +52,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["men", "new", "$100 - $200"]
   },   {
     "id": "pdt-004",
     "images": [
@@ -68,7 +71,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["men", "sale", "under $50"]
   },   {
     "id": "pdt-005",
     "images": [
@@ -85,7 +89,8 @@
     "category": "women",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["women", "popular", "$50 - $100"]
   },   {
     "id": "pdt-006",
     "images": [
@@ -102,7 +107,8 @@
     "category": "women",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["women", "new", "$50 - $100"]
   },   {
     "id": "pdt-007",
     "images": [
@@ -120,7 +126,8 @@
     "category": "women",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 30
+    "inventoryCount": 30,
+    "filter": ["women", "sale", "$50 - $100"]
   },   {
     "id": "pdt-008",
     "images": [
@@ -137,7 +144,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["men", "new", "$100 - $200"]
   },   {
     "id": "pdt-009",
     "images": [
@@ -154,7 +162,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["men", "new", "$100 - $200"]
   },   {
     "id": "pdt-0010",
     "images": [
@@ -171,7 +180,8 @@
     "category": "women",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["women", "new", "$100 - $200"]
   },   {
     "id": "pdt-0011",
     "images": [
@@ -188,7 +198,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["men", "new", "$100 - $200"]
   },   {
     "id": "pdt-0012",
     "images": [
@@ -198,14 +209,15 @@
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/dabfb934-b0be-4457-93bc-73ed2d44ae3d/NIKE+VOMERO+18.png"
     ],
     "title": "Nike Vomero 18",
-    "price": 300,
+    "price": 150,
     "description": "Maximum cushioning in the Vomero provides a comfortable ride for everyday runs. Our softest, most cushioned ride has lightweight ZoomX foam stacked on top of responsive ReactX foam in the midsole.",
     "keywords": ["nike", "zoom", "vomero"],
     "tag": "new",
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 14
+    "inventoryCount": 14,
+    "filter": ["men", "new", "$100 - $200"]
   },   {
     "id": "pdt-0013",
     "images": [
@@ -222,7 +234,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["men", "popular", "$100 - $200"]
   },   {
     "id": "pdt-0014",
     "images": [
@@ -240,7 +253,8 @@
     "category": "men",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["men", "sale", "$100 - $200"]
   },   {
     "id": "pdt-0015",
     "images": [
@@ -250,13 +264,14 @@
       "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8f14f9db-588c-4955-9535-344a5b17f968/WMNS+JORDAN+HEIR+SERIES.png"
     ],
     "title": "Jordan Heir Series 'Treat Yourself'",
-    "price": "120",
+    "price": 120,
     "description": "You're not here to make friends—you're here to dominate the competition. But there's no reason you can't do it in style.",
     "keywords": [],
     "tag": "popular",
     "category": "women",
     "sizes": ["6", "7", "8", "9", "10"],
     "inStock": true,
-    "inventoryCount": 19
+    "inventoryCount": 19,
+    "filter": ["women", "popular", "$100 - $200"]
   }
 ]

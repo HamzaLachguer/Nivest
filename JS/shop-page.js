@@ -26,7 +26,7 @@ const DOM_ELEMENTS = {
 
 let largeScreen = 1024;
 let filterOptionOpen = true;
-let filterBy = [];
+let filterBy = new Set();
 
 DOM_ELEMENTS.filterHeader.addEventListener('click', () => {
   if (window.innerWidth >= largeScreen) return
@@ -54,9 +54,20 @@ function hideFilterOptions() {
 }
 
 
+function toogleFilterId(id) {
+  filterBy.has(id) ? filterBy.remove(id) : filterBy.add(id);
+}
+
+let filterdList = null;
 DOM_ELEMENTS.filterOptions.addEventListener('click', (e) => {
   const option = e.target.closest(".filter-btn");
-  if (option) console.log(option.dataset.filter)
+  if (!option) return;
+
+  const filterId = option.dataset.filter;
+  toogleFilterId(filterId);
+
+  //filterdList.filter()
+  console.log(filterBy);
 })
 
 /* ============================== */
