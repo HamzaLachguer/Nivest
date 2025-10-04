@@ -51,3 +51,13 @@ document.addEventListener('click', (e) => {
     saveToStorage("product-id", productId);
     window.location.href = "./pdtPage.html";
 })
+
+
+
+
+initCart(DOM_ELEMENTS, URL);
+
+DOM_ELEMENTS.clearCartBtn.addEventListener('click', () => {
+  clearCart();
+  initCart(DOM_ELEMENTS, URL);
+});
