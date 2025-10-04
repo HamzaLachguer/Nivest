@@ -25,21 +25,14 @@ const DOM_ELEMENTS = {
 
 
 let largeScreen = 1024;
-let filterOptionOpen = false
-
+let filterOptionOpen = true;
+let filterBy = [];
 
 DOM_ELEMENTS.filterHeader.addEventListener('click', () => {
-  if (window.pageXOffset >= largeScreen) return
+  if (window.innerWidth >= largeScreen) return
 
-  if (!filterOptionOpen) {
-    showFilterOptions();
-    return filterOptionOpen = !filterOptionOpen;
-  }
-
-  if (filterOptionOpen) {
-    hideFilterOptions();
-    return filterOptionOpen = !filterOptionOpen;
-  }
+  filterOptionOpen = !filterOptionOpen;
+  filterOptionOpen ? hideFilterOptions() : showFilterOptions();
 })
 
 
@@ -60,17 +53,29 @@ function hideFilterOptions() {
     .classList.add("rotate-90");
 }
 
+
+DOM_ELEMENTS.filterOptions.addEventListener('click', (e) => {
+  const option = e.target.closest(".filter-btn");
+  if (option) console.log(option.dataset.filter)
+})
+
 /* ============================== */
 // Product grid
 //
 /* ============================== */
-async function productGrid() {
+
+
+const getGridData = async (...filterBy) => {
 
   const data = await loadData(URL);
-  renderProductGrid(data, "#filter-product-grid", data.length)
+  return data;
 }
 
-productGrid();
+let data = await getGridData();
+
+renderProductGrid(data, "#filter-product-grid", data.length)
+
+
 hidePopup();
 
 
