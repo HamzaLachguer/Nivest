@@ -5,6 +5,7 @@ import { getElement } from "./modules/utils/dom.js";
 import { URL } from "./modules/utils/constants.js";
 import { loadData } from "./modules/utils/helpers.js";
 import { renderProductGrid } from "./modules/product-grid/product-grid.js";
+import { updateClass } from "./modules/utils/dom.js";
 
 import { saveToStorage } from "./modules/utils/storage.js";
 import { toggleFavorites, hidePopup } from "./modules/favorites/favorites.js";
@@ -25,6 +26,11 @@ const DOM_ELEMENTS = {
   filterPrice: getElement("#filter-by-price"),
   filterCollection: getElement("#filter-by-collection"),
   filterGender: getElement("#filter-by-gender"),
+
+  searchInput: getElement("#search-input"),
+  emptySearch: getElement("#empty-input-btn"),
+  searchLinks: getElement("#search-links"),
+  searchResultList: getElement("#results-list"),
 }
 
 
@@ -115,65 +121,11 @@ DOM_ELEMENTS.filterOptions.addEventListener('click', (e) => {
   renderProductGrid(data, "#filter-product-grid", data.length);
 })
 
-// async function initFilter() {
-//   let filterGender = new Set();
-//   let filterCollection = new Set();
 
-//   DOM_ELEMENTS.filterGender.addEventListener('click', async (e) => {
-//     const option = e.target.closest(".filter-btn");
-//     if (!option) return;
-    
-//     option.querySelector("div:nth-of-type(1)").classList.toggle("active-filter");
-//     const filterId = option.dataset.category;
-
-//     if (filterId === "all") {
-//       filterGender.clear();
-//       data = [...allData];
-//       return;
-//     }
-
-//     filterGender.has(filterId) ? filterGender.delete(filterId) : filterGender.add(filterId);
-
-//     if (filterGender.size === 0) {
-//       data = [...allData];
-//     } else {
-//       data = allData.filter(p => filterGender.has(p.category));
-//     }
-
-//     getElement("#filter-product-grid").innerHTML = "";
-//     renderProductGrid(data, "#filter-product-grid", data.length);
-//   })
-
-//   DOM_ELEMENTS.filterCollection.addEventListener('click', async (e) => {
-//     const option = e.target.closest(".filter-btn");
-//     if (!option) return;
-    
-//     option.querySelector("div:nth-of-type(1)").classList.toggle("active-filter");
-//     const filterId = option.dataset.tag;
-
-//     filterCollection.has(filterId) ? filterCollection.delete(filterId) : filterCollection.add(filterId);
-//     if (filterCollection.size === 0) {
-//       data = [...allData];
-//     } else {
-//       data = allData.filter(p => filterCollection.has(p.tag));
-//     }
-
-//     getElement("#filter-product-grid").innerHTML = "";
-//     renderProductGrid(data, "#filter-product-grid", data.length);
-//   })
-
-// }
-
-
-//initFilter();
 /* ============================== */
 // Product grid
 //
 /* ============================== */
-
-
-
-
 renderProductGrid(data, "#filter-product-grid", data.length);
 
 
@@ -197,6 +149,64 @@ document.addEventListener('click', (e) => {
     saveToStorage("product-id", productId);
     window.location.href = "./pdtPage.html";
 })
+
+
+/* ============================== */
+// search
+//
+/* ============================== */
+DOM_ELEMENTS.searchInput.addEventListener('input', (e) => {
+  const query = e.target.value.toLowerCase();
+  let searchResult = [];
+  
+  updateClass(DOM_ELEMENTS.emptySearch, "hidden", "grid");
+  updateClass(DOM_ELEMENTS.searchLinks, "flex", "hidden");
+  updateClass(DOM_ELEMENTS.searchResultList, "hidden", "grid");
+  
+  searchResult = allData.filter(p => 
+    p.title.toLowerCase().includes(query)
+  );
+
+  DOM_ELEMENTS.searchResultList.innerHTML = searchResult.map(r => `
+      <li class="flex ">
+        <div class="h-40 w-40 shrink-0 grid place-items-center overflow-hidden">
+          <img 
+          src=${r.images[0]} 
+          alt="product img" 
+          class="object-cover object-center w-full" 
+          loading="lazy">
+        </div>
+
+        <div class="flex justify-between items-start uppercase w-full p-5">
+          <div class="flex flex-col gap-0">
+            <span class="font-semibold text-sm">${r.title}</span>
+            <span class="text-dark-96 font-medium">${r.category}</span>
+          </div>
+          <div class="font-semibold text-sm">$${r.price}</div>
+        </div>
+      </li>
+    `
+  ).join("");
+
+  console.log(searchResult);
+  
+  if (query === "") {
+    searchResult = [];
+    updateClass(DOM_ELEMENTS.emptySearch, "grid", "hidden");
+    updateClass(DOM_ELEMENTS.searchLinks, "hidden", "flex");
+    updateClass(DOM_ELEMENTS.searchResultList, "grid", "hidden");
+  }
+})
+
+DOM_ELEMENTS.emptySearch.addEventListener('click', () => {
+  DOM_ELEMENTS.searchInput.value = "";
+  DOM_ELEMENTS.searchResultList.innerHTML = "";
+  updateClass(DOM_ELEMENTS.emptySearch, "grid", "hidden");
+  updateClass(DOM_ELEMENTS.searchLinks, "hidden", "flex");
+  updateClass(DOM_ELEMENTS.searchResultList, "grid", "hidden");
+})
+
+
 
 /* ============================== */
 // Cart logic & header
