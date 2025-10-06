@@ -197,8 +197,6 @@ DOM_ELEMENTS.searchInput.addEventListener('input', (e) => {
 
     DOM_ELEMENTS.searchResultList.append(li);
   })
-
-  console.log(searchResult);
   
   if (query === "") {
     searchResult = [];
