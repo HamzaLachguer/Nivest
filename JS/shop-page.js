@@ -167,26 +167,36 @@ DOM_ELEMENTS.searchInput.addEventListener('input', (e) => {
     p.title.toLowerCase().includes(query)
   );
 
-  DOM_ELEMENTS.searchResultList.innerHTML = searchResult.map(r => `
-      <li class="flex ">
-        <div class="h-40 w-40 shrink-0 grid place-items-center overflow-hidden">
-          <img 
-          src=${r.images[0]} 
-          alt="product img" 
-          class="object-cover object-center w-full" 
-          loading="lazy">
-        </div>
+  DOM_ELEMENTS.searchResultList.innerHTML = "";
+  searchResult.map(result => {
+    const li = document.createElement("li");
+    li.className = "flex cursor-pointer";
+    li.setAttribute("data-result-id", result.id);
+    li.innerHTML = `
+      <div class="h-40 w-40 shrink-0 grid place-items-center overflow-hidden">
+        <img 
+        src=${result.images[0]} 
+        alt="product img" 
+        class="object-cover object-center w-full" 
+        loading="lazy">
+      </div>
 
-        <div class="flex justify-between items-start uppercase w-full p-5">
-          <div class="flex flex-col gap-0">
-            <span class="font-semibold text-sm">${r.title}</span>
-            <span class="text-dark-96 font-medium">${r.category}</span>
-          </div>
-          <div class="font-semibold text-sm">$${r.price}</div>
+      <div class="flex justify-between items-start uppercase w-full p-5">
+        <div class="flex flex-col gap-0">
+          <span class="font-semibold text-sm">${result.title}</span>
+          <span class="text-dark-96 font-medium">${result.category}</span>
         </div>
-      </li>
-    `
-  ).join("");
+        <div class="font-semibold text-sm">$${result.price}</div>
+      </div>
+    `;
+
+    li.addEventListener('click', () => {
+      saveToStorage("product-id", result.id);
+      window.location.href = "../pdtPage.html";
+    })
+
+    DOM_ELEMENTS.searchResultList.append(li);
+  })
 
   console.log(searchResult);
   
